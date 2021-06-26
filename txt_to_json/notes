@@ -1,0 +1,8 @@
+To open a jupyter notebook from termnal
+From the directory
+
+1)python3 -m notebook
+
+or
+
+2)jupyter notebook filename.ipynb
