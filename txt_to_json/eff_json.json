@@ -1,0 +1,4628 @@
+{
+    "6020": {
+        "charge": 36.526,
+        "TESHMS": 0.99497,
+        "TEHMS": 0.99639,
+        "HCAL_EFF": 0.99396,
+        "PCAL_EFF": 0.95327,
+        "PAERO_EFF": 0.96404,
+        "TLT": 0.97754
+    },
+    "6021": {
+        "charge": 64.657,
+        "TESHMS": 0.99553,
+        "TEHMS": 0.99479,
+        "HCAL_EFF": 0.99391,
+        "PCAL_EFF": 0.95213,
+        "PAERO_EFF": 0.96464,
+        "TLT": 0.97628
+    },
+    "6022": {
+        "charge": 67.102,
+        "TESHMS": 0.99539,
+        "TEHMS": 0.99539,
+        "HCAL_EFF": 0.9975,
+        "PCAL_EFF": 0.95415,
+        "PAERO_EFF": 0.97466,
+        "TLT": 0.99426
+    },
+    "6026": {
+        "charge": 76.281,
+        "TESHMS": 0.99713,
+        "TEHMS": 0.99606,
+        "HCAL_EFF": 0.99761,
+        "PCAL_EFF": 0.94891,
+        "PAERO_EFF": 0.96586,
+        "TLT": 0.99458
+    },
+    "6027": {
+        "charge": 98.182,
+        "TESHMS": 0.99647,
+        "TEHMS": 0.99511,
+        "HCAL_EFF": 0.99545,
+        "PCAL_EFF": 0.95808,
+        "PAERO_EFF": 0.96156,
+        "TLT": 0.99208
+    },
+    "6028": {
+        "charge": 39.786,
+        "TESHMS": 0.99401,
+        "TEHMS": 0.99601,
+        "HCAL_EFF": 0.99319,
+        "PCAL_EFF": 0.95431,
+        "PAERO_EFF": 0.96055,
+        "TLT": 0.99306
+    },
+    "6029": {
+        "charge": 3.767,
+        "TESHMS": 0.99614,
+        "TEHMS": 0.9971,
+        "HCAL_EFF": 0.99808,
+        "PCAL_EFF": 0.96133,
+        "PAERO_EFF": 0.96219,
+        "TLT": 0.97449
+    },
+    "6030": {
+        "charge": 36.166,
+        "TESHMS": 0.99422,
+        "TEHMS": 0.99485,
+        "HCAL_EFF": 0.99222,
+        "PCAL_EFF": 0.95337,
+        "PAERO_EFF": 0.97126,
+        "TLT": 0.9819
+    },
+    "6031": {
+        "charge": 26.625,
+        "TESHMS": 0.9957,
+        "TEHMS": 0.99455,
+        "HCAL_EFF": 0.99262,
+        "PCAL_EFF": 0.94801,
+        "PAERO_EFF": 0.96301,
+        "TLT": 0.98278
+    },
+    "6032": {
+        "charge": 26.379,
+        "TESHMS": 0.99619,
+        "TEHMS": 0.99325,
+        "HCAL_EFF": 0.9954,
+        "PCAL_EFF": 0.9462,
+        "PAERO_EFF": 0.9695,
+        "TLT": 0.98241
+    },
+    "6043": {
+        "charge": 21.414,
+        "TESHMS": 0.99482,
+        "TEHMS": 0.99387,
+        "HCAL_EFF": 0.99358,
+        "PCAL_EFF": 0.94578,
+        "PAERO_EFF": 0.96397,
+        "TLT": 0.98165
+    },
+    "6044": {
+        "charge": 30.848,
+        "TESHMS": 0.99414,
+        "TEHMS": 0.99614,
+        "HCAL_EFF": 0.99624,
+        "PCAL_EFF": 0.95127,
+        "PAERO_EFF": 0.96298,
+        "TLT": 0.9821
+    },
+    "6045": {
+        "charge": 8.794,
+        "TESHMS": 0.99435,
+        "TEHMS": 0.99435,
+        "HCAL_EFF": 0.99328,
+        "PCAL_EFF": 0.95459,
+        "PAERO_EFF": 0.95512,
+        "TLT": 0.98291
+    },
+    "6046": {
+        "charge": 94.108,
+        "TESHMS": 0.99627,
+        "TEHMS": 0.99656,
+        "HCAL_EFF": 0.99549,
+        "PCAL_EFF": 0.95821,
+        "PAERO_EFF": 0.963,
+        "TLT": 0.98947
+    },
+    "6049": {
+        "charge": 3.305,
+        "TESHMS": 0.99489,
+        "TEHMS": 0.99693,
+        "HCAL_EFF": 0.99016,
+        "PCAL_EFF": 0.95871,
+        "PAERO_EFF": 0.96401,
+        "TLT": 0.98106
+    },
+    "6050": {
+        "charge": 12.565,
+        "TESHMS": 0.99236,
+        "TEHMS": 0.99491,
+        "HCAL_EFF": 0.99183,
+        "PCAL_EFF": 0.9574,
+        "PAERO_EFF": 0.95979,
+        "TLT": 0.98124
+    },
+    "6051": {
+        "charge": 9.771,
+        "TESHMS": 0.99432,
+        "TEHMS": 0.99645,
+        "HCAL_EFF": 0.99071,
+        "PCAL_EFF": 0.95213,
+        "PAERO_EFF": 0.95628,
+        "TLT": 0.98227
+    },
+    "6052": {
+        "charge": 18.624,
+        "TESHMS": 0.99149,
+        "TEHMS": 0.99537,
+        "HCAL_EFF": 0.99293,
+        "PCAL_EFF": 0.95443,
+        "PAERO_EFF": 0.96191,
+        "TLT": 0.98257
+    },
+    "6053": {
+        "charge": 8.833,
+        "TESHMS": 0.99438,
+        "TEHMS": 0.99358,
+        "HCAL_EFF": 0.99543,
+        "PCAL_EFF": 0.95416,
+        "PAERO_EFF": 0.96121,
+        "TLT": 0.98107
+    },
+    "6054": {
+        "charge": 57.076,
+        "TESHMS": 0.99297,
+        "TEHMS": 0.99537,
+        "HCAL_EFF": 0.99536,
+        "PCAL_EFF": 0.95278,
+        "PAERO_EFF": 0.96685,
+        "TLT": 0.97948
+    },
+    "6055": {
+        "charge": 11.781,
+        "TESHMS": 0.9926,
+        "TEHMS": 0.99556,
+        "HCAL_EFF": 0.99494,
+        "PCAL_EFF": 0.95107,
+        "PAERO_EFF": 0.96955,
+        "TLT": 0.97867
+    },
+    "6056": {
+        "charge": 109.35,
+        "TESHMS": 0.99425,
+        "TEHMS": 0.99511,
+        "HCAL_EFF": 0.99602,
+        "PCAL_EFF": 0.94953,
+        "PAERO_EFF": 0.96187,
+        "TLT": 0.98284
+    },
+    "6057": {
+        "charge": 109.88,
+        "TESHMS": 0.99304,
+        "TEHMS": 0.99565,
+        "HCAL_EFF": 0.99318,
+        "PCAL_EFF": 0.95408,
+        "PAERO_EFF": 0.95863,
+        "TLT": 0.98269
+    },
+    "6058": {
+        "charge": 83.649,
+        "TESHMS": 0.99371,
+        "TEHMS": 0.99672,
+        "HCAL_EFF": 0.9962,
+        "PCAL_EFF": 0.95338,
+        "PAERO_EFF": 0.97076,
+        "TLT": 0.98381
+    },
+    "6067": {
+        "charge": 108.53,
+        "TESHMS": 0.99716,
+        "TEHMS": 0.99432,
+        "HCAL_EFF": 0.99763,
+        "PCAL_EFF": 0.9566,
+        "PAERO_EFF": 0.97461,
+        "TLT": 0.99551
+    },
+    "6068": {
+        "charge": 47.662,
+        "TESHMS": 0.99321,
+        "TEHMS": 0.99438,
+        "HCAL_EFF": 0.99622,
+        "PCAL_EFF": 0.93851,
+        "PAERO_EFF": 0.9739,
+        "TLT": 0.97493
+    },
+    "6070": {
+        "charge": 45.969,
+        "TESHMS": 0.99311,
+        "TEHMS": 0.99453,
+        "HCAL_EFF": 0.9966,
+        "PCAL_EFF": 0.93889,
+        "PAERO_EFF": 0.97413,
+        "TLT": 0.97188
+    },
+    "6071": {
+        "charge": 35.885,
+        "TESHMS": 0.99356,
+        "TEHMS": 0.99592,
+        "HCAL_EFF": 0.99378,
+        "PCAL_EFF": 0.93227,
+        "PAERO_EFF": 0.97308,
+        "TLT": 0.97412
+    },
+    "6073": {
+        "charge": 107.32,
+        "TESHMS": 0.99566,
+        "TEHMS": 0.99508,
+        "HCAL_EFF": 0.99842,
+        "PCAL_EFF": 0.9446,
+        "PAERO_EFF": 0.97382,
+        "TLT": 0.97808
+    },
+    "6080": {
+        "charge": 123.54,
+        "TESHMS": 0.99713,
+        "TEHMS": 0.99681,
+        "HCAL_EFF": 0.99817,
+        "PCAL_EFF": 0.95407,
+        "PAERO_EFF": 0.97358,
+        "TLT": 0.99389
+    },
+    "6081": {
+        "charge": 12.39,
+        "TESHMS": 0.99483,
+        "TEHMS": 0.99562,
+        "HCAL_EFF": 1.0018,
+        "PCAL_EFF": 0.9352,
+        "PAERO_EFF": 0.97205,
+        "TLT": 0.97845
+    },
+    "6087": {
+        "charge": 149.21,
+        "TESHMS": 0.99567,
+        "TEHMS": 0.99404,
+        "HCAL_EFF": 0.99723,
+        "PCAL_EFF": 0.94941,
+        "PAERO_EFF": 0.9669,
+        "TLT": 0.99233
+    },
+    "6088": {
+        "charge": 36.121,
+        "TESHMS": 0.99609,
+        "TEHMS": 0.99623,
+        "HCAL_EFF": 0.99743,
+        "PCAL_EFF": 0.95548,
+        "PAERO_EFF": 0.97004,
+        "TLT": 0.98059
+    },
+    "6089": {
+        "charge": 37.321,
+        "TESHMS": 0.99606,
+        "TEHMS": 0.99549,
+        "HCAL_EFF": 0.99708,
+        "PCAL_EFF": 0.94954,
+        "PAERO_EFF": 0.97233,
+        "TLT": 0.98098
+    },
+    "6090": {
+        "charge": 36.034,
+        "TESHMS": 0.99504,
+        "TEHMS": 0.99577,
+        "HCAL_EFF": 0.99225,
+        "PCAL_EFF": 0.94378,
+        "PAERO_EFF": 0.97282,
+        "TLT": 0.98051
+    },
+    "6091": {
+        "charge": 31.473,
+        "TESHMS": 0.99445,
+        "TEHMS": 0.99709,
+        "HCAL_EFF": 0.9953,
+        "PCAL_EFF": 0.94101,
+        "PAERO_EFF": 0.97145,
+        "TLT": 0.98096
+    },
+    "6093": {
+        "charge": 28.822,
+        "TESHMS": 0.99461,
+        "TEHMS": 0.99692,
+        "HCAL_EFF": 0.99737,
+        "PCAL_EFF": 0.95747,
+        "PAERO_EFF": 0.96799,
+        "TLT": 0.98275
+    },
+    "6094": {
+        "charge": 3.668,
+        "TESHMS": 0.99153,
+        "TEHMS": 0.99758,
+        "HCAL_EFF": 0.99931,
+        "PCAL_EFF": 0.94909,
+        "PAERO_EFF": 0.96547,
+        "TLT": 0.98055
+    },
+    "6095": {
+        "charge": 3.426,
+        "TESHMS": 0.99339,
+        "TEHMS": 0.99868,
+        "HCAL_EFF": 0.983,
+        "PCAL_EFF": 0.96004,
+        "PAERO_EFF": 0.97986,
+        "TLT": 0.97931
+    },
+    "6096": {
+        "charge": 22.067,
+        "TESHMS": 0.99372,
+        "TEHMS": 0.99514,
+        "HCAL_EFF": 1.0014,
+        "PCAL_EFF": 0.95475,
+        "PAERO_EFF": 0.96357,
+        "TLT": 0.98135
+    },
+    "6097": {
+        "charge": 17.507,
+        "TESHMS": 0.99295,
+        "TEHMS": 0.99647,
+        "HCAL_EFF": 0.99527,
+        "PCAL_EFF": 0.95835,
+        "PAERO_EFF": 0.97514,
+        "TLT": 0.98758
+    },
+    "6098": {
+        "charge": 107.85,
+        "TESHMS": 0.99293,
+        "TEHMS": 0.99576,
+        "HCAL_EFF": 0.9967,
+        "PCAL_EFF": 0.93618,
+        "PAERO_EFF": 0.96497,
+        "TLT": 0.98828
+    },
+    "6109": {
+        "charge": 52.022,
+        "TESHMS": 0.99451,
+        "TEHMS": 0.99294,
+        "HCAL_EFF": 0.99592,
+        "PCAL_EFF": 0.95396,
+        "PAERO_EFF": 0.97469,
+        "TLT": 0.99835
+    },
+    "6110": {
+        "charge": 48.665,
+        "TESHMS": 0.99759,
+        "TEHMS": 0.99679,
+        "HCAL_EFF": 0.99348,
+        "PCAL_EFF": 0.95738,
+        "PAERO_EFF": 0.97341,
+        "TLT": 0.99813
+    },
+    "6111": {
+        "charge": 28.007,
+        "TESHMS": 0.99772,
+        "TEHMS": 0.99667,
+        "HCAL_EFF": 0.99727,
+        "PCAL_EFF": 0.95917,
+        "PAERO_EFF": 0.97208,
+        "TLT": 0.99273
+    },
+    "6112": {
+        "charge": 34.684,
+        "TESHMS": 0.99766,
+        "TEHMS": 0.994,
+        "HCAL_EFF": 0.99378,
+        "PCAL_EFF": 0.95726,
+        "PAERO_EFF": 0.97334,
+        "TLT": 0.99177
+    },
+    "6114": {
+        "charge": 11.525,
+        "TESHMS": 0.99872,
+        "TEHMS": 0.99273,
+        "HCAL_EFF": 0.99136,
+        "PCAL_EFF": 0.96353,
+        "PAERO_EFF": 0.96834,
+        "TLT": 0.99268
+    },
+    "6115": {
+        "charge": 53.02,
+        "TESHMS": 0.99575,
+        "TEHMS": 0.994,
+        "HCAL_EFF": 0.99374,
+        "PCAL_EFF": 0.9552,
+        "PAERO_EFF": 0.96947,
+        "TLT": 0.98943
+    },
+    "6116": {
+        "charge": 34.798,
+        "TESHMS": 0.99587,
+        "TEHMS": 0.99517,
+        "HCAL_EFF": 0.99444,
+        "PCAL_EFF": 0.96012,
+        "PAERO_EFF": 0.9675,
+        "TLT": 0.98728
+    },
+    "6119": {
+        "charge": 56.095,
+        "TESHMS": 0.99677,
+        "TEHMS": 0.99419,
+        "HCAL_EFF": 0.99501,
+        "PCAL_EFF": 0.96362,
+        "PAERO_EFF": 0.96956,
+        "TLT": 0.99697
+    },
+    "6120": {
+        "charge": 37.873,
+        "TESHMS": 1.0,
+        "TEHMS": 0.99431,
+        "HCAL_EFF": 0.99512,
+        "PCAL_EFF": 0.96546,
+        "PAERO_EFF": 0.97558,
+        "TLT": 0.9964
+    },
+    "6124": {
+        "charge": 79.879,
+        "TESHMS": 0.99582,
+        "TEHMS": 0.99456,
+        "HCAL_EFF": 0.99182,
+        "PCAL_EFF": 0.95616,
+        "PAERO_EFF": 0.96445,
+        "TLT": 0.98131
+    },
+    "6125": {
+        "charge": 73.749,
+        "TESHMS": 0.99449,
+        "TEHMS": 0.99343,
+        "HCAL_EFF": 0.99194,
+        "PCAL_EFF": 0.95694,
+        "PAERO_EFF": 0.96678,
+        "TLT": 0.97998
+    },
+    "6127": {
+        "charge": 35.728,
+        "TESHMS": 0.99729,
+        "TEHMS": 0.99458,
+        "HCAL_EFF": 0.99372,
+        "PCAL_EFF": 0.97195,
+        "PAERO_EFF": 0.96574,
+        "TLT": 0.99581
+    },
+    "6128": {
+        "charge": 80.889,
+        "TESHMS": 0.99674,
+        "TEHMS": 0.99592,
+        "HCAL_EFF": 0.99611,
+        "PCAL_EFF": 0.95796,
+        "PAERO_EFF": 0.96767,
+        "TLT": 0.99621
+    },
+    "6129": {
+        "charge": 18.688,
+        "TESHMS": 0.99351,
+        "TEHMS": 0.99838,
+        "HCAL_EFF": 0.9895,
+        "PCAL_EFF": 0.95804,
+        "PAERO_EFF": 0.95438,
+        "TLT": 0.99502
+    },
+    "6130": {
+        "charge": 22.304,
+        "TESHMS": 0.99605,
+        "TEHMS": 0.99079,
+        "HCAL_EFF": 0.99755,
+        "PCAL_EFF": 0.93549,
+        "PAERO_EFF": 0.9586,
+        "TLT": 0.99386
+    },
+    "6132": {
+        "charge": 43.334,
+        "TESHMS": 0.99431,
+        "TEHMS": 0.99716,
+        "HCAL_EFF": 0.98574,
+        "PCAL_EFF": 0.94644,
+        "PAERO_EFF": 0.94956,
+        "TLT": 0.99506
+    },
+    "6133": {
+        "charge": 8.095,
+        "TESHMS": 0.99057,
+        "TEHMS": 1.0,
+        "HCAL_EFF": 0.98289,
+        "PCAL_EFF": 0.92565,
+        "PAERO_EFF": 0.93447,
+        "TLT": 0.99794
+    },
+    "6135": {
+        "charge": 17.773,
+        "TESHMS": 0.99258,
+        "TEHMS": 0.99443,
+        "HCAL_EFF": 1.0063,
+        "PCAL_EFF": 0.95805,
+        "PAERO_EFF": 0.95342,
+        "TLT": 0.99706
+    },
+    "6136": {
+        "charge": 44.34,
+        "TESHMS": 0.99395,
+        "TEHMS": 0.99576,
+        "HCAL_EFF": 0.98712,
+        "PCAL_EFF": 0.95808,
+        "PAERO_EFF": 0.9544,
+        "TLT": 0.98182
+    },
+    "6137": {
+        "charge": 44.67,
+        "TESHMS": 0.99397,
+        "TEHMS": 0.99472,
+        "HCAL_EFF": 0.99064,
+        "PCAL_EFF": 0.95746,
+        "PAERO_EFF": 0.95563,
+        "TLT": 0.98168
+    },
+    "6138": {
+        "charge": 39.987,
+        "TESHMS": 0.99573,
+        "TEHMS": 0.99504,
+        "HCAL_EFF": 0.98913,
+        "PCAL_EFF": 0.94612,
+        "PAERO_EFF": 0.95307,
+        "TLT": 0.98346
+    },
+    "6145": {
+        "charge": 40.835,
+        "TESHMS": 0.99658,
+        "TEHMS": 0.99362,
+        "HCAL_EFF": 0.98504,
+        "PCAL_EFF": 0.95667,
+        "PAERO_EFF": 0.96131,
+        "TLT": 0.9795
+    },
+    "6146": {
+        "charge": 8.125,
+        "TESHMS": 0.99738,
+        "TEHMS": 0.99438,
+        "HCAL_EFF": 0.98772,
+        "PCAL_EFF": 0.95902,
+        "PAERO_EFF": 0.95711,
+        "TLT": 0.98354
+    },
+    "6154": {
+        "charge": 37.186,
+        "TESHMS": 0.99671,
+        "TEHMS": 0.99517,
+        "HCAL_EFF": 0.98594,
+        "PCAL_EFF": 0.95895,
+        "PAERO_EFF": 0.96603,
+        "TLT": 0.99004
+    },
+    "6155": {
+        "charge": 2.263,
+        "TESHMS": 1.0,
+        "TEHMS": 0.98889,
+        "HCAL_EFF": 1.0,
+        "PCAL_EFF": 0.98643,
+        "PAERO_EFF": 0.95337,
+        "TLT": 0.99635
+    },
+    "6166": {
+        "charge": 7.933,
+        "TESHMS": 0.99469,
+        "TEHMS": 0.99646,
+        "HCAL_EFF": 0.99258,
+        "PCAL_EFF": 0.96013,
+        "PAERO_EFF": 0.96912,
+        "TLT": 0.99635
+    },
+    "6168": {
+        "charge": 60.177,
+        "TESHMS": 0.99709,
+        "TEHMS": 0.99288,
+        "HCAL_EFF": 0.9907,
+        "PCAL_EFF": 0.96024,
+        "PAERO_EFF": 0.97043,
+        "TLT": 0.99635
+    },
+    "6169": {
+        "charge": 4.743,
+        "TESHMS": 1.0,
+        "TEHMS": 1.0,
+        "HCAL_EFF": 0.99443,
+        "PCAL_EFF": 0.95715,
+        "PAERO_EFF": 0.97754,
+        "TLT": 0.99635
+    },
+    "6170": {
+        "charge": 36.708,
+        "TESHMS": 0.99527,
+        "TEHMS": 0.99473,
+        "HCAL_EFF": 0.98367,
+        "PCAL_EFF": 0.957,
+        "PAERO_EFF": 0.95174,
+        "TLT": 0.98217
+    },
+    "6171": {
+        "charge": 30.187,
+        "TESHMS": 0.99559,
+        "TEHMS": 0.99391,
+        "HCAL_EFF": 0.9849,
+        "PCAL_EFF": 0.95853,
+        "PAERO_EFF": 0.94764,
+        "TLT": 0.9852
+    },
+    "6172": {
+        "charge": 40.269,
+        "TESHMS": 0.99814,
+        "TEHMS": 0.99396,
+        "HCAL_EFF": 0.99112,
+        "PCAL_EFF": 0.9611,
+        "PAERO_EFF": 0.97885,
+        "TLT": 0.99613
+    },
+    "6179": {
+        "charge": 33.333,
+        "TESHMS": 0.99373,
+        "TEHMS": 0.99596,
+        "HCAL_EFF": 0.98177,
+        "PCAL_EFF": 0.95833,
+        "PAERO_EFF": 0.95855,
+        "TLT": 0.98374
+    },
+    "6180": {
+        "charge": 29.949,
+        "TESHMS": 0.99449,
+        "TEHMS": 0.99505,
+        "HCAL_EFF": 0.98571,
+        "PCAL_EFF": 0.95405,
+        "PAERO_EFF": 0.95149,
+        "TLT": 0.98074
+    },
+    "6181": {
+        "charge": 29.708,
+        "TESHMS": 0.99483,
+        "TEHMS": 0.99418,
+        "HCAL_EFF": 0.98586,
+        "PCAL_EFF": 0.95738,
+        "PAERO_EFF": 0.95441,
+        "TLT": 0.9913
+    },
+    "6182": {
+        "charge": 34.673,
+        "TESHMS": 0.99737,
+        "TEHMS": 0.99474,
+        "HCAL_EFF": 0.99044,
+        "PCAL_EFF": 0.9507,
+        "PAERO_EFF": 0.9632,
+        "TLT": 0.99329
+    },
+    "6183": {
+        "charge": 56.488,
+        "TESHMS": 0.99378,
+        "TEHMS": 0.99533,
+        "HCAL_EFF": 0.98405,
+        "PCAL_EFF": 0.96452,
+        "PAERO_EFF": 0.93811,
+        "TLT": 0.98716
+    },
+    "6184": {
+        "charge": 23.879,
+        "TESHMS": 0.99609,
+        "TEHMS": 0.99531,
+        "HCAL_EFF": 0.99199,
+        "PCAL_EFF": 0.95735,
+        "PAERO_EFF": 0.95803,
+        "TLT": 0.98867
+    },
+    "6185": {
+        "charge": 18.239,
+        "TESHMS": 0.99418,
+        "TEHMS": 0.9957,
+        "HCAL_EFF": 0.97894,
+        "PCAL_EFF": 0.95419,
+        "PAERO_EFF": 0.94183,
+        "TLT": 0.9821
+    },
+    "6186": {
+        "charge": 26.183,
+        "TESHMS": 0.99453,
+        "TEHMS": 0.99541,
+        "HCAL_EFF": 0.9834,
+        "PCAL_EFF": 0.95881,
+        "PAERO_EFF": 0.93135,
+        "TLT": 0.98299
+    },
+    "6187": {
+        "charge": 25.703,
+        "TESHMS": 0.99329,
+        "TEHMS": 0.99564,
+        "HCAL_EFF": 0.98083,
+        "PCAL_EFF": 0.95272,
+        "PAERO_EFF": 0.94035,
+        "TLT": 0.98347
+    },
+    "6194": {
+        "charge": 52.373,
+        "TESHMS": 0.99536,
+        "TEHMS": 0.99569,
+        "HCAL_EFF": 0.9931,
+        "PCAL_EFF": 0.95677,
+        "PAERO_EFF": 0.96692,
+        "TLT": 0.97907
+    },
+    "6195": {
+        "charge": 56.71,
+        "TESHMS": 0.99433,
+        "TEHMS": 0.99454,
+        "HCAL_EFF": 0.99479,
+        "PCAL_EFF": 0.95066,
+        "PAERO_EFF": 0.96388,
+        "TLT": 0.97708
+    },
+    "6196": {
+        "charge": 97.947,
+        "TESHMS": 0.99659,
+        "TEHMS": 0.99446,
+        "HCAL_EFF": 0.99636,
+        "PCAL_EFF": 0.95888,
+        "PAERO_EFF": 0.96395,
+        "TLT": 0.99581
+    },
+    "6197": {
+        "charge": 90.745,
+        "TESHMS": 0.99462,
+        "TEHMS": 0.99462,
+        "HCAL_EFF": 0.99615,
+        "PCAL_EFF": 0.95293,
+        "PAERO_EFF": 0.97685,
+        "TLT": 0.9944
+    },
+    "6198": {
+        "charge": 52.418,
+        "TESHMS": 0.9947,
+        "TEHMS": 0.99546,
+        "HCAL_EFF": 0.99357,
+        "PCAL_EFF": 0.95684,
+        "PAERO_EFF": 0.96297,
+        "TLT": 0.97853
+    },
+    "6199": {
+        "charge": 56.334,
+        "TESHMS": 0.9944,
+        "TEHMS": 0.994,
+        "HCAL_EFF": 0.99256,
+        "PCAL_EFF": 0.95161,
+        "PAERO_EFF": 0.96628,
+        "TLT": 0.97907
+    },
+    "6205": {
+        "charge": 47.981,
+        "TESHMS": 0.99267,
+        "TEHMS": 0.99575,
+        "HCAL_EFF": 0.99311,
+        "PCAL_EFF": 0.95479,
+        "PAERO_EFF": 0.95719,
+        "TLT": 0.98138
+    },
+    "6208": {
+        "charge": 14.558,
+        "TESHMS": 0.99347,
+        "TEHMS": 0.99622,
+        "HCAL_EFF": 0.99134,
+        "PCAL_EFF": 0.9529,
+        "PAERO_EFF": 0.95806,
+        "TLT": 0.98245
+    },
+    "6209": {
+        "charge": 59.752,
+        "TESHMS": 0.99352,
+        "TEHMS": 0.99588,
+        "HCAL_EFF": 0.99254,
+        "PCAL_EFF": 0.95312,
+        "PAERO_EFF": 0.95359,
+        "TLT": 0.98196
+    },
+    "6210": {
+        "charge": 25.359,
+        "TESHMS": 0.9937,
+        "TEHMS": 0.99586,
+        "HCAL_EFF": 0.99034,
+        "PCAL_EFF": 0.95917,
+        "PAERO_EFF": 0.96023,
+        "TLT": 0.98026
+    },
+    "6211": {
+        "charge": 63.121,
+        "TESHMS": 0.99723,
+        "TEHMS": 0.9963,
+        "HCAL_EFF": 0.99302,
+        "PCAL_EFF": 0.95899,
+        "PAERO_EFF": 0.94963,
+        "TLT": 0.99265
+    },
+    "6212": {
+        "charge": 143.34,
+        "TESHMS": 0.99515,
+        "TEHMS": 0.99556,
+        "HCAL_EFF": 0.99426,
+        "PCAL_EFF": 0.96423,
+        "PAERO_EFF": 0.96098,
+        "TLT": 0.99154
+    },
+    "6213": {
+        "charge": 83.337,
+        "TESHMS": 0.99414,
+        "TEHMS": 0.99639,
+        "HCAL_EFF": 0.99706,
+        "PCAL_EFF": 0.95314,
+        "PAERO_EFF": 0.96221,
+        "TLT": 0.98686
+    },
+    "6214": {
+        "charge": 70.607,
+        "TESHMS": 0.99522,
+        "TEHMS": 0.99628,
+        "HCAL_EFF": 0.99512,
+        "PCAL_EFF": 0.95044,
+        "PAERO_EFF": 0.9686,
+        "TLT": 0.98644
+    },
+    "6215": {
+        "charge": 9.697,
+        "TESHMS": 0.99137,
+        "TEHMS": 0.99622,
+        "HCAL_EFF": 0.9962,
+        "PCAL_EFF": 0.94877,
+        "PAERO_EFF": 0.95988,
+        "TLT": 0.98528
+    },
+    "6216": {
+        "charge": 38.638,
+        "TESHMS": 0.99408,
+        "TEHMS": 0.99567,
+        "HCAL_EFF": 0.99335,
+        "PCAL_EFF": 0.95922,
+        "PAERO_EFF": 0.95872,
+        "TLT": 0.984
+    },
+    "6217": {
+        "charge": 11.673,
+        "TESHMS": 0.99173,
+        "TEHMS": 0.99679,
+        "HCAL_EFF": 0.98395,
+        "PCAL_EFF": 0.95747,
+        "PAERO_EFF": 0.95812,
+        "TLT": 0.98245
+    },
+    "6219": {
+        "charge": 40.938,
+        "TESHMS": 0.99393,
+        "TEHMS": 0.99697,
+        "HCAL_EFF": 0.99387,
+        "PCAL_EFF": 0.95431,
+        "PAERO_EFF": 0.963,
+        "TLT": 0.98295
+    },
+    "6220": {
+        "charge": 35.378,
+        "TESHMS": 0.9925,
+        "TEHMS": 0.99537,
+        "HCAL_EFF": 0.99079,
+        "PCAL_EFF": 0.95404,
+        "PAERO_EFF": 0.96513,
+        "TLT": 0.98256
+    },
+    "6242": {
+        "charge": 78.125,
+        "TESHMS": 0.99815,
+        "TEHMS": 0.99722,
+        "HCAL_EFF": 0.99964,
+        "PCAL_EFF": 0.9517,
+        "PAERO_EFF": 0.98304,
+        "TLT": 0.99731
+    },
+    "6243": {
+        "charge": 63.841,
+        "TESHMS": 0.99539,
+        "TEHMS": 1.0,
+        "HCAL_EFF": 0.99832,
+        "PCAL_EFF": 0.94537,
+        "PAERO_EFF": 0.9732,
+        "TLT": 0.99709
+    },
+    "6244": {
+        "charge": 50.206,
+        "TESHMS": 0.99714,
+        "TEHMS": 0.9957,
+        "HCAL_EFF": 0.99776,
+        "PCAL_EFF": 0.95439,
+        "PAERO_EFF": 0.98042,
+        "TLT": 0.99734
+    },
+    "6245": {
+        "charge": 81.777,
+        "TESHMS": 0.9957,
+        "TEHMS": 0.99548,
+        "HCAL_EFF": 0.99439,
+        "PCAL_EFF": 0.93472,
+        "PAERO_EFF": 0.97573,
+        "TLT": 0.97854
+    },
+    "6246": {
+        "charge": 38.409,
+        "TESHMS": 0.99724,
+        "TEHMS": 0.99539,
+        "HCAL_EFF": 0.99579,
+        "PCAL_EFF": 0.94214,
+        "PAERO_EFF": 0.97359,
+        "TLT": 0.98149
+    },
+    "6247": {
+        "charge": 66.241,
+        "TESHMS": 0.99573,
+        "TEHMS": 0.99626,
+        "HCAL_EFF": 0.9953,
+        "PCAL_EFF": 0.93055,
+        "PAERO_EFF": 0.9757,
+        "TLT": 0.97958
+    },
+    "6248": {
+        "charge": 52.838,
+        "TESHMS": 0.99426,
+        "TEHMS": 0.99541,
+        "HCAL_EFF": 0.99635,
+        "PCAL_EFF": 0.93694,
+        "PAERO_EFF": 0.96942,
+        "TLT": 0.97319
+    },
+    "6249": {
+        "charge": 67.785,
+        "TESHMS": 0.99528,
+        "TEHMS": 0.99415,
+        "HCAL_EFF": 0.99609,
+        "PCAL_EFF": 0.94539,
+        "PAERO_EFF": 0.96706,
+        "TLT": 0.97284
+    },
+    "6250": {
+        "charge": 77.01,
+        "TESHMS": 0.99488,
+        "TEHMS": 0.99449,
+        "HCAL_EFF": 0.99586,
+        "PCAL_EFF": 0.94028,
+        "PAERO_EFF": 0.97218,
+        "TLT": 0.97273
+    },
+    "6251": {
+        "charge": 93.168,
+        "TESHMS": 0.99722,
+        "TEHMS": 0.99236,
+        "HCAL_EFF": 0.99492,
+        "PCAL_EFF": 0.9384,
+        "PAERO_EFF": 0.97621,
+        "TLT": 0.99645
+    },
+    "6252": {
+        "charge": 78.262,
+        "TESHMS": 0.99911,
+        "TEHMS": 0.99376,
+        "HCAL_EFF": 0.99795,
+        "PCAL_EFF": 0.94766,
+        "PAERO_EFF": 0.97588,
+        "TLT": 0.99595
+    },
+    "6261": {
+        "charge": 140.06,
+        "TESHMS": 0.9976,
+        "TEHMS": 0.99599,
+        "HCAL_EFF": 0.99558,
+        "PCAL_EFF": 0.96056,
+        "PAERO_EFF": 0.96733,
+        "TLT": 0.99456
+    },
+    "6262": {
+        "charge": 110.7,
+        "TESHMS": 0.99688,
+        "TEHMS": 0.99584,
+        "HCAL_EFF": 1.0001,
+        "PCAL_EFF": 0.9592,
+        "PAERO_EFF": 0.97191,
+        "TLT": 0.99483
+    },
+    "6263": {
+        "charge": 44.643,
+        "TESHMS": 0.99373,
+        "TEHMS": 0.99534,
+        "HCAL_EFF": 0.99463,
+        "PCAL_EFF": 0.9426,
+        "PAERO_EFF": 0.97108,
+        "TLT": 0.97646
+    },
+    "6264": {
+        "charge": 40.588,
+        "TESHMS": 0.99289,
+        "TEHMS": 0.99574,
+        "HCAL_EFF": 0.99588,
+        "PCAL_EFF": 0.94894,
+        "PAERO_EFF": 0.97174,
+        "TLT": 0.97695
+    },
+    "6265": {
+        "charge": 40.215,
+        "TESHMS": 0.99326,
+        "TEHMS": 0.99567,
+        "HCAL_EFF": 0.99607,
+        "PCAL_EFF": 0.94795,
+        "PAERO_EFF": 0.96964,
+        "TLT": 0.97887
+    },
+    "6266": {
+        "charge": 79.471,
+        "TESHMS": 0.99429,
+        "TEHMS": 0.99551,
+        "HCAL_EFF": 0.9961,
+        "PCAL_EFF": 0.94723,
+        "PAERO_EFF": 0.96739,
+        "TLT": 0.97736
+    },
+    "6267": {
+        "charge": 54.334,
+        "TESHMS": 0.99445,
+        "TEHMS": 0.99503,
+        "HCAL_EFF": 0.99438,
+        "PCAL_EFF": 0.94001,
+        "PAERO_EFF": 0.97067,
+        "TLT": 0.98083
+    },
+    "6270": {
+        "charge": 47.171,
+        "TESHMS": 0.99429,
+        "TEHMS": 0.99456,
+        "HCAL_EFF": 0.99572,
+        "PCAL_EFF": 0.95168,
+        "PAERO_EFF": 0.96717,
+        "TLT": 0.98037
+    },
+    "6271": {
+        "charge": 73.825,
+        "TESHMS": 0.99534,
+        "TEHMS": 0.99515,
+        "HCAL_EFF": 0.99473,
+        "PCAL_EFF": 0.94798,
+        "PAERO_EFF": 0.96527,
+        "TLT": 0.98048
+    },
+    "6272": {
+        "charge": 70.314,
+        "TESHMS": 0.99492,
+        "TEHMS": 0.99615,
+        "HCAL_EFF": 0.99492,
+        "PCAL_EFF": 0.94183,
+        "PAERO_EFF": 0.96871,
+        "TLT": 0.9796
+    },
+    "6273": {
+        "charge": 32.149,
+        "TESHMS": 0.99292,
+        "TEHMS": 0.99626,
+        "HCAL_EFF": 0.99476,
+        "PCAL_EFF": 0.95697,
+        "PAERO_EFF": 0.96214,
+        "TLT": 0.98085
+    },
+    "6274": {
+        "charge": 44.078,
+        "TESHMS": 0.9986,
+        "TEHMS": 0.9986,
+        "HCAL_EFF": 0.99835,
+        "PCAL_EFF": 0.95392,
+        "PAERO_EFF": 0.96525,
+        "TLT": 0.99165
+    },
+    "6275": {
+        "charge": 72.113,
+        "TESHMS": 0.99495,
+        "TEHMS": 0.99783,
+        "HCAL_EFF": 0.99679,
+        "PCAL_EFF": 0.95077,
+        "PAERO_EFF": 0.97014,
+        "TLT": 0.99255
+    },
+    "6276": {
+        "charge": 56.323,
+        "TESHMS": 0.99312,
+        "TEHMS": 0.99656,
+        "HCAL_EFF": 0.99223,
+        "PCAL_EFF": 0.94399,
+        "PAERO_EFF": 0.96869,
+        "TLT": 0.99322
+    },
+    "6288": {
+        "charge": 149.01,
+        "TESHMS": 0.99882,
+        "TEHMS": 0.9953,
+        "HCAL_EFF": 0.99934,
+        "PCAL_EFF": 0.96496,
+        "PAERO_EFF": 0.96998,
+        "TLT": 0.9984
+    },
+    "6289": {
+        "charge": 152.14,
+        "TESHMS": 0.99754,
+        "TEHMS": 0.99508,
+        "HCAL_EFF": 0.99323,
+        "PCAL_EFF": 0.95105,
+        "PAERO_EFF": 0.97507,
+        "TLT": 0.9982
+    },
+    "6290": {
+        "charge": 125.33,
+        "TESHMS": 0.99685,
+        "TEHMS": 0.99477,
+        "HCAL_EFF": 0.99383,
+        "PCAL_EFF": 0.9526,
+        "PAERO_EFF": 0.97104,
+        "TLT": 0.9853
+    },
+    "6291": {
+        "charge": 61.92,
+        "TESHMS": 0.99733,
+        "TEHMS": 0.99415,
+        "HCAL_EFF": 0.9953,
+        "PCAL_EFF": 0.95311,
+        "PAERO_EFF": 0.97274,
+        "TLT": 0.98604
+    },
+    "6292": {
+        "charge": 110.67,
+        "TESHMS": 0.99549,
+        "TEHMS": 0.99367,
+        "HCAL_EFF": 0.99454,
+        "PCAL_EFF": 0.94999,
+        "PAERO_EFF": 0.96685,
+        "TLT": 0.97936
+    },
+    "6293": {
+        "charge": 73.64,
+        "TESHMS": 0.99414,
+        "TEHMS": 0.99332,
+        "HCAL_EFF": 0.99318,
+        "PCAL_EFF": 0.94766,
+        "PAERO_EFF": 0.96934,
+        "TLT": 0.97892
+    },
+    "6294": {
+        "charge": 54.383,
+        "TESHMS": 0.99708,
+        "TEHMS": 0.99124,
+        "HCAL_EFF": 0.99474,
+        "PCAL_EFF": 0.96325,
+        "PAERO_EFF": 0.96569,
+        "TLT": 0.99791
+    },
+    "6295": {
+        "charge": 114.41,
+        "TESHMS": 0.99723,
+        "TEHMS": 0.99446,
+        "HCAL_EFF": 0.99466,
+        "PCAL_EFF": 0.95248,
+        "PAERO_EFF": 0.97024,
+        "TLT": 0.99784
+    },
+    "6296": {
+        "charge": 106.84,
+        "TESHMS": 0.99691,
+        "TEHMS": 0.99691,
+        "HCAL_EFF": 0.99626,
+        "PCAL_EFF": 0.97036,
+        "PAERO_EFF": 0.95957,
+        "TLT": 0.9975
+    },
+    "6304": {
+        "charge": 109.84,
+        "TESHMS": 0.99606,
+        "TEHMS": 0.99541,
+        "HCAL_EFF": 1.0018,
+        "PCAL_EFF": 0.94874,
+        "PAERO_EFF": 0.97188,
+        "TLT": 0.99703
+    },
+    "6305": {
+        "charge": 152.2,
+        "TESHMS": 0.99438,
+        "TEHMS": 0.99745,
+        "HCAL_EFF": 0.99273,
+        "PCAL_EFF": 0.957,
+        "PAERO_EFF": 0.96852,
+        "TLT": 0.99649
+    },
+    "6306": {
+        "charge": 38.986,
+        "TESHMS": 0.99602,
+        "TEHMS": 0.99464,
+        "HCAL_EFF": 0.99359,
+        "PCAL_EFF": 0.94728,
+        "PAERO_EFF": 0.96643,
+        "TLT": 0.97852
+    },
+    "6307": {
+        "charge": 153.87,
+        "TESHMS": 0.99337,
+        "TEHMS": 0.99494,
+        "HCAL_EFF": 0.99156,
+        "PCAL_EFF": 0.95053,
+        "PAERO_EFF": 0.96283,
+        "TLT": 0.97984
+    },
+    "6308": {
+        "charge": 110.09,
+        "TESHMS": 0.99374,
+        "TEHMS": 0.99459,
+        "HCAL_EFF": 0.99248,
+        "PCAL_EFF": 0.94955,
+        "PAERO_EFF": 0.96633,
+        "TLT": 0.97689
+    },
+    "6309": {
+        "charge": 93.746,
+        "TESHMS": 0.99598,
+        "TEHMS": 0.99373,
+        "HCAL_EFF": 0.99207,
+        "PCAL_EFF": 0.9562,
+        "PAERO_EFF": 0.96407,
+        "TLT": 0.97941
+    },
+    "6310": {
+        "charge": 33.26,
+        "TESHMS": 0.99536,
+        "TEHMS": 0.99277,
+        "HCAL_EFF": 0.99308,
+        "PCAL_EFF": 0.95116,
+        "PAERO_EFF": 0.96846,
+        "TLT": 0.98012
+    },
+    "6311": {
+        "charge": 38.108,
+        "TESHMS": 0.99622,
+        "TEHMS": 0.99748,
+        "HCAL_EFF": 1.0003,
+        "PCAL_EFF": 0.95918,
+        "PAERO_EFF": 0.96017,
+        "TLT": 0.99796
+    },
+    "6312": {
+        "charge": 62.197,
+        "TESHMS": 0.9992,
+        "TEHMS": 0.99841,
+        "HCAL_EFF": 0.99387,
+        "PCAL_EFF": 0.96049,
+        "PAERO_EFF": 0.96797,
+        "TLT": 0.99752
+    },
+    "6317": {
+        "charge": 74.863,
+        "TESHMS": 0.99757,
+        "TEHMS": 0.99452,
+        "HCAL_EFF": 0.99284,
+        "PCAL_EFF": 0.95795,
+        "PAERO_EFF": 0.96565,
+        "TLT": 0.9968
+    },
+    "6318": {
+        "charge": 88.326,
+        "TESHMS": 0.99536,
+        "TEHMS": 0.99165,
+        "HCAL_EFF": 0.99315,
+        "PCAL_EFF": 0.96227,
+        "PAERO_EFF": 0.96335,
+        "TLT": 0.99638
+    },
+    "6322": {
+        "charge": 66.761,
+        "TESHMS": 0.99379,
+        "TEHMS": 0.99371,
+        "HCAL_EFF": 0.98961,
+        "PCAL_EFF": 0.96124,
+        "PAERO_EFF": 0.94034,
+        "TLT": 0.97884
+    },
+    "6323": {
+        "charge": 48.923,
+        "TESHMS": 0.99388,
+        "TEHMS": 0.994,
+        "HCAL_EFF": 0.99132,
+        "PCAL_EFF": 0.95945,
+        "PAERO_EFF": 0.94387,
+        "TLT": 0.98039
+    },
+    "6325": {
+        "charge": 54.102,
+        "TESHMS": 0.99412,
+        "TEHMS": 0.99325,
+        "HCAL_EFF": 0.98721,
+        "PCAL_EFF": 0.95959,
+        "PAERO_EFF": 0.95281,
+        "TLT": 0.98141
+    },
+    "6326": {
+        "charge": 43.074,
+        "TESHMS": 0.99486,
+        "TEHMS": 0.996,
+        "HCAL_EFF": 0.98991,
+        "PCAL_EFF": 0.95701,
+        "PAERO_EFF": 0.9535,
+        "TLT": 0.98085
+    },
+    "6327": {
+        "charge": 34.934,
+        "TESHMS": 0.99532,
+        "TEHMS": 0.99632,
+        "HCAL_EFF": 0.98726,
+        "PCAL_EFF": 0.9594,
+        "PAERO_EFF": 0.9473,
+        "TLT": 0.98435
+    },
+    "6328": {
+        "charge": 58.458,
+        "TESHMS": 0.99428,
+        "TEHMS": 0.99264,
+        "HCAL_EFF": 0.99106,
+        "PCAL_EFF": 0.9677,
+        "PAERO_EFF": 0.95248,
+        "TLT": 0.99443
+    },
+    "6329": {
+        "charge": 97.897,
+        "TESHMS": 0.99813,
+        "TEHMS": 0.99627,
+        "HCAL_EFF": 0.9929,
+        "PCAL_EFF": 0.95639,
+        "PAERO_EFF": 0.96621,
+        "TLT": 0.99458
+    },
+    "6339": {
+        "charge": 3.796,
+        "TESHMS": 0.99199,
+        "TEHMS": 0.99039,
+        "HCAL_EFF": 0.99174,
+        "PCAL_EFF": 0.95451,
+        "PAERO_EFF": 0.96424,
+        "TLT": 0.98125
+    },
+    "6340": {
+        "charge": 32.867,
+        "TESHMS": 0.99144,
+        "TEHMS": 0.9963,
+        "HCAL_EFF": 0.98579,
+        "PCAL_EFF": 0.94858,
+        "PAERO_EFF": 0.95417,
+        "TLT": 0.98175
+    },
+    "6341": {
+        "charge": 45.349,
+        "TESHMS": 0.99488,
+        "TEHMS": 0.99502,
+        "HCAL_EFF": 0.98957,
+        "PCAL_EFF": 0.95741,
+        "PAERO_EFF": 0.94683,
+        "TLT": 0.98299
+    },
+    "6342": {
+        "charge": 51.851,
+        "TESHMS": 0.99408,
+        "TEHMS": 0.99618,
+        "HCAL_EFF": 0.98838,
+        "PCAL_EFF": 0.95966,
+        "PAERO_EFF": 0.94433,
+        "TLT": 0.98283
+    },
+    "6343": {
+        "charge": 42.871,
+        "TESHMS": 0.99203,
+        "TEHMS": 0.99547,
+        "HCAL_EFF": 0.98239,
+        "PCAL_EFF": 0.9542,
+        "PAERO_EFF": 0.94446,
+        "TLT": 0.98451
+    },
+    "6344": {
+        "charge": 13.131,
+        "TESHMS": 0.99307,
+        "TEHMS": 0.99733,
+        "HCAL_EFF": 0.98851,
+        "PCAL_EFF": 0.96377,
+        "PAERO_EFF": 0.94144,
+        "TLT": 0.98478
+    },
+    "6345": {
+        "charge": 139.27,
+        "TESHMS": 0.9945,
+        "TEHMS": 0.99597,
+        "HCAL_EFF": 0.98883,
+        "PCAL_EFF": 0.95846,
+        "PAERO_EFF": 0.93146,
+        "TLT": 0.99063
+    },
+    "6346": {
+        "charge": 31.948,
+        "TESHMS": 0.99407,
+        "TEHMS": 0.99802,
+        "HCAL_EFF": 0.97567,
+        "PCAL_EFF": 0.9601,
+        "PAERO_EFF": 0.91231,
+        "TLT": 0.99031
+    },
+    "6347": {
+        "charge": 15.371,
+        "TESHMS": 0.99576,
+        "TEHMS": 0.99491,
+        "HCAL_EFF": 0.98908,
+        "PCAL_EFF": 0.95662,
+        "PAERO_EFF": 0.92589,
+        "TLT": 0.98209
+    },
+    "6348": {
+        "charge": 60.94,
+        "TESHMS": 0.99436,
+        "TEHMS": 0.99513,
+        "HCAL_EFF": 0.99193,
+        "PCAL_EFF": 0.95662,
+        "PAERO_EFF": 0.95068,
+        "TLT": 0.9808
+    },
+    "6349": {
+        "charge": 76.094,
+        "TESHMS": 0.99366,
+        "TEHMS": 0.99556,
+        "HCAL_EFF": 0.99014,
+        "PCAL_EFF": 0.95323,
+        "PAERO_EFF": 0.95763,
+        "TLT": 0.98336
+    },
+    "6350": {
+        "charge": 72.858,
+        "TESHMS": 0.9934,
+        "TEHMS": 0.99495,
+        "HCAL_EFF": 0.99295,
+        "PCAL_EFF": 0.95358,
+        "PAERO_EFF": 0.954,
+        "TLT": 0.98148
+    },
+    "6351": {
+        "charge": 43.933,
+        "TESHMS": 0.99413,
+        "TEHMS": 0.99665,
+        "HCAL_EFF": 0.99183,
+        "PCAL_EFF": 0.94455,
+        "PAERO_EFF": 0.9574,
+        "TLT": 0.98272
+    },
+    "6352": {
+        "charge": 67.815,
+        "TESHMS": 0.99343,
+        "TEHMS": 0.99531,
+        "HCAL_EFF": 0.99192,
+        "PCAL_EFF": 0.95577,
+        "PAERO_EFF": 0.94837,
+        "TLT": 0.99512
+    },
+    "6353": {
+        "charge": 67.924,
+        "TESHMS": 0.99139,
+        "TEHMS": 0.99508,
+        "HCAL_EFF": 0.98651,
+        "PCAL_EFF": 0.95716,
+        "PAERO_EFF": 0.958,
+        "TLT": 0.99589
+    },
+    "6354": {
+        "charge": 149.68,
+        "TESHMS": 0.99727,
+        "TEHMS": 0.99408,
+        "HCAL_EFF": 0.99615,
+        "PCAL_EFF": 0.96137,
+        "PAERO_EFF": 0.95973,
+        "TLT": 0.99515
+    },
+    "6359": {
+        "charge": 141.31,
+        "TESHMS": 0.99649,
+        "TEHMS": 0.99315,
+        "HCAL_EFF": 0.99462,
+        "PCAL_EFF": 0.95778,
+        "PAERO_EFF": 0.966,
+        "TLT": 0.98882
+    },
+    "6360": {
+        "charge": 102.73,
+        "TESHMS": 0.99646,
+        "TEHMS": 0.99568,
+        "HCAL_EFF": 0.9968,
+        "PCAL_EFF": 0.95833,
+        "PAERO_EFF": 0.96829,
+        "TLT": 0.98789
+    },
+    "6363": {
+        "charge": 28.414,
+        "TESHMS": 0.99194,
+        "TEHMS": 1.0,
+        "HCAL_EFF": 1.0,
+        "PCAL_EFF": 0.96832,
+        "PAERO_EFF": 0.98478,
+        "TLT": 0.99814
+    },
+    "6364": {
+        "charge": 74.608,
+        "TESHMS": 1.0,
+        "TEHMS": 0.99507,
+        "HCAL_EFF": 0.99773,
+        "PCAL_EFF": 0.98022,
+        "PAERO_EFF": 0.95052,
+        "TLT": 0.99845
+    },
+    "6365": {
+        "charge": 71.724,
+        "TESHMS": 1.0,
+        "TEHMS": 0.99832,
+        "HCAL_EFF": 0.99622,
+        "PCAL_EFF": 0.9497,
+        "PAERO_EFF": 0.97145,
+        "TLT": 0.99858
+    },
+    "6367": {
+        "charge": 84.92,
+        "TESHMS": 0.99403,
+        "TEHMS": 0.99257,
+        "HCAL_EFF": 0.99629,
+        "PCAL_EFF": 0.94793,
+        "PAERO_EFF": 0.96567,
+        "TLT": 0.9868
+    },
+    "6368": {
+        "charge": 83.765,
+        "TESHMS": 0.99469,
+        "TEHMS": 0.9925,
+        "HCAL_EFF": 0.99464,
+        "PCAL_EFF": 0.95781,
+        "PAERO_EFF": 0.96391,
+        "TLT": 0.98564
+    },
+    "6370": {
+        "charge": 70.41,
+        "TESHMS": 0.99596,
+        "TEHMS": 0.99276,
+        "HCAL_EFF": 0.99437,
+        "PCAL_EFF": 0.95297,
+        "PAERO_EFF": 0.9626,
+        "TLT": 0.98261
+    },
+    "6371": {
+        "charge": 85.46,
+        "TESHMS": 0.99882,
+        "TEHMS": 0.99529,
+        "HCAL_EFF": 0.99578,
+        "PCAL_EFF": 0.95552,
+        "PAERO_EFF": 0.96269,
+        "TLT": 0.99858
+    },
+    "6372": {
+        "charge": 98.998,
+        "TESHMS": 0.99626,
+        "TEHMS": 0.99532,
+        "HCAL_EFF": 0.99875,
+        "PCAL_EFF": 0.95864,
+        "PAERO_EFF": 0.96853,
+        "TLT": 0.99785
+    },
+    "6373": {
+        "charge": 124.21,
+        "TESHMS": 0.99604,
+        "TEHMS": 0.99683,
+        "HCAL_EFF": 0.99573,
+        "PCAL_EFF": 0.96352,
+        "PAERO_EFF": 0.95666,
+        "TLT": 0.99758
+    },
+    "6374": {
+        "charge": 53.077,
+        "TESHMS": 0.99669,
+        "TEHMS": 0.98676,
+        "HCAL_EFF": 0.99488,
+        "PCAL_EFF": 0.95371,
+        "PAERO_EFF": 0.95456,
+        "TLT": 0.99707
+    },
+    "6375": {
+        "charge": 95.951,
+        "TESHMS": 0.99313,
+        "TEHMS": 0.99419,
+        "HCAL_EFF": 0.99277,
+        "PCAL_EFF": 0.9504,
+        "PAERO_EFF": 0.95749,
+        "TLT": 0.97912
+    },
+    "6376": {
+        "charge": 148.58,
+        "TESHMS": 0.99544,
+        "TEHMS": 0.99363,
+        "HCAL_EFF": 0.99219,
+        "PCAL_EFF": 0.94817,
+        "PAERO_EFF": 0.95556,
+        "TLT": 0.97812
+    },
+    "6377": {
+        "charge": 64.842,
+        "TESHMS": 0.99591,
+        "TEHMS": 0.99519,
+        "HCAL_EFF": 0.99571,
+        "PCAL_EFF": 0.95831,
+        "PAERO_EFF": 0.95266,
+        "TLT": 0.97914
+    },
+    "6378": {
+        "charge": 85.176,
+        "TESHMS": 0.99372,
+        "TEHMS": 0.99448,
+        "HCAL_EFF": 0.99061,
+        "PCAL_EFF": 0.9549,
+        "PAERO_EFF": 0.93764,
+        "TLT": 0.98305
+    },
+    "6379": {
+        "charge": 86.193,
+        "TESHMS": 0.99493,
+        "TEHMS": 0.99564,
+        "HCAL_EFF": 0.99054,
+        "PCAL_EFF": 0.94781,
+        "PAERO_EFF": 0.94183,
+        "TLT": 0.98264
+    },
+    "6380": {
+        "charge": 94.317,
+        "TESHMS": 0.99456,
+        "TEHMS": 0.99439,
+        "HCAL_EFF": 0.99304,
+        "PCAL_EFF": 0.95267,
+        "PAERO_EFF": 0.94022,
+        "TLT": 0.98243
+    },
+    "6381": {
+        "charge": 18.374,
+        "TESHMS": 0.99645,
+        "TEHMS": 0.99468,
+        "HCAL_EFF": 0.99382,
+        "PCAL_EFF": 0.93252,
+        "PAERO_EFF": 0.94657,
+        "TLT": 0.98411
+    },
+    "6382": {
+        "charge": 74.503,
+        "TESHMS": 0.99363,
+        "TEHMS": 0.99745,
+        "HCAL_EFF": 1.0012,
+        "PCAL_EFF": 0.95616,
+        "PAERO_EFF": 0.94432,
+        "TLT": 0.99636
+    },
+    "6383": {
+        "charge": 108.64,
+        "TESHMS": 0.99336,
+        "TEHMS": 0.99502,
+        "HCAL_EFF": 0.99764,
+        "PCAL_EFF": 0.96213,
+        "PAERO_EFF": 0.95089,
+        "TLT": 0.9958
+    },
+    "6385": {
+        "charge": 79.374,
+        "TESHMS": 0.99834,
+        "TEHMS": 0.99503,
+        "HCAL_EFF": 0.9941,
+        "PCAL_EFF": 0.96656,
+        "PAERO_EFF": 0.95873,
+        "TLT": 0.99781
+    },
+    "6386": {
+        "charge": 29.745,
+        "TESHMS": 0.99761,
+        "TEHMS": 0.99522,
+        "HCAL_EFF": 0.99205,
+        "PCAL_EFF": 0.94752,
+        "PAERO_EFF": 0.9669,
+        "TLT": 0.99688
+    },
+    "6387": {
+        "charge": 128.92,
+        "TESHMS": 0.9954,
+        "TEHMS": 0.99332,
+        "HCAL_EFF": 0.99282,
+        "PCAL_EFF": 0.96033,
+        "PAERO_EFF": 0.94946,
+        "TLT": 0.98412
+    },
+    "6388": {
+        "charge": 105.55,
+        "TESHMS": 0.99523,
+        "TEHMS": 0.99384,
+        "HCAL_EFF": 0.99206,
+        "PCAL_EFF": 0.95763,
+        "PAERO_EFF": 0.94929,
+        "TLT": 0.98255
+    },
+    "6389": {
+        "charge": 63.811,
+        "TESHMS": 0.99615,
+        "TEHMS": 0.99423,
+        "HCAL_EFF": 0.99631,
+        "PCAL_EFF": 0.9654,
+        "PAERO_EFF": 0.96777,
+        "TLT": 0.99794
+    },
+    "6390": {
+        "charge": 59.328,
+        "TESHMS": 0.9963,
+        "TEHMS": 0.99722,
+        "HCAL_EFF": 0.98684,
+        "PCAL_EFF": 0.95203,
+        "PAERO_EFF": 0.97546,
+        "TLT": 0.99737
+    },
+    "6391": {
+        "charge": 40.257,
+        "TESHMS": 0.9987,
+        "TEHMS": 0.98828,
+        "HCAL_EFF": 0.98832,
+        "PCAL_EFF": 0.94899,
+        "PAERO_EFF": 0.97245,
+        "TLT": 0.99635
+    },
+    "6393": {
+        "charge": 18.874,
+        "TESHMS": 0.99326,
+        "TEHMS": 0.99539,
+        "HCAL_EFF": 0.99143,
+        "PCAL_EFF": 0.95828,
+        "PAERO_EFF": 0.94289,
+        "TLT": 0.97993
+    },
+    "6394": {
+        "charge": 56.76,
+        "TESHMS": 0.99432,
+        "TEHMS": 0.99609,
+        "HCAL_EFF": 0.98835,
+        "PCAL_EFF": 0.96054,
+        "PAERO_EFF": 0.95016,
+        "TLT": 0.97765
+    },
+    "6395": {
+        "charge": 71.774,
+        "TESHMS": 0.99537,
+        "TEHMS": 0.99412,
+        "HCAL_EFF": 0.99239,
+        "PCAL_EFF": 0.95363,
+        "PAERO_EFF": 0.94623,
+        "TLT": 0.97979
+    },
+    "6396": {
+        "charge": 20.871,
+        "TESHMS": 0.99667,
+        "TEHMS": 0.99334,
+        "HCAL_EFF": 0.99423,
+        "PCAL_EFF": 0.95659,
+        "PAERO_EFF": 0.9383,
+        "TLT": 0.97976
+    },
+    "6397": {
+        "charge": 43.316,
+        "TESHMS": 0.99462,
+        "TEHMS": 0.99343,
+        "HCAL_EFF": 0.9918,
+        "PCAL_EFF": 0.95762,
+        "PAERO_EFF": 0.9539,
+        "TLT": 0.98538
+    },
+    "6398": {
+        "charge": 70.432,
+        "TESHMS": 0.995,
+        "TEHMS": 0.99438,
+        "HCAL_EFF": 0.99164,
+        "PCAL_EFF": 0.961,
+        "PAERO_EFF": 0.95398,
+        "TLT": 0.98453
+    },
+    "6399": {
+        "charge": 15.387,
+        "TESHMS": 0.99489,
+        "TEHMS": 0.99582,
+        "HCAL_EFF": 0.99387,
+        "PCAL_EFF": 0.95963,
+        "PAERO_EFF": 0.95002,
+        "TLT": 0.97912
+    },
+    "6400": {
+        "charge": 7.332,
+        "TESHMS": 0.99711,
+        "TEHMS": 0.99423,
+        "HCAL_EFF": 0.99272,
+        "PCAL_EFF": 0.96503,
+        "PAERO_EFF": 0.94817,
+        "TLT": 0.97768
+    },
+    "6401": {
+        "charge": 3.739,
+        "TESHMS": 0.99587,
+        "TEHMS": 0.9938,
+        "HCAL_EFF": 0.99165,
+        "PCAL_EFF": 0.95408,
+        "PAERO_EFF": 0.95133,
+        "TLT": 0.98019
+    },
+    "6402": {
+        "charge": 54.699,
+        "TESHMS": 0.9952,
+        "TEHMS": 0.99453,
+        "HCAL_EFF": 0.98697,
+        "PCAL_EFF": 0.95849,
+        "PAERO_EFF": 0.95431,
+        "TLT": 0.98214
+    },
+    "6403": {
+        "charge": 63.88,
+        "TESHMS": 0.99401,
+        "TEHMS": 0.9947,
+        "HCAL_EFF": 0.98811,
+        "PCAL_EFF": 0.95771,
+        "PAERO_EFF": 0.95078,
+        "TLT": 0.98123
+    },
+    "6404": {
+        "charge": 49.13,
+        "TESHMS": 0.99356,
+        "TEHMS": 0.99458,
+        "HCAL_EFF": 0.98596,
+        "PCAL_EFF": 0.95428,
+        "PAERO_EFF": 0.95407,
+        "TLT": 0.98223
+    },
+    "6405": {
+        "charge": 60.876,
+        "TESHMS": 0.99632,
+        "TEHMS": 0.99264,
+        "HCAL_EFF": 0.99257,
+        "PCAL_EFF": 0.9582,
+        "PAERO_EFF": 0.94648,
+        "TLT": 0.99551
+    },
+    "6406": {
+        "charge": 54.543,
+        "TESHMS": 0.99694,
+        "TEHMS": 0.9949,
+        "HCAL_EFF": 0.99209,
+        "PCAL_EFF": 0.94654,
+        "PAERO_EFF": 0.95187,
+        "TLT": 0.99499
+    },
+    "6407": {
+        "charge": 54.806,
+        "TESHMS": 0.99374,
+        "TEHMS": 0.99896,
+        "HCAL_EFF": 0.98346,
+        "PCAL_EFF": 0.95807,
+        "PAERO_EFF": 0.90857,
+        "TLT": 0.99002
+    },
+    "6408": {
+        "charge": 74.596,
+        "TESHMS": 0.99412,
+        "TEHMS": 0.99244,
+        "HCAL_EFF": 0.99025,
+        "PCAL_EFF": 0.94183,
+        "PAERO_EFF": 0.93687,
+        "TLT": 0.9927
+    },
+    "6410": {
+        "charge": 8.195,
+        "TESHMS": 0.99253,
+        "TEHMS": 0.9944,
+        "HCAL_EFF": 0.98706,
+        "PCAL_EFF": 0.95061,
+        "PAERO_EFF": 0.91738,
+        "TLT": 0.98203
+    },
+    "6411": {
+        "charge": 39.582,
+        "TESHMS": 0.99484,
+        "TEHMS": 0.99608,
+        "HCAL_EFF": 0.98862,
+        "PCAL_EFF": 0.96252,
+        "PAERO_EFF": 0.92211,
+        "TLT": 0.98371
+    },
+    "6412": {
+        "charge": 29.652,
+        "TESHMS": 0.99346,
+        "TEHMS": 0.99572,
+        "HCAL_EFF": 0.98787,
+        "PCAL_EFF": 0.95221,
+        "PAERO_EFF": 0.933,
+        "TLT": 0.98304
+    },
+    "6413": {
+        "charge": 31.703,
+        "TESHMS": 0.99215,
+        "TEHMS": 0.99382,
+        "HCAL_EFF": 0.99118,
+        "PCAL_EFF": 0.95181,
+        "PAERO_EFF": 0.92971,
+        "TLT": 0.98188
+    },
+    "6415": {
+        "charge": 42.428,
+        "TESHMS": 0.99402,
+        "TEHMS": 0.99419,
+        "HCAL_EFF": 0.9894,
+        "PCAL_EFF": 0.95586,
+        "PAERO_EFF": 0.91989,
+        "TLT": 0.98367
+    },
+    "6416": {
+        "charge": 32.509,
+        "TESHMS": 0.99476,
+        "TEHMS": 0.99408,
+        "HCAL_EFF": 0.98715,
+        "PCAL_EFF": 0.96116,
+        "PAERO_EFF": 0.93301,
+        "TLT": 0.98283
+    },
+    "6417": {
+        "charge": 24.938,
+        "TESHMS": 0.99403,
+        "TEHMS": 0.99522,
+        "HCAL_EFF": 0.99008,
+        "PCAL_EFF": 0.9542,
+        "PAERO_EFF": 0.92335,
+        "TLT": 0.98109
+    },
+    "6419": {
+        "charge": 103.41,
+        "TESHMS": 0.99592,
+        "TEHMS": 0.99443,
+        "HCAL_EFF": 0.99233,
+        "PCAL_EFF": 0.9549,
+        "PAERO_EFF": 0.96688,
+        "TLT": 0.97342
+    },
+    "6421": {
+        "charge": 80.067,
+        "TESHMS": 0.9946,
+        "TEHMS": 0.99425,
+        "HCAL_EFF": 0.99467,
+        "PCAL_EFF": 0.95217,
+        "PAERO_EFF": 0.96671,
+        "TLT": 0.97434
+    },
+    "6422": {
+        "charge": 55.855,
+        "TESHMS": 0.99529,
+        "TEHMS": 0.99466,
+        "HCAL_EFF": 0.99224,
+        "PCAL_EFF": 0.95125,
+        "PAERO_EFF": 0.96241,
+        "TLT": 0.97557
+    },
+    "6423": {
+        "charge": 25.403,
+        "TESHMS": 0.99606,
+        "TEHMS": 0.99606,
+        "HCAL_EFF": 0.99415,
+        "PCAL_EFF": 0.96318,
+        "PAERO_EFF": 0.9839,
+        "TLT": 0.99679
+    },
+    "6425": {
+        "charge": 54.747,
+        "TESHMS": 0.99802,
+        "TEHMS": 0.99406,
+        "HCAL_EFF": 0.99757,
+        "PCAL_EFF": 0.95693,
+        "PAERO_EFF": 0.97208,
+        "TLT": 0.99712
+    },
+    "6426": {
+        "charge": 31.42,
+        "TESHMS": 0.99196,
+        "TEHMS": 0.99679,
+        "HCAL_EFF": 0.9914,
+        "PCAL_EFF": 0.96723,
+        "PAERO_EFF": 0.9779,
+        "TLT": 0.9976
+    },
+    "6427": {
+        "charge": 54.001,
+        "TESHMS": 1.0,
+        "TEHMS": 0.99698,
+        "HCAL_EFF": 0.99219,
+        "PCAL_EFF": 0.95145,
+        "PAERO_EFF": 0.97403,
+        "TLT": 0.99563
+    },
+    "6428": {
+        "charge": 60.584,
+        "TESHMS": 0.99741,
+        "TEHMS": 0.99655,
+        "HCAL_EFF": 0.99769,
+        "PCAL_EFF": 0.95149,
+        "PAERO_EFF": 0.9628,
+        "TLT": 0.99617
+    },
+    "6429": {
+        "charge": 44.47,
+        "TESHMS": 0.99596,
+        "TEHMS": 0.99499,
+        "HCAL_EFF": 0.99367,
+        "PCAL_EFF": 0.95526,
+        "PAERO_EFF": 0.96472,
+        "TLT": 0.97681
+    },
+    "6430": {
+        "charge": 66.945,
+        "TESHMS": 0.99441,
+        "TEHMS": 0.9961,
+        "HCAL_EFF": 0.99363,
+        "PCAL_EFF": 0.95759,
+        "PAERO_EFF": 0.96167,
+        "TLT": 0.97639
+    },
+    "6431": {
+        "charge": 34.655,
+        "TESHMS": 0.99515,
+        "TEHMS": 0.99578,
+        "HCAL_EFF": 0.99085,
+        "PCAL_EFF": 0.95482,
+        "PAERO_EFF": 0.96068,
+        "TLT": 0.97613
+    },
+    "6432": {
+        "charge": 62.739,
+        "TESHMS": 0.99512,
+        "TEHMS": 0.99535,
+        "HCAL_EFF": 0.99143,
+        "PCAL_EFF": 0.96071,
+        "PAERO_EFF": 0.96309,
+        "TLT": 0.98148
+    },
+    "6433": {
+        "charge": 59.628,
+        "TESHMS": 0.99651,
+        "TEHMS": 0.9949,
+        "HCAL_EFF": 0.9931,
+        "PCAL_EFF": 0.95602,
+        "PAERO_EFF": 0.96759,
+        "TLT": 0.98853
+    },
+    "6434": {
+        "charge": 62.96,
+        "TESHMS": 0.99302,
+        "TEHMS": 0.99457,
+        "HCAL_EFF": 0.99362,
+        "PCAL_EFF": 0.95064,
+        "PAERO_EFF": 0.95127,
+        "TLT": 0.97971
+    },
+    "6435": {
+        "charge": 61.557,
+        "TESHMS": 0.99326,
+        "TEHMS": 0.99537,
+        "HCAL_EFF": 0.98989,
+        "PCAL_EFF": 0.95118,
+        "PAERO_EFF": 0.95673,
+        "TLT": 0.9819
+    },
+    "6436": {
+        "charge": 37.28,
+        "TESHMS": 0.99442,
+        "TEHMS": 0.99407,
+        "HCAL_EFF": 0.99064,
+        "PCAL_EFF": 0.95558,
+        "PAERO_EFF": 0.9459,
+        "TLT": 0.98113
+    },
+    "6439": {
+        "charge": 46.072,
+        "TESHMS": 0.99431,
+        "TEHMS": 0.99773,
+        "HCAL_EFF": 0.98936,
+        "PCAL_EFF": 0.94665,
+        "PAERO_EFF": 0.95329,
+        "TLT": 0.99331
+    },
+    "6440": {
+        "charge": 54.442,
+        "TESHMS": 0.99355,
+        "TEHMS": 0.99631,
+        "HCAL_EFF": 0.98819,
+        "PCAL_EFF": 0.95455,
+        "PAERO_EFF": 0.96969,
+        "TLT": 0.99366
+    },
+    "6441": {
+        "charge": 49.349,
+        "TESHMS": 0.99426,
+        "TEHMS": 0.99522,
+        "HCAL_EFF": 0.98795,
+        "PCAL_EFF": 0.95657,
+        "PAERO_EFF": 0.95757,
+        "TLT": 0.98995
+    },
+    "6442": {
+        "charge": 66.552,
+        "TESHMS": 0.9957,
+        "TEHMS": 0.99355,
+        "HCAL_EFF": 0.99694,
+        "PCAL_EFF": 0.94872,
+        "PAERO_EFF": 0.96086,
+        "TLT": 0.98846
+    },
+    "6443": {
+        "charge": 29.069,
+        "TESHMS": 0.99299,
+        "TEHMS": 0.99613,
+        "HCAL_EFF": 0.99007,
+        "PCAL_EFF": 0.95938,
+        "PAERO_EFF": 0.95623,
+        "TLT": 0.9846
+    },
+    "6444": {
+        "charge": 32.324,
+        "TESHMS": 0.99381,
+        "TEHMS": 0.99602,
+        "HCAL_EFF": 0.99238,
+        "PCAL_EFF": 0.94636,
+        "PAERO_EFF": 0.95811,
+        "TLT": 0.98446
+    },
+    "6445": {
+        "charge": 30.542,
+        "TESHMS": 0.993,
+        "TEHMS": 0.99557,
+        "HCAL_EFF": 0.99117,
+        "PCAL_EFF": 0.96029,
+        "PAERO_EFF": 0.95742,
+        "TLT": 0.98447
+    },
+    "6446": {
+        "charge": 27.733,
+        "TESHMS": 0.99352,
+        "TEHMS": 0.99767,
+        "HCAL_EFF": 0.99027,
+        "PCAL_EFF": 0.96343,
+        "PAERO_EFF": 0.95829,
+        "TLT": 0.98381
+    },
+    "6447": {
+        "charge": 28.031,
+        "TESHMS": 0.99351,
+        "TEHMS": 0.997,
+        "HCAL_EFF": 0.98919,
+        "PCAL_EFF": 0.95689,
+        "PAERO_EFF": 0.95933,
+        "TLT": 0.98289
+    },
+    "6448": {
+        "charge": 31.553,
+        "TESHMS": 0.99329,
+        "TEHMS": 0.99719,
+        "HCAL_EFF": 0.98998,
+        "PCAL_EFF": 0.95227,
+        "PAERO_EFF": 0.96032,
+        "TLT": 0.98501
+    },
+    "6451": {
+        "charge": 65.131,
+        "TESHMS": 0.99419,
+        "TEHMS": 0.99313,
+        "HCAL_EFF": 0.99661,
+        "PCAL_EFF": 0.94506,
+        "PAERO_EFF": 0.97507,
+        "TLT": 0.98259
+    },
+    "6452": {
+        "charge": 76.587,
+        "TESHMS": 0.99592,
+        "TEHMS": 0.99668,
+        "HCAL_EFF": 0.99779,
+        "PCAL_EFF": 0.94153,
+        "PAERO_EFF": 0.97608,
+        "TLT": 0.98286
+    },
+    "6453": {
+        "charge": 78.869,
+        "TESHMS": 0.9965,
+        "TEHMS": 0.99606,
+        "HCAL_EFF": 0.99741,
+        "PCAL_EFF": 0.94578,
+        "PAERO_EFF": 0.97396,
+        "TLT": 0.98256
+    },
+    "6454": {
+        "charge": 151.88,
+        "TESHMS": 0.99938,
+        "TEHMS": 0.99502,
+        "HCAL_EFF": 0.99863,
+        "PCAL_EFF": 0.95181,
+        "PAERO_EFF": 0.97583,
+        "TLT": 0.99764
+    },
+    "6455": {
+        "charge": 35.347,
+        "TESHMS": 1.0,
+        "TEHMS": 1.0,
+        "HCAL_EFF": 0.99098,
+        "PCAL_EFF": 0.94567,
+        "PAERO_EFF": 0.97719,
+        "TLT": 0.99749
+    },
+    "6456": {
+        "charge": 105.82,
+        "TESHMS": 0.99648,
+        "TEHMS": 0.99824,
+        "HCAL_EFF": 1.0007,
+        "PCAL_EFF": 0.94746,
+        "PAERO_EFF": 0.96617,
+        "TLT": 0.99656
+    },
+    "6459": {
+        "charge": 113.58,
+        "TESHMS": 0.99535,
+        "TEHMS": 0.995,
+        "HCAL_EFF": 0.99517,
+        "PCAL_EFF": 0.93991,
+        "PAERO_EFF": 0.97131,
+        "TLT": 0.97625
+    },
+    "6460": {
+        "charge": 10.082,
+        "TESHMS": 0.99505,
+        "TEHMS": 0.99405,
+        "HCAL_EFF": 0.98645,
+        "PCAL_EFF": 0.92536,
+        "PAERO_EFF": 0.95437,
+        "TLT": 0.97746
+    },
+    "6461": {
+        "charge": 120.58,
+        "TESHMS": 0.99538,
+        "TEHMS": 0.99521,
+        "HCAL_EFF": 0.99537,
+        "PCAL_EFF": 0.94616,
+        "PAERO_EFF": 0.97407,
+        "TLT": 0.97918
+    },
+    "6462": {
+        "charge": 108.7,
+        "TESHMS": 0.99567,
+        "TEHMS": 0.99587,
+        "HCAL_EFF": 0.99817,
+        "PCAL_EFF": 0.94713,
+        "PAERO_EFF": 0.97045,
+        "TLT": 0.98292
+    },
+    "6463": {
+        "charge": 13.03,
+        "TESHMS": 0.9952,
+        "TEHMS": 0.9952,
+        "HCAL_EFF": 0.99423,
+        "PCAL_EFF": 0.94535,
+        "PAERO_EFF": 0.97041,
+        "TLT": 0.98547
+    },
+    "6464": {
+        "charge": 93.646,
+        "TESHMS": 0.9957,
+        "TEHMS": 0.99496,
+        "HCAL_EFF": 0.99723,
+        "PCAL_EFF": 0.94827,
+        "PAERO_EFF": 0.97116,
+        "TLT": 0.98639
+    },
+    "6465": {
+        "charge": 115.32,
+        "TESHMS": 0.99355,
+        "TEHMS": 0.99513,
+        "HCAL_EFF": 0.9942,
+        "PCAL_EFF": 0.94674,
+        "PAERO_EFF": 0.97204,
+        "TLT": 0.97728
+    },
+    "6466": {
+        "charge": 97.803,
+        "TESHMS": 0.99355,
+        "TEHMS": 0.9963,
+        "HCAL_EFF": 0.99502,
+        "PCAL_EFF": 0.95235,
+        "PAERO_EFF": 0.97006,
+        "TLT": 0.9777
+    },
+    "6467": {
+        "charge": 73.015,
+        "TESHMS": 0.99438,
+        "TEHMS": 0.99449,
+        "HCAL_EFF": 0.99361,
+        "PCAL_EFF": 0.93866,
+        "PAERO_EFF": 0.97166,
+        "TLT": 0.97842
+    },
+    "6468": {
+        "charge": 63.406,
+        "TESHMS": 0.9988,
+        "TEHMS": 0.9964,
+        "HCAL_EFF": 0.99495,
+        "PCAL_EFF": 0.97147,
+        "PAERO_EFF": 0.97884,
+        "TLT": 0.99681
+    },
+    "6469": {
+        "charge": 17.644,
+        "TESHMS": 0.99546,
+        "TEHMS": 0.98636,
+        "HCAL_EFF": 1.0,
+        "PCAL_EFF": 0.95798,
+        "PAERO_EFF": 0.96343,
+        "TLT": 0.99655
+    },
+    "6470": {
+        "charge": 72.894,
+        "TESHMS": 0.99791,
+        "TEHMS": 0.99373,
+        "HCAL_EFF": 0.99742,
+        "PCAL_EFF": 0.93516,
+        "PAERO_EFF": 0.97927,
+        "TLT": 0.99574
+    },
+    "6471": {
+        "charge": 61.156,
+        "TESHMS": 0.99419,
+        "TEHMS": 0.99767,
+        "HCAL_EFF": 0.99648,
+        "PCAL_EFF": 0.96638,
+        "PAERO_EFF": 0.96719,
+        "TLT": 0.99423
+    },
+    "6472": {
+        "charge": 79.677,
+        "TESHMS": 0.99829,
+        "TEHMS": 0.99401,
+        "HCAL_EFF": 0.98412,
+        "PCAL_EFF": 0.94945,
+        "PAERO_EFF": 0.96769,
+        "TLT": 0.99438
+    },
+    "6473": {
+        "charge": 36.224,
+        "TESHMS": 0.99323,
+        "TEHMS": 0.99526,
+        "HCAL_EFF": 0.99701,
+        "PCAL_EFF": 0.94252,
+        "PAERO_EFF": 0.96868,
+        "TLT": 0.98108
+    },
+    "6474": {
+        "charge": 7.241,
+        "TESHMS": 0.99171,
+        "TEHMS": 0.99793,
+        "HCAL_EFF": 0.99007,
+        "PCAL_EFF": 0.93469,
+        "PAERO_EFF": 0.96336,
+        "TLT": 0.98072
+    },
+    "6475": {
+        "charge": 48.187,
+        "TESHMS": 0.99473,
+        "TEHMS": 0.99473,
+        "HCAL_EFF": 0.99871,
+        "PCAL_EFF": 0.9547,
+        "PAERO_EFF": 0.95895,
+        "TLT": 0.9815
+    },
+    "6476": {
+        "charge": 48.062,
+        "TESHMS": 0.9944,
+        "TEHMS": 0.99605,
+        "HCAL_EFF": 0.99572,
+        "PCAL_EFF": 0.94555,
+        "PAERO_EFF": 0.9645,
+        "TLT": 0.98279
+    },
+    "6477": {
+        "charge": 47.992,
+        "TESHMS": 0.99412,
+        "TEHMS": 0.9936,
+        "HCAL_EFF": 0.99504,
+        "PCAL_EFF": 0.95302,
+        "PAERO_EFF": 0.96923,
+        "TLT": 0.98244
+    },
+    "6478": {
+        "charge": 48.269,
+        "TESHMS": 0.99326,
+        "TEHMS": 0.99545,
+        "HCAL_EFF": 0.99578,
+        "PCAL_EFF": 0.93915,
+        "PAERO_EFF": 0.96635,
+        "TLT": 0.98098
+    },
+    "6479": {
+        "charge": 43.928,
+        "TESHMS": 0.99399,
+        "TEHMS": 0.99709,
+        "HCAL_EFF": 0.99022,
+        "PCAL_EFF": 0.94388,
+        "PAERO_EFF": 0.95513,
+        "TLT": 0.9815
+    },
+    "6486": {
+        "charge": 102.91,
+        "TESHMS": 0.99594,
+        "TEHMS": 0.99416,
+        "HCAL_EFF": 0.99572,
+        "PCAL_EFF": 0.95325,
+        "PAERO_EFF": 0.96479,
+        "TLT": 0.98669
+    },
+    "6487": {
+        "charge": 56.18,
+        "TESHMS": 0.99748,
+        "TEHMS": 0.99832,
+        "HCAL_EFF": 0.9946,
+        "PCAL_EFF": 0.96866,
+        "PAERO_EFF": 0.96318,
+        "TLT": 0.99863
+    },
+    "6488": {
+        "charge": 49.179,
+        "TESHMS": 0.99927,
+        "TEHMS": 0.99561,
+        "HCAL_EFF": 0.99384,
+        "PCAL_EFF": 0.95593,
+        "PAERO_EFF": 0.96198,
+        "TLT": 0.99761
+    },
+    "6489": {
+        "charge": 86.264,
+        "TESHMS": 0.99543,
+        "TEHMS": 0.99255,
+        "HCAL_EFF": 0.99223,
+        "PCAL_EFF": 0.94965,
+        "PAERO_EFF": 0.96094,
+        "TLT": 0.98544
+    },
+    "6490": {
+        "charge": 72.321,
+        "TESHMS": 0.99433,
+        "TEHMS": 0.99386,
+        "HCAL_EFF": 0.99179,
+        "PCAL_EFF": 0.94905,
+        "PAERO_EFF": 0.95927,
+        "TLT": 0.97943
+    },
+    "6491": {
+        "charge": 17.589,
+        "TESHMS": 0.99502,
+        "TEHMS": 0.99387,
+        "HCAL_EFF": 0.99525,
+        "PCAL_EFF": 0.94305,
+        "PAERO_EFF": 0.95462,
+        "TLT": 0.98321
+    },
+    "6493": {
+        "charge": 72.636,
+        "TESHMS": 0.99536,
+        "TEHMS": 0.99349,
+        "HCAL_EFF": 0.99099,
+        "PCAL_EFF": 0.95242,
+        "PAERO_EFF": 0.95421,
+        "TLT": 0.98021
+    },
+    "6494": {
+        "charge": 62.118,
+        "TESHMS": 0.9946,
+        "TEHMS": 0.9976,
+        "HCAL_EFF": 0.99304,
+        "PCAL_EFF": 0.96676,
+        "PAERO_EFF": 0.94932,
+        "TLT": 0.99654
+    },
+    "6495": {
+        "charge": 69.701,
+        "TESHMS": 0.99649,
+        "TEHMS": 0.99699,
+        "HCAL_EFF": 0.99777,
+        "PCAL_EFF": 0.95181,
+        "PAERO_EFF": 0.94342,
+        "TLT": 0.99516
+    },
+    "6496": {
+        "charge": 22.964,
+        "TESHMS": 0.99455,
+        "TEHMS": 0.99426,
+        "HCAL_EFF": 0.99045,
+        "PCAL_EFF": 0.94927,
+        "PAERO_EFF": 0.94103,
+        "TLT": 0.98264
+    },
+    "6497": {
+        "charge": 58.913,
+        "TESHMS": 0.99471,
+        "TEHMS": 0.99431,
+        "HCAL_EFF": 0.98965,
+        "PCAL_EFF": 0.95015,
+        "PAERO_EFF": 0.9379,
+        "TLT": 0.98238
+    },
+    "6498": {
+        "charge": 47.279,
+        "TESHMS": 0.99519,
+        "TEHMS": 0.9954,
+        "HCAL_EFF": 0.99027,
+        "PCAL_EFF": 0.95082,
+        "PAERO_EFF": 0.94114,
+        "TLT": 0.98329
+    },
+    "6499": {
+        "charge": 36.212,
+        "TESHMS": 0.99587,
+        "TEHMS": 0.99416,
+        "HCAL_EFF": 0.9909,
+        "PCAL_EFF": 0.9582,
+        "PAERO_EFF": 0.93524,
+        "TLT": 0.98409
+    },
+    "6500": {
+        "charge": 32.432,
+        "TESHMS": 0.99391,
+        "TEHMS": 0.99391,
+        "HCAL_EFF": 0.99218,
+        "PCAL_EFF": 0.95303,
+        "PAERO_EFF": 0.9513,
+        "TLT": 0.98097
+    },
+    "6501": {
+        "charge": 40.601,
+        "TESHMS": 0.99532,
+        "TEHMS": 0.9942,
+        "HCAL_EFF": 0.98955,
+        "PCAL_EFF": 0.95741,
+        "PAERO_EFF": 0.94111,
+        "TLT": 0.97692
+    },
+    "6502": {
+        "charge": 69.936,
+        "TESHMS": 0.99694,
+        "TEHMS": 0.99274,
+        "HCAL_EFF": 0.98911,
+        "PCAL_EFF": 0.96007,
+        "PAERO_EFF": 0.9571,
+        "TLT": 0.99741
+    },
+    "6503": {
+        "charge": 44.642,
+        "TESHMS": 0.9938,
+        "TEHMS": 0.99619,
+        "HCAL_EFF": 0.99396,
+        "PCAL_EFF": 0.9575,
+        "PAERO_EFF": 0.95281,
+        "TLT": 0.99608
+    },
+    "6504": {
+        "charge": 21.494,
+        "TESHMS": 0.99682,
+        "TEHMS": 0.99682,
+        "HCAL_EFF": 0.99079,
+        "PCAL_EFF": 0.96058,
+        "PAERO_EFF": 0.97447,
+        "TLT": 0.99563
+    },
+    "6506": {
+        "charge": 22.004,
+        "TESHMS": 0.99456,
+        "TEHMS": 0.99291,
+        "HCAL_EFF": 0.98943,
+        "PCAL_EFF": 0.9543,
+        "PAERO_EFF": 0.93759,
+        "TLT": 0.98102
+    },
+    "6507": {
+        "charge": 89.88,
+        "TESHMS": 0.99285,
+        "TEHMS": 0.99191,
+        "HCAL_EFF": 0.99,
+        "PCAL_EFF": 0.95644,
+        "PAERO_EFF": 0.93697,
+        "TLT": 0.97881
+    },
+    "6509": {
+        "charge": 43.061,
+        "TESHMS": 0.99415,
+        "TEHMS": 0.99621,
+        "HCAL_EFF": 0.98834,
+        "PCAL_EFF": 0.95579,
+        "PAERO_EFF": 0.95619,
+        "TLT": 0.98289
+    },
+    "6510": {
+        "charge": 28.724,
+        "TESHMS": 0.99547,
+        "TEHMS": 0.99304,
+        "HCAL_EFF": 0.98706,
+        "PCAL_EFF": 0.95625,
+        "PAERO_EFF": 0.94873,
+        "TLT": 0.98517
+    },
+    "6512": {
+        "charge": 43.249,
+        "TESHMS": 0.99262,
+        "TEHMS": 0.99368,
+        "HCAL_EFF": 0.99457,
+        "PCAL_EFF": 0.96548,
+        "PAERO_EFF": 0.9565,
+        "TLT": 0.99372
+    },
+    "6513": {
+        "charge": 42.025,
+        "TESHMS": 0.99525,
+        "TEHMS": 0.99209,
+        "HCAL_EFF": 0.98562,
+        "PCAL_EFF": 0.97104,
+        "PAERO_EFF": 0.92809,
+        "TLT": 0.99505
+    },
+    "6514": {
+        "charge": 15.866,
+        "TESHMS": 0.99387,
+        "TEHMS": 0.99308,
+        "HCAL_EFF": 0.98329,
+        "PCAL_EFF": 0.9633,
+        "PAERO_EFF": 0.9305,
+        "TLT": 0.98498
+    },
+    "6515": {
+        "charge": 30.378,
+        "TESHMS": 0.99417,
+        "TEHMS": 0.99448,
+        "HCAL_EFF": 0.98828,
+        "PCAL_EFF": 0.95737,
+        "PAERO_EFF": 0.9227,
+        "TLT": 0.98275
+    },
+    "6516": {
+        "charge": 11.702,
+        "TESHMS": 0.99372,
+        "TEHMS": 0.99618,
+        "HCAL_EFF": 0.98715,
+        "PCAL_EFF": 0.96093,
+        "PAERO_EFF": 0.93419,
+        "TLT": 0.98333
+    },
+    "6517": {
+        "charge": 30.556,
+        "TESHMS": 0.99378,
+        "TEHMS": 0.99559,
+        "HCAL_EFF": 0.98613,
+        "PCAL_EFF": 0.95077,
+        "PAERO_EFF": 0.92661,
+        "TLT": 0.98273
+    },
+    "6518": {
+        "charge": 24.947,
+        "TESHMS": 0.99519,
+        "TEHMS": 0.99519,
+        "HCAL_EFF": 0.99488,
+        "PCAL_EFF": 0.94809,
+        "PAERO_EFF": 0.96146,
+        "TLT": 0.97688
+    },
+    "6519": {
+        "charge": 121.2,
+        "TESHMS": 0.99453,
+        "TEHMS": 0.99518,
+        "HCAL_EFF": 0.99725,
+        "PCAL_EFF": 0.95465,
+        "PAERO_EFF": 0.96168,
+        "TLT": 0.97362
+    },
+    "6520": {
+        "charge": 51.32,
+        "TESHMS": 0.99255,
+        "TEHMS": 0.99425,
+        "HCAL_EFF": 0.99794,
+        "PCAL_EFF": 0.95325,
+        "PAERO_EFF": 0.95773,
+        "TLT": 0.97372
+    },
+    "6521": {
+        "charge": 101.77,
+        "TESHMS": 0.99924,
+        "TEHMS": 0.99618,
+        "HCAL_EFF": 0.99885,
+        "PCAL_EFF": 0.96743,
+        "PAERO_EFF": 0.96288,
+        "TLT": 0.99703
+    },
+    "6522": {
+        "charge": 85.673,
+        "TESHMS": 0.99829,
+        "TEHMS": 1.0,
+        "HCAL_EFF": 0.99724,
+        "PCAL_EFF": 0.95972,
+        "PAERO_EFF": 0.97463,
+        "TLT": 0.99724
+    },
+    "6523": {
+        "charge": 107.81,
+        "TESHMS": 0.99617,
+        "TEHMS": 0.99362,
+        "HCAL_EFF": 0.99836,
+        "PCAL_EFF": 0.94144,
+        "PAERO_EFF": 0.98635,
+        "TLT": 0.99756
+    },
+    "6524": {
+        "charge": 145.03,
+        "TESHMS": 0.99477,
+        "TEHMS": 0.99552,
+        "HCAL_EFF": 0.99647,
+        "PCAL_EFF": 0.93615,
+        "PAERO_EFF": 0.97314,
+        "TLT": 0.97855
+    },
+    "6525": {
+        "charge": 118.54,
+        "TESHMS": 0.99643,
+        "TEHMS": 0.99426,
+        "HCAL_EFF": 0.99639,
+        "PCAL_EFF": 0.9411,
+        "PAERO_EFF": 0.9724,
+        "TLT": 0.97755
+    },
+    "6526": {
+        "charge": 101.2,
+        "TESHMS": 0.99503,
+        "TEHMS": 0.99343,
+        "HCAL_EFF": 0.99505,
+        "PCAL_EFF": 0.94664,
+        "PAERO_EFF": 0.97024,
+        "TLT": 0.97865
+    },
+    "6527": {
+        "charge": 77.684,
+        "TESHMS": 0.99397,
+        "TEHMS": 0.99416,
+        "HCAL_EFF": 0.99787,
+        "PCAL_EFF": 0.94625,
+        "PAERO_EFF": 0.97427,
+        "TLT": 0.9729
+    },
+    "6528": {
+        "charge": 184.74,
+        "TESHMS": 0.994,
+        "TEHMS": 0.99535,
+        "HCAL_EFF": 0.99505,
+        "PCAL_EFF": 0.93504,
+        "PAERO_EFF": 0.97384,
+        "TLT": 0.97315
+    },
+    "6529": {
+        "charge": 128.74,
+        "TESHMS": 0.99413,
+        "TEHMS": 0.99365,
+        "HCAL_EFF": 0.99674,
+        "PCAL_EFF": 0.93872,
+        "PAERO_EFF": 0.97306,
+        "TLT": 0.97339
+    },
+    "6531": {
+        "charge": 127.16,
+        "TESHMS": 0.99601,
+        "TEHMS": 0.99601,
+        "HCAL_EFF": 0.99894,
+        "PCAL_EFF": 0.96167,
+        "PAERO_EFF": 0.97865,
+        "TLT": 0.9971
+    },
+    "6532": {
+        "charge": 57.688,
+        "TESHMS": 1.0,
+        "TEHMS": 0.99105,
+        "HCAL_EFF": 0.99614,
+        "PCAL_EFF": 0.94169,
+        "PAERO_EFF": 0.97561,
+        "TLT": 0.99692
+    },
+    "6533": {
+        "charge": 66.315,
+        "TESHMS": 0.99544,
+        "TEHMS": 0.99658,
+        "HCAL_EFF": 0.99886,
+        "PCAL_EFF": 0.95492,
+        "PAERO_EFF": 0.97278,
+        "TLT": 0.9946
+    },
+    "6534": {
+        "charge": 45.667,
+        "TESHMS": 0.99822,
+        "TEHMS": 0.99645,
+        "HCAL_EFF": 0.99787,
+        "PCAL_EFF": 0.97042,
+        "PAERO_EFF": 0.99037,
+        "TLT": 0.99515
+    },
+    "6535": {
+        "charge": 110.41,
+        "TESHMS": 0.99361,
+        "TEHMS": 0.99555,
+        "HCAL_EFF": 0.99587,
+        "PCAL_EFF": 0.95889,
+        "PAERO_EFF": 0.96519,
+        "TLT": 0.97893
+    },
+    "6536": {
+        "charge": 99.828,
+        "TESHMS": 0.99458,
+        "TEHMS": 0.99491,
+        "HCAL_EFF": 0.99403,
+        "PCAL_EFF": 0.954,
+        "PAERO_EFF": 0.96848,
+        "TLT": 0.97621
+    },
+    "6537": {
+        "charge": 61.179,
+        "TESHMS": 0.99553,
+        "TEHMS": 0.9942,
+        "HCAL_EFF": 0.98917,
+        "PCAL_EFF": 0.95598,
+        "PAERO_EFF": 0.9628,
+        "TLT": 0.97533
+    },
+    "6538": {
+        "charge": 35.892,
+        "TESHMS": 0.99629,
+        "TEHMS": 0.99444,
+        "HCAL_EFF": 0.99262,
+        "PCAL_EFF": 0.95574,
+        "PAERO_EFF": 0.96259,
+        "TLT": 0.99662
+    },
+    "6539": {
+        "charge": 35.237,
+        "TESHMS": 0.99554,
+        "TEHMS": 0.99809,
+        "HCAL_EFF": 0.99166,
+        "PCAL_EFF": 0.9438,
+        "PAERO_EFF": 0.9582,
+        "TLT": 0.99414
+    },
+    "6541": {
+        "charge": 55.14,
+        "TESHMS": 0.99533,
+        "TEHMS": 0.99597,
+        "HCAL_EFF": 0.98782,
+        "PCAL_EFF": 0.95956,
+        "PAERO_EFF": 0.96448,
+        "TLT": 0.97957
+    },
+    "6542": {
+        "charge": 30.206,
+        "TESHMS": 0.9925,
+        "TEHMS": 0.99532,
+        "HCAL_EFF": 0.98476,
+        "PCAL_EFF": 0.95563,
+        "PAERO_EFF": 0.96573,
+        "TLT": 0.98132
+    },
+    "6543": {
+        "charge": 43.548,
+        "TESHMS": 0.9946,
+        "TEHMS": 0.99576,
+        "HCAL_EFF": 0.98764,
+        "PCAL_EFF": 0.96207,
+        "PAERO_EFF": 0.95846,
+        "TLT": 0.98337
+    },
+    "6544": {
+        "charge": 45.271,
+        "TESHMS": 0.99716,
+        "TEHMS": 0.99716,
+        "HCAL_EFF": 0.98946,
+        "PCAL_EFF": 0.95717,
+        "PAERO_EFF": 0.94474,
+        "TLT": 0.99007
+    },
+    "6545": {
+        "charge": 108.47,
+        "TESHMS": 0.99463,
+        "TEHMS": 0.99444,
+        "HCAL_EFF": 0.99461,
+        "PCAL_EFF": 0.9363,
+        "PAERO_EFF": 0.97534,
+        "TLT": 0.97479
+    },
+    "6546": {
+        "charge": 50.669,
+        "TESHMS": 0.99787,
+        "TEHMS": 0.99787,
+        "HCAL_EFF": 0.99691,
+        "PCAL_EFF": 0.94787,
+        "PAERO_EFF": 0.98162,
+        "TLT": 0.99715
+    },
+    "6547": {
+        "charge": 53.21,
+        "TESHMS": 0.9967,
+        "TEHMS": 0.99802,
+        "HCAL_EFF": 0.99629,
+        "PCAL_EFF": 0.93816,
+        "PAERO_EFF": 0.9735,
+        "TLT": 0.99669
+    },
+    "6548": {
+        "charge": 45.212,
+        "TESHMS": 0.99551,
+        "TEHMS": 0.99419,
+        "HCAL_EFF": 0.99368,
+        "PCAL_EFF": 0.94536,
+        "PAERO_EFF": 0.973,
+        "TLT": 0.97428
+    },
+    "6549": {
+        "charge": 61.934,
+        "TESHMS": 0.99481,
+        "TEHMS": 0.99381,
+        "HCAL_EFF": 0.99287,
+        "PCAL_EFF": 0.94754,
+        "PAERO_EFF": 0.96967,
+        "TLT": 0.97461
+    },
+    "6550": {
+        "charge": 62.466,
+        "TESHMS": 0.99379,
+        "TEHMS": 0.99582,
+        "HCAL_EFF": 0.99325,
+        "PCAL_EFF": 0.94766,
+        "PAERO_EFF": 0.97124,
+        "TLT": 0.98038
+    },
+    "6551": {
+        "charge": 56.455,
+        "TESHMS": 0.99404,
+        "TEHMS": 0.99492,
+        "HCAL_EFF": 0.99369,
+        "PCAL_EFF": 0.94693,
+        "PAERO_EFF": 0.96911,
+        "TLT": 0.97881
+    },
+    "6552": {
+        "charge": 66.676,
+        "TESHMS": 0.99825,
+        "TEHMS": 0.9952,
+        "HCAL_EFF": 0.99774,
+        "PCAL_EFF": 0.95795,
+        "PAERO_EFF": 0.96812,
+        "TLT": 0.99529
+    },
+    "7593": {
+        "charge": 81.447,
+        "TESHMS": 0.99225,
+        "TEHMS": 0.99472,
+        "HCAL_EFF": 0.99487,
+        "PCAL_EFF": 0.9436,
+        "PAERO_EFF": 0.97065,
+        "TLT": 0.99244
+    },
+    "7594": {
+        "charge": 184.02,
+        "TESHMS": 0.99155,
+        "TEHMS": 0.99608,
+        "HCAL_EFF": 0.9966,
+        "PCAL_EFF": 0.9428,
+        "PAERO_EFF": 0.9757,
+        "TLT": 0.992
+    },
+    "7595": {
+        "charge": 100.63,
+        "TESHMS": 0.99395,
+        "TEHMS": 0.99625,
+        "HCAL_EFF": 0.99808,
+        "PCAL_EFF": 0.94635,
+        "PAERO_EFF": 0.97047,
+        "TLT": 0.99243
+    },
+    "7596": {
+        "charge": 53.861,
+        "TESHMS": 0.99157,
+        "TEHMS": 0.9942,
+        "HCAL_EFF": 0.99855,
+        "PCAL_EFF": 0.95846,
+        "PAERO_EFF": 0.96947,
+        "TLT": 0.99244
+    },
+    "7597": {
+        "charge": 127.1,
+        "TESHMS": 0.9913,
+        "TEHMS": 0.99435,
+        "HCAL_EFF": 0.99715,
+        "PCAL_EFF": 0.94962,
+        "PAERO_EFF": 0.9775,
+        "TLT": 0.99153
+    },
+    "7599": {
+        "charge": 5.993,
+        "TESHMS": 1.0,
+        "TEHMS": 1.0,
+        "HCAL_EFF": 1.0,
+        "PCAL_EFF": 0.89937,
+        "PAERO_EFF": 1.0,
+        "TLT": 0.99933
+    },
+    "7600": {
+        "charge": 17.492,
+        "TESHMS": 0.98462,
+        "TEHMS": 1.0,
+        "HCAL_EFF": 1.0,
+        "PCAL_EFF": 0.92702,
+        "PAERO_EFF": 0.98136,
+        "TLT": 0.99719
+    },
+    "7601": {
+        "charge": 34.221,
+        "TESHMS": 0.99167,
+        "TEHMS": 1.0,
+        "HCAL_EFF": 1.0,
+        "PCAL_EFF": 0.96522,
+        "PAERO_EFF": 0.95499,
+        "TLT": 0.99917
+    },
+    "7602": {
+        "charge": 101.84,
+        "TESHMS": 0.99541,
+        "TEHMS": 0.99312,
+        "HCAL_EFF": 0.99339,
+        "PCAL_EFF": 0.94868,
+        "PAERO_EFF": 0.9888,
+        "TLT": 0.99866
+    },
+    "7603": {
+        "charge": 112.57,
+        "TESHMS": 0.99383,
+        "TEHMS": 0.98971,
+        "HCAL_EFF": 0.99132,
+        "PCAL_EFF": 0.9737,
+        "PAERO_EFF": 0.98571,
+        "TLT": 0.99913
+    },
+    "7604": {
+        "charge": 49.7,
+        "TESHMS": 1.0,
+        "TEHMS": 0.99065,
+        "HCAL_EFF": 0.99272,
+        "PCAL_EFF": 0.95074,
+        "PAERO_EFF": 0.96631,
+        "TLT": 0.99787
+    },
+    "7605": {
+        "charge": 134.63,
+        "TESHMS": 0.9921,
+        "TEHMS": 0.99368,
+        "HCAL_EFF": 0.99258,
+        "PCAL_EFF": 0.96863,
+        "PAERO_EFF": 0.9706,
+        "TLT": 0.99802
+    },
+    "7606": {
+        "charge": 117.03,
+        "TESHMS": 0.99425,
+        "TEHMS": 0.99042,
+        "HCAL_EFF": 1.0,
+        "PCAL_EFF": 0.94147,
+        "PAERO_EFF": 0.98163,
+        "TLT": 0.99876
+    },
+    "7607": {
+        "charge": 47.099,
+        "TESHMS": 1.0,
+        "TEHMS": 1.0,
+        "HCAL_EFF": 1.0017,
+        "PCAL_EFF": 0.94459,
+        "PAERO_EFF": 0.97343,
+        "TLT": 0.99862
+    },
+    "7608": {
+        "charge": 178.11,
+        "TESHMS": 0.98559,
+        "TEHMS": 0.9948,
+        "HCAL_EFF": 0.99625,
+        "PCAL_EFF": 0.94154,
+        "PAERO_EFF": 0.97259,
+        "TLT": 0.98945
+    },
+    "7609": {
+        "charge": 179.99,
+        "TESHMS": 0.98715,
+        "TEHMS": 0.99698,
+        "HCAL_EFF": 0.99687,
+        "PCAL_EFF": 0.94362,
+        "PAERO_EFF": 0.96923,
+        "TLT": 0.99024
+    },
+    "7610": {
+        "charge": 111.04,
+        "TESHMS": 0.98798,
+        "TEHMS": 0.99629,
+        "HCAL_EFF": 0.99544,
+        "PCAL_EFF": 0.94353,
+        "PAERO_EFF": 0.96901,
+        "TLT": 0.99044
+    },
+    "7611": {
+        "charge": 157.75,
+        "TESHMS": 0.98002,
+        "TEHMS": 0.99546,
+        "HCAL_EFF": 0.99531,
+        "PCAL_EFF": 0.91893,
+        "PAERO_EFF": 0.96234,
+        "TLT": 0.9844
+    },
+    "7612": {
+        "charge": 127.87,
+        "TESHMS": 0.98107,
+        "TEHMS": 0.99438,
+        "HCAL_EFF": 0.99475,
+        "PCAL_EFF": 0.92245,
+        "PAERO_EFF": 0.95958,
+        "TLT": 0.98478
+    },
+    "7613": {
+        "charge": 168.33,
+        "TESHMS": 0.97859,
+        "TEHMS": 0.99617,
+        "HCAL_EFF": 0.99397,
+        "PCAL_EFF": 0.91747,
+        "PAERO_EFF": 0.95548,
+        "TLT": 0.98387
+    },
+    "7614": {
+        "charge": 165.42,
+        "TESHMS": 0.97957,
+        "TEHMS": 0.99492,
+        "HCAL_EFF": 0.99773,
+        "PCAL_EFF": 0.90941,
+        "PAERO_EFF": 0.96434,
+        "TLT": 0.98377
+    },
+    "7615": {
+        "charge": 172.87,
+        "TESHMS": 0.98011,
+        "TEHMS": 0.99519,
+        "HCAL_EFF": 0.99587,
+        "PCAL_EFF": 0.91545,
+        "PAERO_EFF": 0.96311,
+        "TLT": 0.98256
+    },
+    "7616": {
+        "charge": 55.604,
+        "TESHMS": 0.97891,
+        "TEHMS": 0.99864,
+        "HCAL_EFF": 0.98994,
+        "PCAL_EFF": 0.90034,
+        "PAERO_EFF": 0.96061,
+        "TLT": 0.98161
+    },
+    "7617": {
+        "charge": 138.28,
+        "TESHMS": 0.99573,
+        "TEHMS": 0.99716,
+        "HCAL_EFF": 0.99617,
+        "PCAL_EFF": 0.95269,
+        "PAERO_EFF": 0.96464,
+        "TLT": 0.99782
+    },
+    "7618": {
+        "charge": 150.49,
+        "TESHMS": 0.9935,
+        "TEHMS": 0.9974,
+        "HCAL_EFF": 0.98923,
+        "PCAL_EFF": 0.9461,
+        "PAERO_EFF": 0.96283,
+        "TLT": 0.99737
+    },
+    "7619": {
+        "charge": 105.88,
+        "TESHMS": 0.9946,
+        "TEHMS": 0.98921,
+        "HCAL_EFF": 0.99797,
+        "PCAL_EFF": 0.96331,
+        "PAERO_EFF": 0.9545,
+        "TLT": 0.99783
+    },
+    "7620": {
+        "charge": 55.837,
+        "TESHMS": 0.98997,
+        "TEHMS": 0.99666,
+        "HCAL_EFF": 0.98598,
+        "PCAL_EFF": 0.93171,
+        "PAERO_EFF": 0.93641,
+        "TLT": 0.9971
+    },
+    "7621": {
+        "charge": 38.931,
+        "TESHMS": 0.99119,
+        "TEHMS": 1.0,
+        "HCAL_EFF": 1.0019,
+        "PCAL_EFF": 0.94401,
+        "PAERO_EFF": 0.97812,
+        "TLT": 0.99647
+    },
+    "7622": {
+        "charge": 140.23,
+        "TESHMS": 0.99611,
+        "TEHMS": 0.99482,
+        "HCAL_EFF": 0.99934,
+        "PCAL_EFF": 0.93977,
+        "PAERO_EFF": 0.93328,
+        "TLT": 0.99643
+    },
+    "7623": {
+        "charge": 140.85,
+        "TESHMS": 0.99243,
+        "TEHMS": 1.0,
+        "HCAL_EFF": 0.99695,
+        "PCAL_EFF": 0.9464,
+        "PAERO_EFF": 0.94765,
+        "TLT": 0.99675
+    },
+    "7625": {
+        "charge": 106.7,
+        "TESHMS": 0.9775,
+        "TEHMS": 0.99661,
+        "HCAL_EFF": 0.99195,
+        "PCAL_EFF": 0.88442,
+        "PAERO_EFF": 0.95225,
+        "TLT": 0.98103
+    },
+    "7626": {
+        "charge": 115.8,
+        "TESHMS": 0.97197,
+        "TEHMS": 0.99517,
+        "HCAL_EFF": 0.99551,
+        "PCAL_EFF": 0.88559,
+        "PAERO_EFF": 0.95,
+        "TLT": 0.98083
+    },
+    "7627": {
+        "charge": 87.104,
+        "TESHMS": 0.97146,
+        "TEHMS": 0.99467,
+        "HCAL_EFF": 0.99673,
+        "PCAL_EFF": 0.88347,
+        "PAERO_EFF": 0.95557,
+        "TLT": 0.98066
+    },
+    "7628": {
+        "charge": 102.55,
+        "TESHMS": 0.97438,
+        "TEHMS": 0.99533,
+        "HCAL_EFF": 0.99403,
+        "PCAL_EFF": 0.88579,
+        "PAERO_EFF": 0.95398,
+        "TLT": 0.98006
+    },
+    "7629": {
+        "charge": 96.645,
+        "TESHMS": 0.96903,
+        "TEHMS": 0.99548,
+        "HCAL_EFF": 0.99096,
+        "PCAL_EFF": 0.87956,
+        "PAERO_EFF": 0.95916,
+        "TLT": 0.98129
+    },
+    "7630": {
+        "charge": 108.35,
+        "TESHMS": 0.96961,
+        "TEHMS": 0.99488,
+        "HCAL_EFF": 0.99577,
+        "PCAL_EFF": 0.87712,
+        "PAERO_EFF": 0.95265,
+        "TLT": 0.97971
+    },
+    "7631": {
+        "charge": 112.59,
+        "TESHMS": 0.97298,
+        "TEHMS": 0.99465,
+        "HCAL_EFF": 0.9937,
+        "PCAL_EFF": 0.88562,
+        "PAERO_EFF": 0.95037,
+        "TLT": 0.97989
+    },
+    "7632": {
+        "charge": 114.64,
+        "TESHMS": 0.97263,
+        "TEHMS": 0.9953,
+        "HCAL_EFF": 0.99433,
+        "PCAL_EFF": 0.88034,
+        "PAERO_EFF": 0.96419,
+        "TLT": 0.97933
+    },
+    "7633": {
+        "charge": 105.81,
+        "TESHMS": 0.97408,
+        "TEHMS": 0.99445,
+        "HCAL_EFF": 0.99042,
+        "PCAL_EFF": 0.8739,
+        "PAERO_EFF": 0.95622,
+        "TLT": 0.98106
+    },
+    "7634": {
+        "charge": 119.93,
+        "TESHMS": 0.97147,
+        "TEHMS": 0.99525,
+        "HCAL_EFF": 0.99477,
+        "PCAL_EFF": 0.88279,
+        "PAERO_EFF": 0.9503,
+        "TLT": 0.9797
+    },
+    "7635": {
+        "charge": 79.311,
+        "TESHMS": 0.99236,
+        "TEHMS": 0.99553,
+        "HCAL_EFF": 0.99839,
+        "PCAL_EFF": 0.95639,
+        "PAERO_EFF": 0.96673,
+        "TLT": 0.99389
+    },
+    "7636": {
+        "charge": 88.157,
+        "TESHMS": 0.99295,
+        "TEHMS": 0.99698,
+        "HCAL_EFF": 0.99638,
+        "PCAL_EFF": 0.95525,
+        "PAERO_EFF": 0.96484,
+        "TLT": 0.99417
+    },
+    "7637": {
+        "charge": 29.256,
+        "TESHMS": 0.9953,
+        "TEHMS": 0.99635,
+        "HCAL_EFF": 0.99131,
+        "PCAL_EFF": 0.95584,
+        "PAERO_EFF": 0.95797,
+        "TLT": 0.99428
+    },
+    "7638": {
+        "charge": 100.7,
+        "TESHMS": 0.99644,
+        "TEHMS": 0.99881,
+        "HCAL_EFF": 0.99453,
+        "PCAL_EFF": 0.96156,
+        "PAERO_EFF": 0.96652,
+        "TLT": 0.99819
+    },
+    "7639": {
+        "charge": 34.747,
+        "TESHMS": 1.0,
+        "TEHMS": 0.99644,
+        "HCAL_EFF": 1.0,
+        "PCAL_EFF": 0.94981,
+        "PAERO_EFF": 0.9711,
+        "TLT": 0.99803
+    },
+    "7640": {
+        "charge": 52.142,
+        "TESHMS": 0.99314,
+        "TEHMS": 0.99771,
+        "HCAL_EFF": 0.99705,
+        "PCAL_EFF": 0.95547,
+        "PAERO_EFF": 0.96734,
+        "TLT": 0.99706
+    },
+    "7641": {
+        "charge": 102.28,
+        "TESHMS": 0.99515,
+        "TEHMS": 0.99636,
+        "HCAL_EFF": 0.99619,
+        "PCAL_EFF": 0.96528,
+        "PAERO_EFF": 0.95152,
+        "TLT": 0.99719
+    },
+    "7642": {
+        "charge": 78.487,
+        "TESHMS": 0.98761,
+        "TEHMS": 0.99419,
+        "HCAL_EFF": 0.99569,
+        "PCAL_EFF": 0.95198,
+        "PAERO_EFF": 0.96382,
+        "TLT": 0.99159
+    },
+    "7643": {
+        "charge": 68.494,
+        "TESHMS": 0.98793,
+        "TEHMS": 0.99627,
+        "HCAL_EFF": 0.99254,
+        "PCAL_EFF": 0.94298,
+        "PAERO_EFF": 0.95342,
+        "TLT": 0.99213
+    },
+    "7644": {
+        "charge": 79.823,
+        "TESHMS": 0.98609,
+        "TEHMS": 0.99518,
+        "HCAL_EFF": 0.99466,
+        "PCAL_EFF": 0.94955,
+        "PAERO_EFF": 0.95336,
+        "TLT": 0.99231
+    },
+    "7645": {
+        "charge": 34.961,
+        "TESHMS": 0.98684,
+        "TEHMS": 0.9966,
+        "HCAL_EFF": 0.99768,
+        "PCAL_EFF": 0.93957,
+        "PAERO_EFF": 0.95213,
+        "TLT": 0.99149
+    },
+    "7646": {
+        "charge": 63.15,
+        "TESHMS": 0.98273,
+        "TEHMS": 0.99489,
+        "HCAL_EFF": 0.9946,
+        "PCAL_EFF": 0.93525,
+        "PAERO_EFF": 0.9578,
+        "TLT": 0.98542
+    },
+    "7647": {
+        "charge": 65.794,
+        "TESHMS": 0.98268,
+        "TEHMS": 0.99423,
+        "HCAL_EFF": 0.99359,
+        "PCAL_EFF": 0.93289,
+        "PAERO_EFF": 0.95885,
+        "TLT": 0.9876
+    },
+    "7648": {
+        "charge": 70.269,
+        "TESHMS": 0.98318,
+        "TEHMS": 0.99396,
+        "HCAL_EFF": 0.99211,
+        "PCAL_EFF": 0.92037,
+        "PAERO_EFF": 0.9528,
+        "TLT": 0.98785
+    },
+    "7649": {
+        "charge": 64.937,
+        "TESHMS": 0.98155,
+        "TEHMS": 0.99626,
+        "HCAL_EFF": 0.99284,
+        "PCAL_EFF": 0.93851,
+        "PAERO_EFF": 0.95295,
+        "TLT": 0.98658
+    },
+    "7650": {
+        "charge": 68.653,
+        "TESHMS": 0.98068,
+        "TEHMS": 0.99349,
+        "HCAL_EFF": 0.99147,
+        "PCAL_EFF": 0.9215,
+        "PAERO_EFF": 0.95349,
+        "TLT": 0.98691
+    },
+    "7651": {
+        "charge": 76.174,
+        "TESHMS": 0.97911,
+        "TEHMS": 0.99578,
+        "HCAL_EFF": 0.99167,
+        "PCAL_EFF": 0.91584,
+        "PAERO_EFF": 0.95754,
+        "TLT": 0.98517
+    },
+    "7652": {
+        "charge": 78.588,
+        "TESHMS": 0.97591,
+        "TEHMS": 0.99398,
+        "HCAL_EFF": 0.9912,
+        "PCAL_EFF": 0.93019,
+        "PAERO_EFF": 0.95711,
+        "TLT": 0.98361
+    },
+    "7654": {
+        "charge": 128.18,
+        "TESHMS": 0.98859,
+        "TEHMS": 0.9943,
+        "HCAL_EFF": 0.99732,
+        "PCAL_EFF": 0.95678,
+        "PAERO_EFF": 0.96633,
+        "TLT": 0.99534
+    },
+    "7655": {
+        "charge": 112.24,
+        "TESHMS": 0.99339,
+        "TEHMS": 0.9989,
+        "HCAL_EFF": 0.99618,
+        "PCAL_EFF": 0.96723,
+        "PAERO_EFF": 0.96185,
+        "TLT": 0.99526
+    },
+    "7657": {
+        "charge": 124.27,
+        "TESHMS": 0.98829,
+        "TEHMS": 0.99468,
+        "HCAL_EFF": 0.99059,
+        "PCAL_EFF": 0.93752,
+        "PAERO_EFF": 0.94754,
+        "TLT": 0.99182
+    },
+    "7658": {
+        "charge": 125.92,
+        "TESHMS": 0.98789,
+        "TEHMS": 0.99697,
+        "HCAL_EFF": 0.99449,
+        "PCAL_EFF": 0.95479,
+        "PAERO_EFF": 0.94873,
+        "TLT": 0.99166
+    },
+    "7659": {
+        "charge": 28.806,
+        "TESHMS": 0.98696,
+        "TEHMS": 0.9913,
+        "HCAL_EFF": 1.0,
+        "PCAL_EFF": 0.93353,
+        "PAERO_EFF": 0.92131,
+        "TLT": 0.99408
+    },
+    "7660": {
+        "charge": 59.055,
+        "TESHMS": 0.98024,
+        "TEHMS": 0.9921,
+        "HCAL_EFF": 0.98869,
+        "PCAL_EFF": 0.93506,
+        "PAERO_EFF": 0.93025,
+        "TLT": 0.99097
+    },
+    "7661": {
+        "charge": 47.813,
+        "TESHMS": 0.97631,
+        "TEHMS": 0.99552,
+        "HCAL_EFF": 0.99206,
+        "PCAL_EFF": 0.9006,
+        "PAERO_EFF": 0.93522,
+        "TLT": 0.98197
+    },
+    "7662": {
+        "charge": 46.796,
+        "TESHMS": 0.97654,
+        "TEHMS": 0.99538,
+        "HCAL_EFF": 0.98728,
+        "PCAL_EFF": 0.90179,
+        "PAERO_EFF": 0.93409,
+        "TLT": 0.98503
+    },
+    "7663": {
+        "charge": 49.425,
+        "TESHMS": 0.96891,
+        "TEHMS": 0.99588,
+        "HCAL_EFF": 0.99247,
+        "PCAL_EFF": 0.89982,
+        "PAERO_EFF": 0.93462,
+        "TLT": 0.98378
+    },
+    "7666": {
+        "charge": 19.096,
+        "TESHMS": 0.97661,
+        "TEHMS": 0.99415,
+        "HCAL_EFF": 0.9926,
+        "PCAL_EFF": 0.91939,
+        "PAERO_EFF": 0.95539,
+        "TLT": 0.98415
+    },
+    "7667": {
+        "charge": 26.966,
+        "TESHMS": 0.97494,
+        "TEHMS": 0.99702,
+        "HCAL_EFF": 0.99293,
+        "PCAL_EFF": 0.92888,
+        "PAERO_EFF": 0.94916,
+        "TLT": 0.98295
+    },
+    "7668": {
+        "charge": 45.017,
+        "TESHMS": 0.97342,
+        "TEHMS": 0.99497,
+        "HCAL_EFF": 0.99471,
+        "PCAL_EFF": 0.91084,
+        "PAERO_EFF": 0.93207,
+        "TLT": 0.98529
+    },
+    "7669": {
+        "charge": 45.867,
+        "TESHMS": 0.97626,
+        "TEHMS": 0.99671,
+        "HCAL_EFF": 0.98476,
+        "PCAL_EFF": 0.89438,
+        "PAERO_EFF": 0.93529,
+        "TLT": 0.98404
+    },
+    "7670": {
+        "charge": 42.694,
+        "TESHMS": 0.97887,
+        "TEHMS": 0.99741,
+        "HCAL_EFF": 0.99064,
+        "PCAL_EFF": 0.9018,
+        "PAERO_EFF": 0.93184,
+        "TLT": 0.9842
+    },
+    "7671": {
+        "charge": 151.13,
+        "TESHMS": 0.9715,
+        "TEHMS": 0.99603,
+        "HCAL_EFF": 0.99784,
+        "PCAL_EFF": 0.90615,
+        "PAERO_EFF": 0.97111,
+        "TLT": 0.97709
+    },
+    "7672": {
+        "charge": 177.39,
+        "TESHMS": 0.97156,
+        "TEHMS": 0.9963,
+        "HCAL_EFF": 0.99741,
+        "PCAL_EFF": 0.89716,
+        "PAERO_EFF": 0.97329,
+        "TLT": 0.97628
+    },
+    "7673": {
+        "charge": 128.89,
+        "TESHMS": 0.9977,
+        "TEHMS": 0.99885,
+        "HCAL_EFF": 1.0004,
+        "PCAL_EFF": 0.95163,
+        "PAERO_EFF": 0.9732,
+        "TLT": 0.99647
+    },
+    "7674": {
+        "charge": 59.845,
+        "TESHMS": 0.99483,
+        "TEHMS": 0.98966,
+        "HCAL_EFF": 1.0,
+        "PCAL_EFF": 0.94982,
+        "PAERO_EFF": 0.9881,
+        "TLT": 0.99731
+    },
+    "7675": {
+        "charge": 109.67,
+        "TESHMS": 0.98869,
+        "TEHMS": 0.99576,
+        "HCAL_EFF": 1.0004,
+        "PCAL_EFF": 0.94233,
+        "PAERO_EFF": 0.96718,
+        "TLT": 0.99505
+    },
+    "7676": {
+        "charge": 131.38,
+        "TESHMS": 0.99617,
+        "TEHMS": 0.9949,
+        "HCAL_EFF": 0.99818,
+        "PCAL_EFF": 0.94518,
+        "PAERO_EFF": 0.9764,
+        "TLT": 0.99528
+    },
+    "7677": {
+        "charge": 57.15,
+        "TESHMS": 0.98718,
+        "TEHMS": 0.9968,
+        "HCAL_EFF": 0.99644,
+        "PCAL_EFF": 0.9617,
+        "PAERO_EFF": 0.9593,
+        "TLT": 0.9956
+    },
+    "7678": {
+        "charge": 2.822,
+        "TESHMS": 0.95122,
+        "TEHMS": 1.0,
+        "HCAL_EFF": 1.0,
+        "PCAL_EFF": 0.94956,
+        "PAERO_EFF": 0.96937,
+        "TLT": 0.99183
+    },
+    "7679": {
+        "charge": 109.67,
+        "TESHMS": 0.97006,
+        "TEHMS": 0.99632,
+        "HCAL_EFF": 0.99907,
+        "PCAL_EFF": 0.88564,
+        "PAERO_EFF": 0.96916,
+        "TLT": 0.97873
+    },
+    "7680": {
+        "charge": 100.63,
+        "TESHMS": 0.97029,
+        "TEHMS": 0.99544,
+        "HCAL_EFF": 0.99797,
+        "PCAL_EFF": 0.90424,
+        "PAERO_EFF": 0.9688,
+        "TLT": 0.97894
+    },
+    "7681": {
+        "charge": 104.28,
+        "TESHMS": 0.97167,
+        "TEHMS": 0.99558,
+        "HCAL_EFF": 0.99647,
+        "PCAL_EFF": 0.90208,
+        "PAERO_EFF": 0.96969,
+        "TLT": 0.97798
+    },
+    "7682": {
+        "charge": 104.52,
+        "TESHMS": 0.9722,
+        "TEHMS": 0.99522,
+        "HCAL_EFF": 0.99632,
+        "PCAL_EFF": 0.90506,
+        "PAERO_EFF": 0.96722,
+        "TLT": 0.97836
+    },
+    "7684": {
+        "charge": 56.305,
+        "TESHMS": 0.97101,
+        "TEHMS": 0.99493,
+        "HCAL_EFF": 0.9975,
+        "PCAL_EFF": 0.8897,
+        "PAERO_EFF": 0.96592,
+        "TLT": 0.97913
+    },
+    "7685": {
+        "charge": 55.574,
+        "TESHMS": 0.9755,
+        "TEHMS": 0.99455,
+        "HCAL_EFF": 0.99734,
+        "PCAL_EFF": 0.89664,
+        "PAERO_EFF": 0.96854,
+        "TLT": 0.98065
+    },
+    "7686": {
+        "charge": 55.264,
+        "TESHMS": 0.96808,
+        "TEHMS": 0.99613,
+        "HCAL_EFF": 1.0005,
+        "PCAL_EFF": 0.89705,
+        "PAERO_EFF": 0.97162,
+        "TLT": 0.9806
+    },
+    "7687": {
+        "charge": 58.461,
+        "TESHMS": 0.96928,
+        "TEHMS": 0.99786,
+        "HCAL_EFF": 0.999,
+        "PCAL_EFF": 0.89402,
+        "PAERO_EFF": 0.96969,
+        "TLT": 0.98197
+    },
+    "7688": {
+        "charge": 47.141,
+        "TESHMS": 0.97006,
+        "TEHMS": 0.99743,
+        "HCAL_EFF": 1.0002,
+        "PCAL_EFF": 0.90993,
+        "PAERO_EFF": 0.96889,
+        "TLT": 0.98181
+    },
+    "7689": {
+        "charge": 67.739,
+        "TESHMS": 0.97162,
+        "TEHMS": 0.99603,
+        "HCAL_EFF": 0.99522,
+        "PCAL_EFF": 0.90928,
+        "PAERO_EFF": 0.96734,
+        "TLT": 0.98114
+    },
+    "7690": {
+        "charge": 24.54,
+        "TESHMS": 0.97121,
+        "TEHMS": 0.99723,
+        "HCAL_EFF": 0.99959,
+        "PCAL_EFF": 0.90497,
+        "PAERO_EFF": 0.96643,
+        "TLT": 0.97988
+    },
+    "7692": {
+        "charge": 29.51,
+        "TESHMS": 0.96756,
+        "TEHMS": 0.99671,
+        "HCAL_EFF": 0.99743,
+        "PCAL_EFF": 0.90349,
+        "PAERO_EFF": 0.9736,
+        "TLT": 0.98222
+    },
+    "7694": {
+        "charge": 187.79,
+        "TESHMS": 0.98895,
+        "TEHMS": 0.99755,
+        "HCAL_EFF": 0.9989,
+        "PCAL_EFF": 0.95579,
+        "PAERO_EFF": 0.96927,
+        "TLT": 0.99314
+    },
+    "7695": {
+        "charge": 128.19,
+        "TESHMS": 0.99049,
+        "TEHMS": 0.99715,
+        "HCAL_EFF": 1.0007,
+        "PCAL_EFF": 0.96927,
+        "PAERO_EFF": 0.97016,
+        "TLT": 0.99345
+    },
+    "7697": {
+        "charge": 64.109,
+        "TESHMS": 0.99094,
+        "TEHMS": 0.99245,
+        "HCAL_EFF": 0.99809,
+        "PCAL_EFF": 0.95633,
+        "PAERO_EFF": 0.96397,
+        "TLT": 0.99518
+    },
+    "7698": {
+        "charge": 75.385,
+        "TESHMS": 0.99393,
+        "TEHMS": 0.99757,
+        "HCAL_EFF": 1.0,
+        "PCAL_EFF": 0.95346,
+        "PAERO_EFF": 0.97236,
+        "TLT": 0.99597
+    },
+    "7699": {
+        "charge": 106.4,
+        "TESHMS": 0.97488,
+        "TEHMS": 0.99552,
+        "HCAL_EFF": 0.9994,
+        "PCAL_EFF": 0.91931,
+        "PAERO_EFF": 0.96711,
+        "TLT": 0.98
+    },
+    "7702": {
+        "charge": 103.08,
+        "TESHMS": 0.97459,
+        "TEHMS": 0.99614,
+        "HCAL_EFF": 0.99881,
+        "PCAL_EFF": 0.92436,
+        "PAERO_EFF": 0.96375,
+        "TLT": 0.97944
+    },
+    "7703": {
+        "charge": 15.229,
+        "TESHMS": 0.96752,
+        "TEHMS": 0.99845,
+        "HCAL_EFF": 1.0003,
+        "PCAL_EFF": 0.92193,
+        "PAERO_EFF": 0.96295,
+        "TLT": 0.9793
+    },
+    "7706": {
+        "charge": 60.889,
+        "TESHMS": 0.9727,
+        "TEHMS": 0.9965,
+        "HCAL_EFF": 0.99851,
+        "PCAL_EFF": 0.91689,
+        "PAERO_EFF": 0.95936,
+        "TLT": 0.98094
+    },
+    "7707": {
+        "charge": 52.903,
+        "TESHMS": 0.97404,
+        "TEHMS": 0.99682,
+        "HCAL_EFF": 0.99815,
+        "PCAL_EFF": 0.92607,
+        "PAERO_EFF": 0.95914,
+        "TLT": 0.9809
+    },
+    "7708": {
+        "charge": 56.327,
+        "TESHMS": 0.97291,
+        "TEHMS": 0.99519,
+        "HCAL_EFF": 0.99575,
+        "PCAL_EFF": 0.92038,
+        "PAERO_EFF": 0.95485,
+        "TLT": 0.98043
+    },
+    "7709": {
+        "charge": 58.819,
+        "TESHMS": 0.97041,
+        "TEHMS": 0.99541,
+        "HCAL_EFF": 0.9975,
+        "PCAL_EFF": 0.91393,
+        "PAERO_EFF": 0.95786,
+        "TLT": 0.98061
+    },
+    "7710": {
+        "charge": 29.834,
+        "TESHMS": 0.97732,
+        "TEHMS": 0.99669,
+        "HCAL_EFF": 0.99707,
+        "PCAL_EFF": 0.91275,
+        "PAERO_EFF": 0.96348,
+        "TLT": 0.98188
+    },
+    "7711": {
+        "charge": 113.6,
+        "TESHMS": 0.98651,
+        "TEHMS": 0.99133,
+        "HCAL_EFF": 1.0,
+        "PCAL_EFF": 0.95173,
+        "PAERO_EFF": 0.96144,
+        "TLT": 0.99286
+    },
+    "7712": {
+        "charge": 57.729,
+        "TESHMS": 0.98741,
+        "TEHMS": 0.99281,
+        "HCAL_EFF": 0.99754,
+        "PCAL_EFF": 0.964,
+        "PAERO_EFF": 0.97042,
+        "TLT": 0.99286
+    },
+    "7713": {
+        "charge": 38.034,
+        "TESHMS": 0.97746,
+        "TEHMS": 0.9959,
+        "HCAL_EFF": 0.99573,
+        "PCAL_EFF": 0.91343,
+        "PAERO_EFF": 0.96113,
+        "TLT": 0.98985
+    },
+    "7714": {
+        "charge": 39.187,
+        "TESHMS": 0.97012,
+        "TEHMS": 0.9954,
+        "HCAL_EFF": 0.9966,
+        "PCAL_EFF": 0.92493,
+        "PAERO_EFF": 0.95319,
+        "TLT": 0.98768
+    },
+    "7715": {
+        "charge": 100.68,
+        "TESHMS": 0.97908,
+        "TEHMS": 0.99759,
+        "HCAL_EFF": 1.0,
+        "PCAL_EFF": 0.93784,
+        "PAERO_EFF": 0.95699,
+        "TLT": 0.98674
+    },
+    "7716": {
+        "charge": 31.345,
+        "TESHMS": 0.97578,
+        "TEHMS": 0.99566,
+        "HCAL_EFF": 0.9979,
+        "PCAL_EFF": 0.92466,
+        "PAERO_EFF": 0.96076,
+        "TLT": 0.98366
+    },
+    "7717": {
+        "charge": 33.243,
+        "TESHMS": 0.9687,
+        "TEHMS": 0.99401,
+        "HCAL_EFF": 0.99888,
+        "PCAL_EFF": 0.91051,
+        "PAERO_EFF": 0.95913,
+        "TLT": 0.98378
+    },
+    "7718": {
+        "charge": 36.879,
+        "TESHMS": 0.96976,
+        "TEHMS": 0.9953,
+        "HCAL_EFF": 0.99748,
+        "PCAL_EFF": 0.90529,
+        "PAERO_EFF": 0.96012,
+        "TLT": 0.98423
+    },
+    "7719": {
+        "charge": 30.099,
+        "TESHMS": 0.97034,
+        "TEHMS": 0.99671,
+        "HCAL_EFF": 0.9992,
+        "PCAL_EFF": 0.916,
+        "PAERO_EFF": 0.96308,
+        "TLT": 0.98405
+    },
+    "7720": {
+        "charge": 31.098,
+        "TESHMS": 0.97152,
+        "TEHMS": 0.99676,
+        "HCAL_EFF": 0.99737,
+        "PCAL_EFF": 0.91879,
+        "PAERO_EFF": 0.9631,
+        "TLT": 0.98412
+    },
+    "7721": {
+        "charge": 34.566,
+        "TESHMS": 0.97561,
+        "TEHMS": 0.9944,
+        "HCAL_EFF": 0.99651,
+        "PCAL_EFF": 0.9163,
+        "PAERO_EFF": 0.95832,
+        "TLT": 0.98219
+    },
+    "7722": {
+        "charge": 30.131,
+        "TESHMS": 0.96901,
+        "TEHMS": 0.99701,
+        "HCAL_EFF": 0.99543,
+        "PCAL_EFF": 0.91851,
+        "PAERO_EFF": 0.96986,
+        "TLT": 0.98365
+    },
+    "7724": {
+        "charge": 102.54,
+        "TESHMS": 0.99318,
+        "TEHMS": 0.99473,
+        "HCAL_EFF": 0.99843,
+        "PCAL_EFF": 0.93893,
+        "PAERO_EFF": 0.97382,
+        "TLT": 0.99264
+    },
+    "7725": {
+        "charge": 52.226,
+        "TESHMS": 1.0,
+        "TEHMS": 0.99512,
+        "HCAL_EFF": 1.0,
+        "PCAL_EFF": 0.93968,
+        "PAERO_EFF": 0.9621,
+        "TLT": 0.99852
+    },
+    "7727": {
+        "charge": 143.87,
+        "TESHMS": 0.99306,
+        "TEHMS": 0.99167,
+        "HCAL_EFF": 0.99555,
+        "PCAL_EFF": 0.9558,
+        "PAERO_EFF": 0.96778,
+        "TLT": 0.99823
+    },
+    "7728": {
+        "charge": 96.55,
+        "TESHMS": 0.9977,
+        "TEHMS": 0.99309,
+        "HCAL_EFF": 0.99649,
+        "PCAL_EFF": 0.94486,
+        "PAERO_EFF": 0.97776,
+        "TLT": 0.99818
+    },
+    "7735": {
+        "charge": 154.33,
+        "TESHMS": 0.9875,
+        "TEHMS": 0.99594,
+        "HCAL_EFF": 0.99595,
+        "PCAL_EFF": 0.93537,
+        "PAERO_EFF": 0.97053,
+        "TLT": 0.98815
+    },
+    "7736": {
+        "charge": 177.29,
+        "TESHMS": 0.99048,
+        "TEHMS": 0.9959,
+        "HCAL_EFF": 0.99785,
+        "PCAL_EFF": 0.93397,
+        "PAERO_EFF": 0.97113,
+        "TLT": 0.9889
+    },
+    "7737": {
+        "charge": 144.23,
+        "TESHMS": 0.98292,
+        "TEHMS": 0.99457,
+        "HCAL_EFF": 0.99731,
+        "PCAL_EFF": 0.91674,
+        "PAERO_EFF": 0.96815,
+        "TLT": 0.98418
+    },
+    "7738": {
+        "charge": 154.34,
+        "TESHMS": 0.97997,
+        "TEHMS": 0.99435,
+        "HCAL_EFF": 0.99691,
+        "PCAL_EFF": 0.92446,
+        "PAERO_EFF": 0.96626,
+        "TLT": 0.9831
+    },
+    "7739": {
+        "charge": 16.67,
+        "TESHMS": 0.97995,
+        "TEHMS": 0.99646,
+        "HCAL_EFF": 1.0025,
+        "PCAL_EFF": 0.88723,
+        "PAERO_EFF": 0.97448,
+        "TLT": 0.98212
+    },
+    "7740": {
+        "charge": 180.18,
+        "TESHMS": 0.9794,
+        "TEHMS": 0.9949,
+        "HCAL_EFF": 0.99624,
+        "PCAL_EFF": 0.92263,
+        "PAERO_EFF": 0.96242,
+        "TLT": 0.9834
+    },
+    "7747": {
+        "charge": 64.794,
+        "TESHMS": 0.99169,
+        "TEHMS": 0.98892,
+        "HCAL_EFF": 0.99735,
+        "PCAL_EFF": 0.98766,
+        "PAERO_EFF": 0.96863,
+        "TLT": 0.99799
+    },
+    "7748": {
+        "charge": 152.55,
+        "TESHMS": 0.99524,
+        "TEHMS": 0.99881,
+        "HCAL_EFF": 0.99648,
+        "PCAL_EFF": 0.95856,
+        "PAERO_EFF": 0.97422,
+        "TLT": 0.99726
+    },
+    "7749": {
+        "charge": 47.14,
+        "TESHMS": 0.98936,
+        "TEHMS": 0.99645,
+        "HCAL_EFF": 1.0022,
+        "PCAL_EFF": 0.95416,
+        "PAERO_EFF": 0.96811,
+        "TLT": 0.99754
+    },
+    "7750": {
+        "charge": 42.106,
+        "TESHMS": 0.99283,
+        "TEHMS": 0.99283,
+        "HCAL_EFF": 0.99413,
+        "PCAL_EFF": 0.91335,
+        "PAERO_EFF": 0.94743,
+        "TLT": 0.997
+    },
+    "7751": {
+        "charge": 137.97,
+        "TESHMS": 0.99239,
+        "TEHMS": 0.99492,
+        "HCAL_EFF": 0.99486,
+        "PCAL_EFF": 0.93538,
+        "PAERO_EFF": 0.95375,
+        "TLT": 0.99703
+    },
+    "7752": {
+        "charge": 159.27,
+        "TESHMS": 0.99021,
+        "TEHMS": 0.99891,
+        "HCAL_EFF": 1.0002,
+        "PCAL_EFF": 0.94914,
+        "PAERO_EFF": 0.96073,
+        "TLT": 0.99676
+    },
+    "7757": {
+        "charge": 141.52,
+        "TESHMS": 0.97376,
+        "TEHMS": 0.99527,
+        "HCAL_EFF": 0.99629,
+        "PCAL_EFF": 0.90559,
+        "PAERO_EFF": 0.96576,
+        "TLT": 0.98026
+    },
+    "7758": {
+        "charge": 177.28,
+        "TESHMS": 0.97258,
+        "TEHMS": 0.99615,
+        "HCAL_EFF": 0.99705,
+        "PCAL_EFF": 0.90715,
+        "PAERO_EFF": 0.96299,
+        "TLT": 0.9809
+    },
+    "7759": {
+        "charge": 137.66,
+        "TESHMS": 0.9715,
+        "TEHMS": 0.99619,
+        "HCAL_EFF": 0.99564,
+        "PCAL_EFF": 0.90537,
+        "PAERO_EFF": 0.96343,
+        "TLT": 0.97944
+    },
+    "7760": {
+        "charge": 110.09,
+        "TESHMS": 0.99328,
+        "TEHMS": 0.99641,
+        "HCAL_EFF": 0.99693,
+        "PCAL_EFF": 0.95542,
+        "PAERO_EFF": 0.96145,
+        "TLT": 0.99143
+    },
+    "7762": {
+        "charge": 49.895,
+        "TESHMS": 0.99786,
+        "TEHMS": 0.99572,
+        "HCAL_EFF": 1.0,
+        "PCAL_EFF": 0.96786,
+        "PAERO_EFF": 0.9742,
+        "TLT": 0.99824
+    },
+    "7768": {
+        "charge": 63.994,
+        "TESHMS": 0.99021,
+        "TEHMS": 0.99555,
+        "HCAL_EFF": 0.99606,
+        "PCAL_EFF": 0.95554,
+        "PAERO_EFF": 0.96428,
+        "TLT": 0.99429
+    },
+    "7769": {
+        "charge": 42.591,
+        "TESHMS": 0.99334,
+        "TEHMS": 0.99634,
+        "HCAL_EFF": 0.99638,
+        "PCAL_EFF": 0.94984,
+        "PAERO_EFF": 0.96523,
+        "TLT": 0.99441
+    },
+    "7770": {
+        "charge": 29.902,
+        "TESHMS": 0.99174,
+        "TEHMS": 0.99806,
+        "HCAL_EFF": 0.99735,
+        "PCAL_EFF": 0.95283,
+        "PAERO_EFF": 0.96073,
+        "TLT": 0.99307
+    },
+    "7771": {
+        "charge": 33.141,
+        "TESHMS": 0.9894,
+        "TEHMS": 0.99691,
+        "HCAL_EFF": 0.99534,
+        "PCAL_EFF": 0.95073,
+        "PAERO_EFF": 0.96171,
+        "TLT": 0.99315
+    },
+    "7772": {
+        "charge": 123.22,
+        "TESHMS": 0.99646,
+        "TEHMS": 0.9947,
+        "HCAL_EFF": 0.99868,
+        "PCAL_EFF": 0.94983,
+        "PAERO_EFF": 0.96909,
+        "TLT": 0.99822
+    },
+    "7773": {
+        "charge": 114.51,
+        "TESHMS": 0.99009,
+        "TEHMS": 0.9955,
+        "HCAL_EFF": 0.99406,
+        "PCAL_EFF": 0.9479,
+        "PAERO_EFF": 0.96104,
+        "TLT": 0.99656
+    },
+    "7774": {
+        "charge": 66.64,
+        "TESHMS": 0.98525,
+        "TEHMS": 0.99672,
+        "HCAL_EFF": 0.99544,
+        "PCAL_EFF": 0.94921,
+        "PAERO_EFF": 0.96151,
+        "TLT": 0.99593
+    },
+    "7775": {
+        "charge": 81.57,
+        "TESHMS": 0.98061,
+        "TEHMS": 0.99479,
+        "HCAL_EFF": 0.99715,
+        "PCAL_EFF": 0.93986,
+        "PAERO_EFF": 0.95643,
+        "TLT": 0.98712
+    },
+    "7776": {
+        "charge": 73.174,
+        "TESHMS": 0.98362,
+        "TEHMS": 0.99509,
+        "HCAL_EFF": 0.99815,
+        "PCAL_EFF": 0.93286,
+        "PAERO_EFF": 0.94671,
+        "TLT": 0.98694
+    },
+    "7777": {
+        "charge": 84.356,
+        "TESHMS": 0.97906,
+        "TEHMS": 0.99575,
+        "HCAL_EFF": 0.99372,
+        "PCAL_EFF": 0.93826,
+        "PAERO_EFF": 0.95423,
+        "TLT": 0.98695
+    },
+    "7783": {
+        "charge": 54.887,
+        "TESHMS": 0.97504,
+        "TEHMS": 0.9956,
+        "HCAL_EFF": 0.99261,
+        "PCAL_EFF": 0.91999,
+        "PAERO_EFF": 0.96567,
+        "TLT": 0.98265
+    },
+    "7784": {
+        "charge": 57.79,
+        "TESHMS": 0.97781,
+        "TEHMS": 0.99525,
+        "HCAL_EFF": 0.99853,
+        "PCAL_EFF": 0.91668,
+        "PAERO_EFF": 0.95361,
+        "TLT": 0.98232
+    },
+    "7785": {
+        "charge": 60.105,
+        "TESHMS": 0.97384,
+        "TEHMS": 0.99499,
+        "HCAL_EFF": 0.99023,
+        "PCAL_EFF": 0.92041,
+        "PAERO_EFF": 0.95901,
+        "TLT": 0.98276
+    },
+    "7786": {
+        "charge": 56.067,
+        "TESHMS": 0.97273,
+        "TEHMS": 0.99474,
+        "HCAL_EFF": 0.99833,
+        "PCAL_EFF": 0.92029,
+        "PAERO_EFF": 0.95742,
+        "TLT": 0.9819
+    },
+    "7787": {
+        "charge": 37.137,
+        "TESHMS": 0.97045,
+        "TEHMS": 0.9968,
+        "HCAL_EFF": 0.99609,
+        "PCAL_EFF": 0.92519,
+        "PAERO_EFF": 0.95561,
+        "TLT": 0.98087
+    },
+    "7790": {
+        "charge": 87.122,
+        "TESHMS": 0.99287,
+        "TEHMS": 0.99763,
+        "HCAL_EFF": 0.99082,
+        "PCAL_EFF": 0.9476,
+        "PAERO_EFF": 0.9804,
+        "TLT": 0.9938
+    },
+    "7791": {
+        "charge": 15.826,
+        "TESHMS": 1.0,
+        "TEHMS": 0.99383,
+        "HCAL_EFF": 1.0,
+        "PCAL_EFF": 0.95202,
+        "PAERO_EFF": 0.96398,
+        "TLT": 0.99469
+    },
+    "7792": {
+        "charge": 66.109,
+        "TESHMS": 0.98404,
+        "TEHMS": 0.99645,
+        "HCAL_EFF": 1.0018,
+        "PCAL_EFF": 0.95414,
+        "PAERO_EFF": 0.97302,
+        "TLT": 0.99208
+    },
+    "7793": {
+        "charge": 102.74,
+        "TESHMS": 0.99667,
+        "TEHMS": 0.99667,
+        "HCAL_EFF": 1.0005,
+        "PCAL_EFF": 0.94038,
+        "PAERO_EFF": 0.98004,
+        "TLT": 0.99749
+    },
+    "7794": {
+        "charge": 100.89,
+        "TESHMS": 0.99495,
+        "TEHMS": 0.99158,
+        "HCAL_EFF": 1.0,
+        "PCAL_EFF": 0.97814,
+        "PAERO_EFF": 0.97192,
+        "TLT": 0.99788
+    },
+    "7796": {
+        "charge": 152.68,
+        "TESHMS": 0.98648,
+        "TEHMS": 0.99472,
+        "HCAL_EFF": 0.99777,
+        "PCAL_EFF": 0.92407,
+        "PAERO_EFF": 0.97299,
+        "TLT": 0.98584
+    },
+    "7797": {
+        "charge": 143.61,
+        "TESHMS": 0.98526,
+        "TEHMS": 0.99711,
+        "HCAL_EFF": 0.99777,
+        "PCAL_EFF": 0.92357,
+        "PAERO_EFF": 0.97034,
+        "TLT": 0.9859
+    },
+    "7798": {
+        "charge": 152.67,
+        "TESHMS": 0.97275,
+        "TEHMS": 0.99415,
+        "HCAL_EFF": 0.99714,
+        "PCAL_EFF": 0.9015,
+        "PAERO_EFF": 0.9687,
+        "TLT": 0.97981
+    },
+    "7799": {
+        "charge": 147.99,
+        "TESHMS": 0.9723,
+        "TEHMS": 0.99597,
+        "HCAL_EFF": 0.99904,
+        "PCAL_EFF": 0.91003,
+        "PAERO_EFF": 0.97149,
+        "TLT": 0.97897
+    },
+    "7800": {
+        "charge": 81.013,
+        "TESHMS": 0.98627,
+        "TEHMS": 0.99714,
+        "HCAL_EFF": 0.99792,
+        "PCAL_EFF": 0.92323,
+        "PAERO_EFF": 0.9698,
+        "TLT": 0.98965
+    },
+    "7801": {
+        "charge": 118.3,
+        "TESHMS": 0.99186,
+        "TEHMS": 0.99837,
+        "HCAL_EFF": 1.0004,
+        "PCAL_EFF": 0.95844,
+        "PAERO_EFF": 0.97216,
+        "TLT": 0.99739
+    },
+    "7802": {
+        "charge": 89.836,
+        "TESHMS": 0.99608,
+        "TEHMS": 1.0,
+        "HCAL_EFF": 1.0,
+        "PCAL_EFF": 0.9744,
+        "PAERO_EFF": 0.95487,
+        "TLT": 0.99747
+    },
+    "7803": {
+        "charge": 84.116,
+        "TESHMS": 0.99701,
+        "TEHMS": 0.99253,
+        "HCAL_EFF": 1.0014,
+        "PCAL_EFF": 0.94564,
+        "PAERO_EFF": 0.9797,
+        "TLT": 0.99611
+    },
+    "7804": {
+        "charge": 85.01,
+        "TESHMS": 0.99078,
+        "TEHMS": 0.99539,
+        "HCAL_EFF": 0.99722,
+        "PCAL_EFF": 0.95796,
+        "PAERO_EFF": 0.97662,
+        "TLT": 0.99541
+    },
+    "7805": {
+        "charge": 99.786,
+        "TESHMS": 0.97438,
+        "TEHMS": 0.99519,
+        "HCAL_EFF": 0.99912,
+        "PCAL_EFF": 0.91387,
+        "PAERO_EFF": 0.96944,
+        "TLT": 0.97894
+    },
+    "7806": {
+        "charge": 118.83,
+        "TESHMS": 0.97307,
+        "TEHMS": 0.99646,
+        "HCAL_EFF": 0.99806,
+        "PCAL_EFF": 0.8991,
+        "PAERO_EFF": 0.96524,
+        "TLT": 0.98072
+    },
+    "7807": {
+        "charge": 60.583,
+        "TESHMS": 0.97107,
+        "TEHMS": 0.99633,
+        "HCAL_EFF": 0.99843,
+        "PCAL_EFF": 0.91647,
+        "PAERO_EFF": 0.96583,
+        "TLT": 0.98076
+    },
+    "7808": {
+        "charge": 88.758,
+        "TESHMS": 0.98491,
+        "TEHMS": 0.99521,
+        "HCAL_EFF": 0.99699,
+        "PCAL_EFF": 0.95198,
+        "PAERO_EFF": 0.9638,
+        "TLT": 0.98719
+    },
+    "7809": {
+        "charge": 77.9,
+        "TESHMS": 0.98483,
+        "TEHMS": 0.99553,
+        "HCAL_EFF": 0.99759,
+        "PCAL_EFF": 0.94514,
+        "PAERO_EFF": 0.96299,
+        "TLT": 0.98892
+    },
+    "7811": {
+        "charge": 105.44,
+        "TESHMS": 0.99313,
+        "TEHMS": 0.99742,
+        "HCAL_EFF": 0.99758,
+        "PCAL_EFF": 0.95623,
+        "PAERO_EFF": 0.95917,
+        "TLT": 0.9972
+    },
+    "7812": {
+        "charge": 117.57,
+        "TESHMS": 0.99035,
+        "TEHMS": 0.99324,
+        "HCAL_EFF": 0.99755,
+        "PCAL_EFF": 0.9524,
+        "PAERO_EFF": 0.96902,
+        "TLT": 0.99578
+    },
+    "7813": {
+        "charge": 72.819,
+        "TESHMS": 0.97541,
+        "TEHMS": 0.9962,
+        "HCAL_EFF": 0.99512,
+        "PCAL_EFF": 0.92669,
+        "PAERO_EFF": 0.95466,
+        "TLT": 0.98292
+    },
+    "7814": {
+        "charge": 96.074,
+        "TESHMS": 0.97518,
+        "TEHMS": 0.99607,
+        "HCAL_EFF": 0.99707,
+        "PCAL_EFF": 0.93129,
+        "PAERO_EFF": 0.95992,
+        "TLT": 0.98275
+    },
+    "7815": {
+        "charge": 50.743,
+        "TESHMS": 0.97801,
+        "TEHMS": 0.99489,
+        "HCAL_EFF": 0.99633,
+        "PCAL_EFF": 0.90967,
+        "PAERO_EFF": 0.95789,
+        "TLT": 0.98137
+    },
+    "7816": {
+        "charge": 54.528,
+        "TESHMS": 0.97468,
+        "TEHMS": 0.99691,
+        "HCAL_EFF": 0.9961,
+        "PCAL_EFF": 0.91928,
+        "PAERO_EFF": 0.94964,
+        "TLT": 0.98281
+    },
+    "7817": {
+        "charge": 62.326,
+        "TESHMS": 0.97627,
+        "TEHMS": 0.99595,
+        "HCAL_EFF": 0.99624,
+        "PCAL_EFF": 0.92318,
+        "PAERO_EFF": 0.94388,
+        "TLT": 0.98244
+    },
+    "7819": {
+        "charge": 50.562,
+        "TESHMS": 0.99245,
+        "TEHMS": 0.99623,
+        "HCAL_EFF": 0.99481,
+        "PCAL_EFF": 0.94573,
+        "PAERO_EFF": 0.93938,
+        "TLT": 0.99194
+    },
+    "7820": {
+        "charge": 110.19,
+        "TESHMS": 0.98793,
+        "TEHMS": 0.99437,
+        "HCAL_EFF": 0.99454,
+        "PCAL_EFF": 0.94052,
+        "PAERO_EFF": 0.96176,
+        "TLT": 0.99158
+    }
+}
