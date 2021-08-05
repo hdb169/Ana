@@ -59,7 +59,7 @@ hadd kin610_d2_pos_6185.root coin_replay_production_618[5-7]_-1.root
 hadd kin612_h2_pos_6188.root coin_replay_production_618[8-9].root coin_replay_production_6190_-1.root
 
 
-hadd kin71_d2_pos_7500.root coin_replay_production_750[0-1]_-1.root
+hadd kin71_d2_pos_6500.root coin_replay_production_650[0-1]_-1.root
 hadd kin73_d2_pos_6506.root coin_replay_production_650[6-7]_-1.root
 hadd kin75_d2_pos_6509.root coin_replay_production_6509_-1.root coin_replay_production_6510_-1.root
 hadd kin77_d2_pos_6514.root coin_replay_production_651[4-7]_-1.root 
