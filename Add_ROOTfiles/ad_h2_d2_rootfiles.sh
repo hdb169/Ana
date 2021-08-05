@@ -27,7 +27,7 @@ hadd kin26_h2_neg_6033.root coin_replay_production_603[3-6]_-1.root
 hadd kin27_d2_neg_6043.root coin_replay_production_604[3-5]_-1.root
 hadd kin29_h2_neg_6038.root coin_replay_production_603[8-9]_-1.root coin_replay_production_604[0-2]_-1.root
 hadd kin210_d2_neg_6049.root coin_replay_production_6049_-1.root coin_replay_production_605[0-5]_-1.root
-hadd kin212_h2_neg_6059 coin_replay_production_6059_-1.root coin_replay_production_606[0-4]_-1.root
+hadd kin212_h2_neg_6059.root coin_replay_production_6059_-1.root coin_replay_production_606[0-4]_-1.root
 
 
 hadd kin31_d2_pos_6537.root coin_replay_production_6537_-1.root
@@ -192,7 +192,7 @@ hadd kin395_d2_neg_7805.root coin_replay_production_780[5-7]_-1.root
 
 hadd kin401_d2_pos_7808.root coin_replay_production_780[8-9]_-1.root
 hadd kin403_d2_pos_7813.root coin_replay_production_781[3-4]_-1.root
-hadd kin405_d2_pos_7915.root coin_replay_production_781[5-7]_-1.root
+hadd kin405_d2_pos_7815.root coin_replay_production_781[5-7]_-1.root
 
 #Note
 #11/1 6490 :added (A), 6418 not added (NA), 6420 NA
