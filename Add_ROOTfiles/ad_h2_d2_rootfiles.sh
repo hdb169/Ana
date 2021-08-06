@@ -83,7 +83,7 @@ hadd kin912_h2_neg_6277.root coin_replay_production_6277_-1.root coin_replay_pro
 
 
 hadd kin101_d2_pos_6194.root coin_replay_production_619[4-5]_-1.root
-hadd kin103_h2_pos_6292.root coin_replay_production_629[2-3]_-1.root 
+hadd kin103_h2_pos_6192.root coin_replay_production_629[2-3]_-1.root 
 hadd kin104_d2_pos_6198.root coin_replay_production_619[8-9]_-1.root 
 hadd kin106_h2_pos_6200.root coin_replay_production_620[0-1]_-1.root 
 hadd kin107_d2_pos_6205.root coin_replay_production_6205_-1.root coin_replay_production_620[8-9]_-1.root coin_replay_production_6210_-1.root
@@ -108,19 +108,19 @@ hadd kin127_d2_neg_6473.root coin_replay_production_647[3-9]_-1.root
 hadd kin131_d2_neg_6290.root coin_replay_production_629[0-1]_-1.root
 hadd kin133_h2_neg_6285.root coin_replay_production_628[5-7]_-1.root
 hadd kin134_d2_neg_6292.root coin_replay_production_629[2-3]_-1.root
-hadd kin136_h2_neg_7297.root coin_replay_production_629[7-9]_-1.root 
+hadd kin136_h2_neg_6297.root coin_replay_production_629[7-9]_-1.root 
 hadd kin137_d2_neg_6306.root coin_replay_production_630[6-8]_-1.root
-hadd kin139_h2_neg_6200.root coin_replay_production_620[0-2]_-1.root 
+hadd kin139_h2_neg_6300.root coin_replay_production_630[0-2]_-1.root 
 hadd kin1310_d2_neg_6348.root coin_replay_production_634[8-9]_-1.root coin_replay_production_635[0-1]_-1.root
 hadd kin1312_h2_neg_6355.root coin_replay_production_635[5-8]_-1.root
 
 
 hadd kin141_d2_pos_6309.root coin_replay_production_6309_-1.root  coin_replay_production_6310_-1.root
-hadd kin143_h2_pos_6213.root coin_replay_production_621[3-4]_-1.root
+hadd kin143_h2_pos_6313.root coin_replay_production_631[3-4]_-1.root
 hadd kin144_d2_pos_6322.root coin_replay_production_632[2-3]_-1.root
 hadd kin146_h2_pos_6315.root coin_replay_production_631[7-8]_-1.root 
-hadd kin147_d2_pos_6315.root coin_replay_production_631[5-6]_-1.root
-hadd kin149_h2_pos_6324.root coin_replay_production_632[4-7]_-1.root 
+hadd kin147_d2_pos_6325.root coin_replay_production_632[5-6]_-1.root
+hadd kin149_h2_pos_6331.root coin_replay_production_633[1-2]_-1.root 
 hadd kin1410_d2_pos_6340.root coin_replay_production_634[0-4]_-1.root  coin_replay_production_6347_-1.root
 hadd kin1412_h2_pos_6334.root coin_replay_production_633[4-8]_-1.root
 
@@ -201,7 +201,7 @@ hadd kin405_d2_pos_7815.root coin_replay_production_781[5-7]_-1.root
 #14/10 6339 Not added
 #15/5 6399 added, 6400, 6401 not added
 #38/5 7767 added
-#12/1 6449, 50 not added
+
 
 
 
