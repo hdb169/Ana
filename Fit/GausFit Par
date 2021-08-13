@@ -1,0 +1,17 @@
+     v1->cd(3);gPad->SetGridx();
+    hist_hcal_should_fit->Draw("hist");//to print the mean of E/P
+    hist_hcal_should_fit->Fit(g3,"R");
+    g3->Draw("same");
+
+
+    v1->cd(4);gPad->SetGridx();
+    hist_pcal_should_fit->Draw("hist");
+    hist_pcal_should_fit->Fit(g4,"R");//to print the mean of E/P
+    g4->Draw("same");
+
+
+    
+    double meanh = g3->GetParameter(1);
+    double meanh_err = g3->GetParError(1);
+    double sigh = g3->GetParameter(2);
+    double sigh_err = g3->GetParError(2);
