@@ -1,4 +1,8 @@
-     v1->cd(3);gPad->SetGridx();
+    TF1 * g3 = new TF1("g3", "gaus", 0.92, 1.08);
+    TF1 * g4 = new TF1("g4", "gaus", 0.92, 1.08);
+
+     
+    v1->cd(3);gPad->SetGridx();
     hist_hcal_should_fit->Draw("hist");//to print the mean of E/P
     hist_hcal_should_fit->Fit(g3,"R");
     g3->Draw("same");
