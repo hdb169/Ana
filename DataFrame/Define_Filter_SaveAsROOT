@@ -1,0 +1,82 @@
+void trial(){
+  ROOT::EnableImplicitMT();
+  ROOT::RDataFrame d1_df("T","./root/coin_replay_production_7593_1000.root");
+  auto h1 = d1_df.Histo1D({"pdelta","h1 No Cuts",100,-10,20},"P.gtr.dp");
+  auto cut1 =[](double hdelta){return hdelta>-8&&hdelta<8;};
+  //new dataframe with fisrt step cut
+  auto d2_df = d1_df.Filter(cut1,{"H.gtr.dp"});
+  std::cout<<"Total No of entries after cut: "<<*d2_df.Count()<<std::endl;
+
+  auto h2 = d2_df.Histo1D({"pdelta","h2 with first Cut",100,-10,20},"P.gtr.dp");
+  //draw hist with cuts on itself (direct cut)
+  auto d3_df = d1_df.Filter("H.gtr.dp>-8&&H.gtr.dp<8");
+  auto h3 = d3_df.Histo1D({"pdelta","h3 with first (direct) Cut",100,-10,20},"P.gtr.dp");
+
+  //cut adding
+
+  auto d4_df = d3_df.Filter("H.cal.etottracknorm>0.8");
+  auto h4 = d4_df.Histo1D({"pdelta","h4 with first Cut + second cut",100,-10,20},"P.gtr.dp");
+
+  //two cuts at once
+
+  auto d5_df = d1_df.Filter("H.cal.etottracknorm>0.8&&H.gtr.dp>-8&&H.gtr.dp<8");
+  auto h5 = d5_df.Histo1D({"pdelta","h5 with all cuts  at once",100,-10,20},"P.gtr.dp");
+
+  //2D plot
+  auto h6 = d5_df.Histo2D({"pdelta vs pbeta", "delta vs beta;beta;delta", 100, 0, 2, 100, -10, 20},"P.gtr.beta","P.gtr.dp");
+ 
+  //save as samll ROOTile
+ 
+  auto df_new1 = d1_df.Define("pdelta1","P.gtr.dp")
+    .Define("hbeta1","H.gtr.beta");
+
+  auto df_new2 = d1_df.Filter("H.gtr.dp>-8&&H.gtr.dp<8")
+    .Define("pdelta2","P.gtr.dp")
+    .Define("hbeta2","H.gtr.beta");
+
+  auto df_new3 = d1_df.Filter("H.gtr.dp>-8&&H.gtr.dp<8&&H.cal.etottracknorm>0.8")
+    .Define("pdelta3","P.gtr.dp")
+    .Define("hbeta3","H.gtr.beta");
+ 
+   
+ 
+ 
+  auto OutTree1 = "T1";
+  auto OutTree2 = "T2";
+  auto OutTree3 = "T3";
+  
+  auto OutRootName = "output_ROOTfile.root";
+  
+  ROOT::RDF::RSnapshotOptions opts;
+  opts.fMode = "UPDATE";
+  df_new1.Snapshot(OutTree1,OutRootName,{"pdelta1","hbeta1"});
+  df_new2.Snapshot(OutTree2,OutRootName,{"pdelta2","hbeta2"},opts);
+  df_new3.Snapshot(OutTree3,OutRootName,{"pdelta3","hbeta3"},opts);
+ 
+  TCanvas *c1 = new TCanvas("c1","",1000,600);
+  c1->Divide(3,3);
+  c1->cd(1);
+  h1->Draw();
+
+  c1->cd(2);
+  h2->Draw();
+
+  c1->cd(3);
+  h3->Draw();
+
+  c1->cd(4);
+  h4->Draw();
+
+  c1->cd(5);
+  h5->Draw();
+
+  c1->cd(6);
+  h6->Draw("colz");
+  h6->GetYaxis()->CenterTitle();
+  h6->GetXaxis()->CenterTitle();
+
+
+
+ 
+  c1->SaveAs("pdf/hist_1.pdf");
+}
