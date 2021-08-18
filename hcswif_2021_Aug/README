@@ -1,0 +1,13 @@
+Also in github
+ https://github.com/hdb169/Ana/new/main/hcswif_2021_Aug
+
+This hcswif works
+
+The main thing is that I have to bulid hcana with 6.10.02 version of ROOT
+
+This was done by first sourcing to source/apps/root/6.10.03/set...csh
+
+
+And using the setup.sh with phy 2.1 version but not any ROOT versions
+
+Be sure to keep the correct path for hcana and the replay 
