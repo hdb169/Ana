@@ -81,3 +81,26 @@ void trial(){
  
   c1->SaveAs("pdf/hist_1.pdf");
 }
+
+//applying all cuts at once============================>
+
+void plot_1dhist(){
+ROOT::EnableImplicitMT();
+//auto path = ;
+ROOT::RDataFrame d("T", "/lustre19/expphy/volatile/hallc/c-csv/hdbhatt/ROOTfiles/neweff/coin_replay_production_7723_-1.root");
+
+auto myHisto1 = d.Histo1D("H.cal.etottracknorm");
+auto myHisto2 = d.Filter("P.gtr.dp>-10&&P.gtr.dp<20&&H.gtr.dp>-8&&H.gtr.dp<8&&P.cal.etottracknorm<0.7&&P.aero.npeSum>4&&H.cer.npeSum>2")
+                 .Histo1D("H.cal.etottracknorm");
+TCanvas *c1 = new TCanvas("c1","example hist",1000,800);
+c1->Divide(2,2);
+c1->cd(1);
+myHisto1->DrawCopy();
+
+c1->cd(2);
+myHisto2->DrawCopy();
+
+
+c1->SaveAs("pdf/example1.pdf");
+
+
