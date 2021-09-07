@@ -194,6 +194,12 @@ void skim_check(int RunGroup=0){
 
 
 
+        /////////====================================Positive Polarity
+
+    
+    
+    
+    
 
     //loop over each pos runs data
     for(auto it = pos_D2.begin();it!=pos_D2.end();++it){
@@ -518,6 +524,16 @@ void skim_check(int RunGroup=0){
 
     }
 
+    
+    
+    
+    /////////======================================Negative Polarity
+    
+    
+    
+    
+    
+    
     //loop over each neg runs data
     for(auto it = neg_D2.begin();it!=neg_D2.end();++it){
       int RunNumber = *it;
