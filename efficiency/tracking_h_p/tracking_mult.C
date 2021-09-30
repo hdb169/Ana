@@ -7,6 +7,7 @@
 
 ///Note, this is all good, but acc subtraction is not done, yet htrack, ptrack ef are > 99.5 for (5367-5377)
 ///needs scaler analysis
+//you may remove phgcer  cut
 
 #include "TH1F.h"
 #include <TH2.h>
