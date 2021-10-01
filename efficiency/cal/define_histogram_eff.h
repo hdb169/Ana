@@ -149,20 +149,17 @@ TH1D *hist_hcal_did_acc = new TH1D("hist_hcal_did_acc", "hist_hcal_did_acc", bin
 TH1D *hist_hcal_should_acc = new TH1D("hist_hcal_should_acc", "hist_hcal_should_acc", bincal, local, hical);
 TH1D *hist_hcal_did_coin = new TH1D("hist_hcal_did_coin", "hist_hcal_did_coin", bincal, local, hical);
 TH1D *hist_hcal_should_coin = new TH1D("hist_hcal_should_coin", "hist_hcal_should_coin", bincal, local, hical);
-
-/* TH1D *hist_pcal_did_acc = new TH1D("hist_pcal_did_acc", "hist_pcal_did_acc", bincal, local, hical); */
-/* TH1D *hist_pcal_should_acc = new TH1D("hist_pcal_should_acc", "hist_pcal_should_acc", bincal, local, hical); */
-
-
-
-/* TH1D *hist_pcal_did_coin = new TH1D("hist_pcal_did_coin", "hist_pcal_did_coin", bincal, local, hical); */
-/* TH1D *hist_pcal_should_coin = new TH1D("hist_pcal_should_coin", "hist_pcal_should_coin", bincal, local, hical); */
-
-
 TH1D *hist_hcal_did_clean = new TH1D("hist_hcal_did_clean", "hist_hcal_did_clean", bincal, local, hical);
 TH1D *hist_hcal_should_clean = new TH1D("hist_hcal_should_clean", "hist_hcal_should_clean", bincal, local, hical);
-/* TH1D *hist_pcal_did_clean = new TH1D("hist_pcal_did_clean", "hist_pcal_did_clean", bincal, local, hical); */
-/* TH1D *hist_pcal_should_clean = new TH1D("hist_pcal_should_clean", "hist_pcal_should_clean", bincal, local, hical); */
+
+
+
+TH1D *hist_pcal_did_acc = new TH1D("hist_pcal_did_acc", "hist_pcal_did_acc", bincal, local, hical);
+TH1D *hist_pcal_should_acc = new TH1D("hist_pcal_should_acc", "hist_pcal_should_acc", bincal, local, hical);
+TH1D *hist_pcal_did_coin = new TH1D("hist_pcal_did_coin", "hist_pcal_did_coin", bincal, local, hical);
+TH1D *hist_pcal_should_coin = new TH1D("hist_pcal_should_coin", "hist_pcal_should_coin", bincal, local, hical);
+TH1D *hist_pcal_did_clean = new TH1D("hist_pcal_did_clean", "hist_pcal_did_clean", bincal, local, hical);
+TH1D *hist_pcal_should_clean = new TH1D("hist_pcal_should_clean", "hist_pcal_should_clean", bincal, local, hical);
 
 //aero eff
 //hallc talk aero vs z
@@ -175,13 +172,13 @@ TH1D *hist_pcal_aero_did_clean = new TH1D("hist_pcal_aero_did_clean", "hist_pcal
 
 
 //differnt z bins efficiency
-TH1D *hist_pcal_did_acc = new TH1D("hist_pcal_did_acc", "hist_pcal_did_acc", binzvalue, binzlo, binzhi);
-TH1D *hist_pcal_should_acc = new TH1D("hist_pcal_should_acc", "hist_pcal_should_acc", binzvalue, binzlo, binzhi);
-TH1D *hist_pcal_did_coin = new TH1D("hist_pcal_did_coin", "hist_pcal_did_coin", binzvalue, binzlo, binzhi);
-TH1D *hist_pcal_should_coin = new TH1D("hist_pcal_should_coin", "hist_pcal_should_coin", binzvalue, binzlo, binzhi);
-TH1D *hist_pcal_eff = new TH1D("hist_pcal_eff", "hist_pcal_eff", binzvalue, binzlo, binzhi);
-TH1D *hist_pcal_did_clean = new TH1D("hist_pcal_did_clean", "hist_pcal_did_clean", binzvalue, binzlo, binzhi );
-TH1D *hist_pcal_should_clean = new TH1D("hist_pcal_should_clean", "hist_pcal_should_clean", binzvalue, binzlo, binzhi );
+/* TH1D *hist_pcal_did_acc = new TH1D("hist_pcal_did_acc", "hist_pcal_did_acc", binzvalue, binzlo, binzhi); */
+/* TH1D *hist_pcal_should_acc = new TH1D("hist_pcal_should_acc", "hist_pcal_should_acc", binzvalue, binzlo, binzhi); */
+/* TH1D *hist_pcal_did_coin = new TH1D("hist_pcal_did_coin", "hist_pcal_did_coin", binzvalue, binzlo, binzhi); */
+/* TH1D *hist_pcal_should_coin = new TH1D("hist_pcal_should_coin", "hist_pcal_should_coin", binzvalue, binzlo, binzhi); */
+/* TH1D *hist_pcal_eff = new TH1D("hist_pcal_eff", "hist_pcal_eff", binzvalue, binzlo, binzhi); */
+/* TH1D *hist_pcal_did_clean = new TH1D("hist_pcal_did_clean", "hist_pcal_did_clean", binzvalue, binzlo, binzhi ); */
+/* TH1D *hist_pcal_should_clean = new TH1D("hist_pcal_should_clean", "hist_pcal_should_clean", binzvalue, binzlo, binzhi ); */
 
 TH1D *hist_pcal_aero_eff = new TH1D("hist_pcal_aero_eff", "hist_pcal_aero_eff", binzvalue, binzlo, binzhi);
 
