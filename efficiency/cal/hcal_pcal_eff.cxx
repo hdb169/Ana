@@ -212,12 +212,12 @@ void hcal_pcaleff(){//has hgcer cut
 	
 	if(pcal_did_cut_coin){//-----------------------------------cal coin  did in z
 	  // hist_pcal_did_coin->Fill(pcaletottrack); jan 19
-	  hist_pcal_did_coin->Fill(zhad);
+	  hist_pcal_did_coin->Fill(pcaletottrack);
 
 	}
        	if(pcal_should_cut_coin){//-------------------------------------cal coin should in z
 	  // hist_pcal_should_coin->Fill(pcaletottrack); jan 19
-	  hist_pcal_should_coin->Fill(zhad);
+	  hist_pcal_should_coin->Fill(pcaletottrack);
 	  shms_sh_vs_psh_should_coin->Fill(pcalepr,shmsshower);
 
 	}
