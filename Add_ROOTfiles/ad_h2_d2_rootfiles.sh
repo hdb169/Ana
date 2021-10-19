@@ -1,3 +1,234 @@
+
+#!/bin/bash
+echo
+home_dir=/lustre19/expphy/volatile/hallc/c-csv/hdbhatt/ROOTfiles/newhcana
+rootoutdir="/lustre19/expphy/volatile/hallc/c-csv/hdbhatt/ROOTfiles/newhcana/addedRootfiles"
+echo "$home_dir"
+echo
+echo
+cd "$home_dir"
+########
+#shell script to add runs is in another file, these are all D2 and H2 runs only.
+
+
+hadd pos_6068.root run_6068_-1.root run_6070_-1.root run_6071_-1.root
+hadd pos_6065.root run_6065_-1.root run_6066_-1.root
+hadd pos_6073.root run_6073_-1.root run_6081_-1.root
+hadd pos_6082.root run_6082_-1.root run_6083_-1.root
+hadd pos_6088.root run_6088_-1.root run_6089_-1.root run_6090_-1.root
+hadd pos_6084.root run_6084_-1.root run_6085_-1.root run_6086_-1.root
+hadd pos_6091.root run_6091_-1.root run_6093_-1.root run_6096_-1.root
+hadd pos_6099.root run_6099_-1.root run_610[0-3]_-1.root 
+
+
+hadd neg_6020.root run_602[0-1]_-1.root
+hadd neg_6025.root run_602[3-5]_-1.root
+hadd neg_6029.root run_6029_-1.root run_603[0-2]_-1.root
+hadd neg_6033.root run_603[3-6]_-1.root
+hadd neg_6043.root run_604[3-5]_-1.root
+hadd neg_6038.root run_603[8-9]_-1.root run_604[0-2]_-1.root
+hadd neg_6049.root run_6049_-1.root run_605[0-5]_-1.root
+hadd neg_6059.root run_6059_-1.root run_606[0-4]_-1.root
+
+
+hadd pos_6537.root run_6537_-1.root
+hadd pos_6541.root run_6541_-1.root
+hadd pos_6542.root run_654[2-3]_-1.root
+
+hadd neg_6545.root run_6545_-1.root
+hadd neg_6548.root run_654[8-9]_-1.root
+hadd neg_6550.root run_655[0-1]_-1.root
+
+
+hadd neg_6111.root run_611[1-2]_-1.root run_6114_-1.root
+hadd neg_6104.root run_610[4-6]_-1.root
+hadd neg_6115.root run_611[5-6]_-1.root
+hadd neg_6117.root run_611[7-8]_-1.root run_6121_-1.root
+hadd neg_6124.root run_612[4-5]_-1.root
+hadd neg_6122.root run_612[2-3]_-1.root run_6126_-1.root
+hadd neg_6136.root run_613[6-8]_-1.root
+hadd neg_6140.root run_614[0-1]_-1.root run_6139_-1.root
+
+
+hadd pos_6145.root run_614[5-6]_-1.root run_6154_-1.root
+hadd pos_6142.root run_6142_-1.root run_6144_-1.root  run_6163_-1.root run_6164_-1.root
+hadd pos_6170.root run_617[0-1]_-1.root 
+hadd pos_6174.root run_617[4-5].root
+hadd pos_6179.root run_6179_-1.root  run_6180_-1.root
+hadd pos_6177.root run_617[7-8].root
+hadd pos_6185.root run_618[5-7]_-1.root 
+hadd pos_6188.root run_618[8-9].root run_6190_-1.root
+
+
+hadd pos_6500.root run_650[0-1]_-1.root
+hadd pos_6506.root run_650[6-7]_-1.root
+hadd pos_6509.root run_6509_-1.root run_6510_-1.root
+hadd pos_6514.root run_651[4-7]_-1.root 
+
+
+hadd neg_6486.root run_6486_-1.root
+hadd neg_6489.root run_6489_-1.root
+hadd neg_6490.root run_649[0-1]_-1.root run_6493_-1.root
+hadd neg_6496.root run_649[6-9]_-1.root 
+
+
+
+hadd neg_6245.root run_624[5-7]_-1.root
+hadd neg_6237.root run_6237_-1.root  run_624[0-1]_-1.root
+hadd neg_6248.root run_624[8-9]_-1.root run_6250_-1.root
+hadd neg_6253.root run_625[3-5]_-1.root 
+hadd neg_6263.root run_626[3-7]_-1.root
+hadd neg_6256.root run_625[6-9]_-1.root run_6260_-1.root
+hadd neg_6270.root run_627[0-3]_-1.root
+hadd neg_6277.root run_6277_-1.root run_6281_-1.root run_6282_-1.root run_6284_-1.root
+
+
+hadd pos_6194.root run_619[4-5]_-1.root
+hadd pos_6192.root run_629[2-3]_-1.root 
+hadd pos_6198.root run_619[8-9]_-1.root 
+hadd pos_6200.root run_620[0-1]_-1.root 
+hadd pos_6205.root run_6205_-1.root run_620[8-9]_-1.root run_6210_-1.root
+hadd pos_6202.root run_620[2-4]_-1.root 
+hadd pos_6215.root run_621[5-7]_-1.root run_6219_-1.root run_6229_-1.root
+hadd pos_6221.root run_622[1-5]_-1.root 
+
+
+hadd pos_6419.root run_6419_-1.root run_642[1-2]_-1.root 
+hadd pos_6429.root run_6429_-1.root run_643[0-3]_-1.root
+hadd pos_6434.root run_643[4-6]_-1.root
+hadd pos_6443.root run_644[3-8]_-1.root 
+
+
+
+hadd neg_6451.root run_645[1-3]_-1.root 
+hadd neg_6459.root run_6459_-1.root run_646[0-4]_-1.root
+hadd neg_6465.root run_646[5-7]_-1.root
+hadd neg_6473.root run_647[3-9]_-1.root 
+
+
+hadd neg_6290.root run_629[0-1]_-1.root
+hadd neg_6285.root run_628[5-7]_-1.root
+hadd neg_6292.root run_629[2-3]_-1.root
+hadd neg_6297.root run_629[7-9]_-1.root 
+hadd neg_6306.root run_630[6-8]_-1.root
+hadd neg_6300.root run_630[0-2]_-1.root 
+hadd neg_6348.root run_634[8-9]_-1.root run_635[0-1]_-1.root
+hadd neg_6355.root run_635[5-8]_-1.root
+
+
+hadd pos_6309.root run_6309_-1.root  run_6310_-1.root
+hadd pos_6313.root run_631[3-4]_-1.root
+hadd pos_6322.root run_632[2-3]_-1.root
+hadd pos_6315.root run_631[7-8]_-1.root 
+hadd pos_6325.root run_632[5-6]_-1.root
+hadd pos_6331.root run_633[1-2]_-1.root 
+hadd pos_6340.root run_634[0-4]_-1.root  run_6347_-1.root
+hadd pos_6334.root run_633[4-8]_-1.root
+
+
+hadd pos_6387.root run_638[7-8]_-1.root run_639[7-8]_-1.root 
+hadd pos_6393.root run_639[3-6]_-1.root
+hadd pos_6399.root run_6399_-1.root run_640[2-4]_-1.root
+hadd pos_6410.root run_641[0-3]_-1.root  run_641[5-7]_-1.root
+
+
+hadd neg_6359.root run_6359_-1.root run_6360_-1.root 
+hadd neg_6367.root run_636[7-8]_-1.root run_6370_-1.root
+hadd neg_6375.root run_637[5-7]_-1.root
+hadd neg_6378.root run_637[8-9]_-1.root  run_638[0-1]_-1.root
+
+
+hadd neg_6524.root run_652[4-6]_-1.root 
+hadd pos_6518.root run_651[8-9]_-1.root run_6520_-1.root
+
+
+hadd neg_6535.root run_653[5-6]_-1.root 
+hadd pos_6527.root run_652[7-9]_-1.root
+
+
+
+hadd neg_7593.root run_759[3-7]_-1.root
+hadd neg_7608.root run_760[8-9]_-1.root run_7610_-1.root
+hadd neg_7611.root run_761[1-6]_-1.root
+hadd neg_7625.root run_762[5-9]_-1.root run_763[0-4]_-1.root
+
+
+
+hadd pos_7637.root run_763[5-7]_-1.root
+hadd pos_7642.root run_764[2-5]_-1.root
+hadd pos_7646.root run_764[6-9]_-1.root run_765[0-2]_-1.roo
+hadd pos_7661.root run_766[1-9]_-1.root run_7670_-1.root
+
+
+hadd neg_7671.root run_767[1-2]_-1.root
+hadd neg_7679.root run_7679_-1.root run_768[0-2]_-1.root
+hadd neg_7684.root run_768[4-9]_-1.root run_769[0-2]_-1.root
+
+
+hadd pos_7699.root run_7699_-1.root run_770[2-3]_-1.root
+hadd pos_7706.root run_770[6-9]_-1.root run_7710_-1.root
+hadd pos_7716.root run_771[6-9]_-1.root run_772[0-2]_-1.root
+
+
+hadd neg_7729.root run_7729_-1.root run_773[0-3]_-1.root
+hadd neg_7735.root run_773[5-6]_-1.root
+hadd neg_7741.root run_774[1-3]_-1.root 
+hadd neg_7737.root run_773[7-9]_-1.root run_7740_-1.root
+hadd neg_7753.root run_775[3-5]_-1.root 
+hadd neg_7757.root run_775[7-9]_-1.root 
+
+
+hadd pos_7765.root run_776[5-6]_-1.root
+hadd pos_7767.root run_776[7-9]_-1.root run_777[0-1]_-1.root
+hadd pos_7778.root run_777[8-9]_-1.root 
+hadd pos_7775.root run_777[5-7]_-1.root 
+hadd pos_7781.root run_778[1-2]_-1.root 
+hadd pos_7783.root run_778[3-7]_-1.root 
+
+
+hadd neg_7796.root run_779[6-7]_-1.root
+hadd neg_7798.root run_779[8-9]_-1.root run_7800_-1.root
+hadd neg_7805.root run_780[5-7]_-1.root
+
+
+hadd pos_7808.root run_780[8-9]_-1.root
+hadd pos_7813.root run_781[3-4]_-1.root
+hadd pos_7815.root run_781[5-7]_-1.root
+
+#Note
+#11/1 6490 :added (A), 6418 not added (NA), 6420 NA
+#12/1 6449, 6450 Added
+#14/7 6324 added
+#14/10 6339 Not added
+#15/5 6399 added, 6400, 6401 not added
+#38/5 7767 added
+
+
+
+
+
+############
+eval "mv *kin*.root addedROOTfiles"
+eval "ls -ltrh addedROOTfiles/*.root"
+
+
+
+
+
+
+=======================================
+
+
+
+
+
+
+
+
+
+
+
+
 #!/bin/bash
 echo
 home_dir=/lustre19/expphy/volatile/hallc/c-csv/hdbhatt/ROOTfiles/alleff
