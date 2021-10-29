@@ -1,0 +1,1083 @@
+//made pcal 0.6, hcal 0.8, rf 0.4 , ctime 2, hcer 8, delta dropped centaral, graphical cut on
+#include "header.h"
+#include <iostream>
+#include <string>
+#include "TCanvas.h"
+#include "TGraphErrors.h"
+#include "TF1.h"
+#include "TPaveText.h"
+#include <TStyle.h>
+#include <TCanvas.h>
+#include <TLine.h>
+#include <TMath.h>
+#include <TPaveText.h>
+#include <TGaxis.h>
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <stdio.h>
+#include <TSystem.h>
+#include <TTree.h>
+#include <TArc.h>
+#include <TCutG.h>
+#include <TExec.h>
+#include <TColor.h>
+#define NRUNS 1//2//5
+
+Int_t runs[NRUNS]={1};
+//Int_t runs[NRUNS]={7672};
+#define nums  21
+Int_t hgcerhist[nums]={0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20};
+
+
+double RI = 1.00137;
+
+void pippim_alltarget(){
+  gStyle->SetPalette(1,0);//color in 2D 3D
+  gStyle->SetOptStat(1000011);
+  gStyle->SetOptFit(1);
+  gStyle->SetTitleOffset(1.,"Y");
+  gStyle->SetTitleOffset(.7,"X");
+  gStyle->SetLabelSize(0.04,"XY");
+  gStyle->SetTitleSize(0.06,"XY");
+  gStyle->SetPadLeftMargin(0.12);  
+  //#include "gStyle.h"
+  gStyle->SetOptStat(0);
+  //gStyle->SetOptStat(1000011);//integral
+  // gStyle->SetOptStat(1111111);//integral
+  gStyle->SetOptFit(1);//integral
+  // gStyle->SetErrorX(0); 
+
+  ofstream txtfile_central("txtfile/hgcer_eff_central.txt",ios::app);
+  ofstream txtfile_middle("txtfile/hgcer_eff_middle.txt",ios::app);
+  ofstream txtfile_exterior("txtfile/hgcer_eff_exterior.txt",ios::app);
+
+  
+  gStyle->SetErrorX(0);
+
+  for(Int_t r=0; r<NRUNS; r++){
+  
+    // TString filename  = Form("/home/hdbhatt/ROOTfiles/short_hgc/coin_replay_production_%d_-1.root", runs[r]);//------7796
+     TString filename  = Form("/home/hdbhatt/ROOTfiles/oct28_hgceff/all_pip_pim_D2H2Al_gt3gev_%d.root", runs[r]);//------7796
+
+    TFile *f = new TFile(filename, "READ");
+    TFile * f11 = new TFile(Form("root_hgcereff/efficieny_%d_try.root",runs[r]),"RECREATE");
+
+    cout<< "Opening Run Num = "<< runs[r] <<endl; 
+    
+    if(f->IsZombie()){
+      std::cout << "Error opening file "<< std::endl;
+      continue;
+    }
+
+   
+    TCutG *cutg = new TCutG("cutg",22);
+    cutg->SetVarX("");
+    cutg->SetVarY("");
+    cutg->SetPoint(0, 4.8,2.4 );
+    cutg->SetPoint(1, 2.4,2.4 );
+    cutg->SetPoint(2, 2.4,3.1 ) ;
+    cutg->SetPoint(3, 0,3.1);
+    cutg->SetPoint(4, 0, 2.4);
+    cutg->SetPoint(5, -0.8,2.4);
+    cutg->SetPoint(6, -0.8,1.6);
+    cutg->SetPoint(7, -3.2,1.6);
+    cutg->SetPoint(8, -3.2,0.8 );
+    cutg->SetPoint(9, -1.64,0.8);
+    cutg->SetPoint(10, -1.64,0 );
+    cutg->SetPoint(11, -0.8,0);
+    cutg->SetPoint(12,  -0.8,-0.8) ;
+    cutg->SetPoint(13, 0.8,-0.8);
+    cutg->SetPoint(14, 0.8,-1.6 );
+    cutg->SetPoint(15, 3.2,-1.6 );
+    cutg->SetPoint(16, 3.2,0);
+    cutg->SetPoint(17, 2.4,0);
+    cutg->SetPoint(18, 2.4, 0.8 ); 
+    cutg->SetPoint(19, 5.6,0.6 );
+    cutg->SetPoint(20, 5.6,1.6 );
+    cutg->SetPoint(21, 4.8,1.6);
+    cutg->SetPoint(22, 4.8,2.4);
+    
+    TCutG *cutg1 = new TCutG("cutg1",8);
+    cutg1->SetVarX("");
+    cutg1->SetVarY("");
+    cutg1->SetPoint(0,-10,-10 );
+    cutg1->SetPoint(1, 0,-10 );
+    cutg1->SetPoint(2, 10,-10 ) ;
+    cutg1->SetPoint(3, 10,0);
+    cutg1->SetPoint(4, 10,10);
+    cutg1->SetPoint(5, 0,10);
+    cutg1->SetPoint(6, -10,10);
+    cutg1->SetPoint(7, -10,0);
+    cutg1->SetPoint(8, -10,-10);
+
+    TCutG *cutg2 = new TCutG("cutg2",8);
+    cutg2->SetVarX("");
+    cutg2->SetVarY("");
+    cutg2->SetPoint(0,-20,-20 );
+    cutg2->SetPoint(1, 0,-20 );
+    cutg2->SetPoint(2, 20,-20 ) ;
+    cutg2->SetPoint(3, 20,0);
+    cutg2->SetPoint(4, 20,20);
+    cutg2->SetPoint(5, 0,20);
+    cutg2->SetPoint(6, -20,20);
+    cutg2->SetPoint(7, -20,0);
+    cutg2->SetPoint(8, -20,-20);
+    
+    //#include "binkin391_401.h"
+
+#include "grcutfile0.h"
+#include "bin7808.h"
+
+    
+    Double_t pionmass   = 0.1395701835;    //Gev/c^2 
+    Double_t protonmass = 0.93827231;//GeV/c2
+    Double_t dxbj, dQ2, dnu,domega,  dW2, dpmiss, demiss,  zhad, Mx2,Mx2a_acccut,Epi_acccut,zhad_acccut,Epi_pidcut,zhad_pidcut,Mx2_pidcut,Epi_cut,zhad_cut,Mx2_cut ;//d = data
+    Double_t pbeta,hbeta,pdelta,hdelta,hcaletottrack,pcaletottrack,pcalepr,hcalepr,paero,hcernpe,hgcer,W,Q2,xbj,ctime,Epi,Epi_d,Epi_acc,z,z_d,z_acc,pkinomega,mom,HgtrP,hhodstarttime,phodstarttime,hdipole, pdipole,pcaletotnorm,phodgoodscinhit,betanotrack,pdcntrack,pdcch1nhit,pdcch2nhit, phodrftdcmult,phodrftdctime,prftdcmult,prftdctime , hhodrftdcmult,hhodrftdctime,hrftdcmult,hrftdctime,phodfphitstime,hhodfphitstime,rfminusfp,eventtype,rf_pion,hhodgoodscinhit,hhodbetanotrack,hdcntrack,hgtry,pgtry,phodbetanotrack,hcaletotnorm,gevnum,hxptar,hyptar,pxptar,pyptar ;
+
+    double scaler_eventnum,bcm1charge,bcm1current,scaler1MHztime,scaler1MHztimecut,bcm1chargecut,s1xscaler,s1yscaler,s2xscaler,s2yscaler,ptrig1scaler,ptrig2scaler,ptrig3scaler,ptrig4scaler,ptrig6scaler,pedtmscaler,pelcleanscaler,pl1acceptscaler,edtmtdctime,edtmtdctimeraw,mult,ptrig1rate,rate,charge,hgc_xAtCer,hgc_yAtCer   ;
+    
+    Double_t Epi_dcut0, z_dcut0, Epi_dcut1, z_dcut1, Epi_dcut2, z_dcut2, Epi_dcut3, z_dcut3, Epi_dcut1plus2, z_dcut1plus2; 
+    Double_t Epi_acc0, z_acc0, Epi_acc1, z_acc1, Epi_acc2, z_acc2, Epi_acc3, z_acc3, Epi_acc1plus2, z_acc1plus2 ,rf_pion1 ;
+
+    Bool_t  accR_cut, accL_cut,shms_cut,pid_cut,tracking_cut,did_cut,should_cut,acc_cut_should,acc_cut_did,pid_cut_acc,hgcer_cut, paero_cut, mod4_pioncut, mod4_notpioncut, pcal_cut, hcal_cut, ctime_cut, hms_cut, pcal_cut_tight, cuttype1, cuttype1acc, cuttype2, cuttype2acc, cuttype1plus2, cuttype1plus2acc , hgcer_cut_loose,  paero_cut_loose,  cuttype0, cuttype0acc, common_cut, cuttype3, cuttype3acc, accsub_cut, acc_cut, shms_tr_did_cut, shms_tr_should_cut, hms_tr_did_cut, hms_tr_should_cut,basic_cut,basic_cal_aero, hms_cal_should_cut, hms_cal_did_cut, shms_cal_should_cut, shms_cal_did_cut, cal_eff_hms_shms_base_cut,cointime_cut ;
+
+    Double_t Epi_cut_acc, zhad_cut_acc, Mx2_cut_acc;
+    Double_t ctmin = 2;//2.0;//1.5
+    Double_t ctmax = 2;//2.0;//1.5
+    Double_t rfmin = 0.5;//0.5;//0.5;
+    Double_t rfmax = 1.5;//1.5;//1.5;
+    Double_t eprmin = 0.0;
+    Double_t eprmax = 0.2;//0.15;
+    Double_t pcaletotmin = 0.0;
+    Double_t pcaletotmax = 0.7;//0.75;
+    Double_t hcaletotmin = 0.75;//0.75;
+    Double_t offsetrf;
+    double nbin  = 70;//5;
+    double loxy = -70;//-30;
+    double hixy  = 40;//30;
+    double lodelta = -10;
+    double hidelta = 20;
+    double npelo = 0;
+    double npehi = 30;
+    double binP   = 20;
+    double binloP = 2.9;
+    double binhiP = 5.5;
+    double maxct = 47.5;
+    double minct = 42.5;
+    TH1F *hmom = new TH1F("hmom","", 17, 2.8, 7.0);
+    TH1F *hmom_all_regions = new TH1F("hmom_all_regions (hole removed)","Mom Distn (all regions); Mom (GeV); Counts", 17, 2.8, 7.0);
+    TH1F *hmom_circle1 = new TH1F("hmom_circle1","Mom Distn (inner circle); Mom (GeV); Counts", 17, 2.8, 7.0);
+    TH1F *hmom_circle2 = new TH1F("hmom_circle2","Mom Distn (middle circle); Mom (GeV); Counts", 17, 2.8, 7.0);
+    TH1F *hmom_circle3 = new TH1F("hmom_circle3","Mom Distn (exterior); Mom (GeV); Counts", 17, 2.8, 7.0);
+
+    TH1F *hctimecut = new TH1F("hctimecut","", 100, 30, 55);
+    TProfile2D * xy_vs_npe_grcut = new TProfile2D("xy_vs_npe_grcut","X vs Y  vs NPE (hole present, No Cer Cut);P.hgcer.yAtCer;P.hgcer.xAtCer;NPESUM", 300, -50, 50, 300, -50, 50, 0, 35);
+    TProfile2D * xy_vs_npe_grcut_hole_removed = new TProfile2D("xy_vs_npe_grcut_hole_removed","X vs Y  vs NPE (hole removed,  Cer Cut);P.hgcer.yAtCer;P.hgcer.xAtCer;NPESUM", 300, -50, 50, 300, -50, 50, 0, 35);
+
+    TH2D * XvsY_hgc0p5 = new TH2D("XvsY_hgc0p5","X vs Y At Hgcer;P.hgcer.yAtCer;P.hgcer.xAtCer", 300, -50, 50, 300, -50, 50);
+    TH2D * XvsY_hgc0p5_hole = new TH2D("XvsY_hgc0p5_hole","X vs Y At Hgcer (Remove Hole + stripe);P.hgcer.yAtCer;P.hgcer.xAtCer", 300, -50, 50, 300, -50, 50);
+    TH2D * XvsY_hgc0p5_all_regions = new TH2D("XvsY_hgc0p5_all_regions","X vs Y At Hgcer (All But Remove Hole + stripe);P.hgcer.yAtCer;P.hgcer.xAtCer", 300, -50, 50, 300, -50, 50);
+    TH2D * XvsY_hgc0p5_cir1 = new TH2D("XvsY_hgc0p5_cir1","X vs Y At Hgcer (circle 1) ;P.hgcer.yAtCer;P.hgcer.xAtCer", 300, -50, 50, 300, -50, 50);
+    TH2D * XvsY_hgc0p5_cir2 = new TH2D("XvsY_hgc0p5_cir2","X vs Y At Hgcer (circle 2) ;P.hgcer.yAtCer;P.hgcer.xAtCer", 300, -50, 50, 300, -50, 50);
+    TH2D * XvsY_hgc0p5_exterior = new TH2D("XvsY_hgc0p5_cir3","X vs Y At Hgcer (exterior) ;P.hgcer.yAtCer;P.hgcer.xAtCer", 300, -50, 50, 300, -50, 50);
+
+
+
+   
+#include "offsetrf.h"
+    TTree * tt = (TTree *)f->Get("T");
+    TTree * ss = (TTree *)f->Get("TSP");
+#include "define_histogram.h"
+
+    //----------------------------------------Fill Hist
+    //#include "branch_original.h"
+#include "branch.h"
+
+    Long64_t nentriesD = tt->GetEntries();
+   
+   
+#include "scaler_branch.h"
+    Long64_t scal_entries = ss->GetEntries();
+#include "scaler_analysis.h"
+
+    Int_t nscaler_reads_acc=0;
+   
+   
+		
+    Bool_t hgcer_cut1 ,paero_cut1 , mod4_pioncut1,  mod4_notpioncut1,   pcal_cut1, hcal_cut1,  hms_cut1,   shms_cut1, shms_cut2, pid_cut1, ctime_cut1, acc_cut1, acc_cut1hardcut,acc_cut_norf,central_hole,right_or_left_of_hole,remove_region,circle1, circle22, circle2, circle3, pid_cutacc, hms_cutacc ;
+
+
+    Int_t nscaler_reads=0;
+
+      
+    for (int kk=0; kk<nentriesD;  kk++){//-----------------------------------------------------Main Evt Loop
+      tt->GetEntry(kk);
+    
+      rf_pion1 = (fmod(-prftdctime+phodfphitstime+ 399.05 ,4.008));
+      // rf_pion1 = (fmod(-prftdctime+phodfphitstime+ 400.10 ,4.008));
+      //mod4_pioncut1 = ((rf_pion1 > 2.5 && rf_pion1 < 3.5));
+
+      mod4_pioncut1 = ((rf_pion1 > 0.5 && rf_pion1 < 1.5)||(rf_pion1 > 2.5 && rf_pion1 < 3.5));
+      mod4_notpioncut1 =!mod4_pioncut;
+      pcal_cut1 =  pcaletottrack < pcaletotmax;
+      hcal_cut1 =  hcaletottrack > hcaletotmin;
+
+      hms_cut1  =  hdelta> -8 && hdelta < 8  && hhodstarttime ==1 && hdipole==1  &&hcernpe>1.0 && hcaletottrack>0.75 && hxptar>-0.08&&hxptar<0.08&&hyptar>-0.04&&hyptar<0.04 && ctime>43&&ctime<47;
+      //for pim
+      hms_cutacc  =  hdelta> -8 && hdelta < 8  && hhodstarttime ==1 && hdipole==1  &&hcernpe>1.0 && hcaletottrack>0.75 && hxptar>-0.08&&hxptar<0.08&&hyptar>-0.04&&hyptar<0.04;
+      shms_cut1 =  pdelta >-10 && pdelta < 20   && phodstarttime == 1  && eventtype > 3 && pcaletottrack<0.7 && paero>4 && pdipole ==1 && pxptar>-0.05&&pxptar<0.05&&pyptar>-0.05&&pyptar<0.05;
+      pid_cutacc  = hms_cutacc && shms_cut1 && mod4_pioncut1;//no HGC but RFtime
+      pid_cut1  = hms_cut1 && shms_cut1 && mod4_pioncut1;//no HGC but RFtime
+
+      central_hole = (pow(hgc_yAtCer-1.33, 2) +  pow(hgc_xAtCer-0.83, 2) >= pow(6.0, 2));//radius = 2.54->3.54
+      // right_or_left_of_hole = ((hgc_yAtCer > 1.33 && (hgc_xAtCer < 0.47 ||  hgc_xAtCer > 2.34) ) ||  (hgc_yAtCer < 1.33 && (hgc_xAtCer < 0.26 ||  hgc_xAtCer > 1.76)));
+      right_or_left_of_hole = ((hgc_yAtCer > 1.33 && (hgc_xAtCer < 0. ||  hgc_xAtCer > 3.0) ) ||  (hgc_yAtCer < 1.33 && (hgc_xAtCer < 0.||  hgc_xAtCer > 3)));
+      remove_region = central_hole && right_or_left_of_hole;//ok
+
+      circle1 = (pow(hgc_yAtCer, 2) +  pow(hgc_xAtCer, 2) <= pow(14.5, 2)) && remove_region ;//ok//2.54 to 10
+      circle2 = (pow(hgc_yAtCer, 2) +  pow(hgc_xAtCer, 2) <= pow(24, 2)) && (pow(hgc_yAtCer, 2) +  pow(hgc_xAtCer, 2) > pow(14.5, 2)) && remove_region ;//ok 10 to 20
+      circle3 = (!circle1 && !circle2) && remove_region;//20+
+
+      //for acc sub///////////////////////////////////////////////////////////////////////
+      if(pid_cutacc &&remove_region){
+	hctime->Fill(ctime);
+      }
+      Int_t bin_max = hctime->GetMaximumBin();
+      Double_t max_value = hctime->GetBinCenter(bin_max);
+      accL_cut        =   ctime > (max_value - 18 ) && ctime < (max_value - 10);
+      accR_cut        =   ctime > (max_value + 14 ) && ctime < (max_value + 22);
+      acc_cut         =   (accR_cut || accL_cut);
+
+      if(pid_cutacc &&remove_region && acc_cut){
+	hctimeacc->Fill(ctime);
+
+	htotal_mom_all_acc->Fill(mom);//------------1.....acc sub
+	htotal_delta_all_acc->Fill(pdelta);//--------2.....acc sub
+	if(hgcer>0.5){
+	  hpass_mom_all_acc->Fill(mom);//--------------3.....acc sub
+	  hpass_delta_all_acc->Fill(pdelta);//----------4.....acc sub
+	  
+	}
+	
+      }
+
+      if(hms_cut1 && shms_cut1 &&remove_region &&hgcer>0.5){hRF->Fill(rf_pion1);}//plot RF time without RF cut
+
+      
+      
+      //acc sub done/////////////////////////////////////////////////////////////////////
+      if(pid_cut1){
+	xy_vs_npe_grcut->Fill(hgc_yAtCer,hgc_xAtCer,hgcer);
+       
+
+	if(remove_region){
+	  hmom->Fill(mom);
+	  hctimecut->Fill(ctime);
+	}
+	
+	if(hgcer>0.5){
+	  XvsY_hgc0p5->Fill(hgc_yAtCer,hgc_xAtCer);
+	  hmom_all_regions->Fill(mom);
+	  if(remove_region){
+	    
+	    XvsY_hgc0p5_all_regions->Fill(hgc_yAtCer,hgc_xAtCer);
+	    xy_vs_npe_grcut_hole_removed->Fill(hgc_yAtCer,hgc_xAtCer,hgcer);
+
+	  }
+	  for(int i=1;i<17;i++){
+	    if(mom>2.8+0.1*i  &&  mom<=2.9+0.1*i){ histcer_all[i]->Fill(hgcer);}
+	  }
+	  if(mom>4.5){ histcer_all[17]->Fill(hgcer);}
+	  
+	  if(circle1){
+	    
+	    XvsY_hgc0p5_cir1->Fill(hgc_yAtCer,hgc_xAtCer);
+	    hmom_circle1->Fill(mom);
+	    for(int i=1;i<17;i++){
+	      if(mom>2.8+0.1*i  &&  mom<=2.9+0.1*i){ histcer_central[i]->Fill(hgcer);}
+	    }
+	    if(mom>4.5){ histcer_central[17]->Fill(hgcer);}
+
+	  }
+	  
+	  if(circle2){
+	    XvsY_hgc0p5_cir2->Fill(hgc_yAtCer,hgc_xAtCer);
+	    hmom_circle2->Fill(mom);
+	    for(int i=1;i<17;i++){
+	      if(mom>2.8+0.1*i  &&  mom<=2.9+0.1*i){ histcer_middle[i]->Fill(hgcer);}
+	    }
+	    if(mom>4.5){ histcer_middle[17]->Fill(hgcer);}
+
+	  }
+
+	  if(circle3){
+	    XvsY_hgc0p5_exterior->Fill(hgc_yAtCer,hgc_xAtCer);
+	    hmom_circle3->Fill(mom);
+	    for(int i=1;i<17;i++){
+	      if(mom>2.8+0.1*i  &&  mom<=2.9+0.1*i){ histcer_exterior[i]->Fill(hgcer);}
+	    }
+	    if(mom>4.5){ histcer_exterior[17]->Fill(hgcer);}
+
+	  }
+
+
+
+	  /////////efficiency delta P
+	
+	  // for(int i=1;i<17;i++){
+	  //   if(mom>2.8+0.1*i  &&  mom<=2.9+0.1*i){ histcer_all[i]->Fill(hgcer);}
+	  // }//17 P 
+	}//hgcer
+	
+	/////////efficiency delta P
+	//no central  removed removed
+	
+	htotal_mom_hole_present->Fill(mom);
+	htotal_delta_hole_present->Fill(pdelta);
+	if(hgcer>0.5){
+	  hpass_mom_hole_present->Fill(mom);
+	  hpass_delta_hole_present->Fill(pdelta);
+	} 
+	
+	//all==========================>this is we need for pEff Class
+	if(remove_region){
+	  htotal_mom_all->Fill(mom);//------------1.....acc sub
+	  htotal_delta_all->Fill(pdelta);//--------2.....acc sub
+	 
+	  if(hgcer>0.5){
+	    hpass_mom_all->Fill(mom);//--------------3.....acc sub
+	    hpass_delta_all->Fill(pdelta);//----------4.....acc sub
+	    
+
+	  } 
+	}
+	//plot CTime vs RF time for all mom
+	if(remove_region){
+	  for(int i=1;i<17;i++){
+	    if(mom>2.8+0.1*i && mom<=2.9+0.1*i){hctime_vs_rftime_should[i]->Fill(rf_pion1,ctime);}
+	  }
+	  if(mom>4.5){hctime_vs_rftime_should[17]->Fill(rf_pion1,ctime);}
+
+	  if(hgcer>0.5){
+	    for(int i=1;i<17;i++){
+	      if(mom>2.8+0.1*i && mom<=2.9+0.1*i){hctime_vs_rftime_did[i]->Fill(rf_pion1,ctime);}
+	    }
+	    if(mom>4.5){hctime_vs_rftime_did[17]->Fill(rf_pion1,ctime);}	  
+	  }
+	}//plot CTime vs RF time for all mom done
+
+	
+	//cent
+	if(circle1){
+	  htotal_mom_central->Fill(mom);
+	  htotal_delta_central->Fill(pdelta);
+	  if(hgcer>0.5){
+	    hpass_mom_central->Fill(mom);
+	    hpass_delta_central->Fill(pdelta);
+	  } 
+	}
+	//mid
+	if(circle2){
+	  htotal_mom_middle->Fill(mom);
+	  htotal_delta_middle->Fill(pdelta);
+	  if(hgcer>0.5){
+	    hpass_mom_middle->Fill(mom);
+	    hpass_delta_middle->Fill(pdelta);
+	  } 
+	}
+
+	//ext
+	//mid
+	if(circle3){
+	  htotal_mom_exterior->Fill(mom);
+	  htotal_delta_exterior->Fill(pdelta);
+	  if(hgcer>0.5){
+	    hpass_mom_exterior->Fill(mom);
+	    hpass_delta_exterior->Fill(pdelta);
+	  } 
+	}
+	/////////efficiency delta P
+
+	
+      }//pid	  
+    }//entries
+
+
+#include "eff.h"    
+  
+    //do acc sub ///////all means all regions/////////
+    TH1F *   hpass_mom_all_acc_1peak = (TH1F*) hpass_mom_all_acc->Clone();
+    TH1F *   htotal_mom_all_acc_1peak = (TH1F*) htotal_mom_all_acc->Clone();
+    TH1F *   hpass_delta_all_acc_1peak = (TH1F*) hpass_delta_all_acc->Clone();
+    TH1F *   htotal_delta_all_acc_1peak = (TH1F*) htotal_delta_all_acc->Clone();
+    hpass_mom_all_acc_1peak->Sumw2();
+    htotal_mom_all_acc_1peak->Sumw2();
+    hpass_delta_all_acc_1peak->Sumw2();
+    htotal_delta_all_acc_1peak->Sumw2();
+  
+    hpass_mom_all_acc_1peak->Scale(4/16.0);
+    htotal_mom_all_acc_1peak->Scale(4/16.0);
+    hpass_delta_all_acc_1peak->Scale(4/16.0);
+    htotal_delta_all_acc_1peak->Scale(4/16.0);
+
+    hpass_mom_all_acc_sub->Add(hpass_mom_all,hpass_mom_all_acc_1peak,1,-1);
+    htotal_mom_all_acc_sub->Add(htotal_mom_all,htotal_mom_all_acc_1peak,1,-1);
+    hpass_delta_all_acc_sub->Add(hpass_delta_all,hpass_delta_all_acc_1peak,1,-1);
+    htotal_delta_all_acc_sub->Add(htotal_delta_all,htotal_delta_all_acc_1peak,1,-1);
+
+    hpass_mom_all_acc_sub->Sumw2();
+    htotal_mom_all_acc_sub->Sumw2();
+    hpass_delta_all_acc_sub->Sumw2();
+    htotal_delta_all_acc_sub->Sumw2();
+
+    TEfficiency *pEff_mom_all_acc_sub = new TEfficiency();
+    pEff_mom_all_acc_sub = new TEfficiency(* hpass_mom_all_acc_sub, *htotal_mom_all_acc_sub); 
+
+    TEfficiency *pEff_delta_all_acc_sub = new TEfficiency();
+    pEff_delta_all_acc_sub = new TEfficiency(* hpass_delta_all_acc_sub, *htotal_delta_all_acc_sub); 
+
+
+    double did_accsubEnt =  hpass_mom_all_acc_sub->GetEntries();
+    double did_accsubInt =  hpass_mom_all_acc_sub->Integral();
+    double should_accsubEnt =  htotal_mom_all_acc_sub->GetEntries();
+    double should_accsubInt =  htotal_mom_all_acc_sub->Integral();
+
+  
+    //acc sub done here
+
+
+    // Int_t  before_int = XvsY_hgc0p5->Integral();
+    // Int_t  after_int = XvsY_hgc0p5_cir->Integral();
+    // Double_t loss = (before_int - after_int)*100/before_int;
+    
+    // cout<<"before = "<< before_int << "after = "<<  after_int<< " % loss = "<< loss <<"%."<<endl;
+
+    double centralP = hmom->GetMean();
+    cout<<" "<<endl;
+    cout<< runs[r]<<"  "<< "Central P = "<< centralP << endl;
+    cout<<"  "<<endl;
+    
+    TCanvas *accsub = new TCanvas("accsub","accsub", 1200, 800);
+    //gStyle->SetErrorX(0);
+    accsub->Divide(3,2);
+    accsub->cd(1);
+    hctime->Draw("");
+    hctime->SetLineWidth(2);
+    hctimeacc->Draw("sames");
+    hctimeacc->SetLineWidth(2);
+    hctimeacc->SetLineColor(kRed);
+    hctime->SetTitle("Ctime: pip");
+
+    
+    accsub->cd(2);
+    htotal_mom_all_acc_1peak->Draw("e,p1");
+    htotal_mom_all_acc_1peak->SetLineWidth(2);
+    htotal_mom_all_acc_1peak->SetMarkerStyle(4);
+    hpass_mom_all_acc_1peak->Draw("e, p1 sames");
+    hpass_mom_all_acc_1peak->SetLineWidth(2);
+    hpass_mom_all_acc_1peak->SetLineColor(kRed);
+    hpass_mom_all_acc_1peak->SetMarkerStyle(4);
+    hpass_mom_all_acc_1peak->SetMarkerColor(kRed);
+    htotal_mom_all_acc_1peak->SetTitle("Mom: Pass, Total: pip");
+ 
+    accsub->cd(3);
+    htotal_delta_all_acc_1peak->Draw("e,p1");
+    htotal_delta_all_acc_1peak->SetLineWidth(2);
+    htotal_delta_all_acc_1peak->SetMarkerStyle(4);
+    hpass_delta_all_acc_1peak->Draw("e, p1 sames");
+    hpass_delta_all_acc_1peak->SetLineWidth(2);
+    hpass_delta_all_acc_1peak->SetLineColor(kRed);
+    hpass_delta_all_acc_1peak->SetMarkerStyle(4);
+    hpass_delta_all_acc_1peak->SetMarkerColor(kRed);
+    htotal_delta_all_acc_1peak->SetTitle("Delta: Pass, Total: pip");
+
+    accsub->cd(4);
+    momhist2->Draw("e,p1");
+    momhist2->GetYaxis()->SetRangeUser(0.8,1.0);
+    pEff_mom_all_acc_sub->Draw("e, p1 sames");
+    pEff_mom_all_acc_sub->SetLineWidth(2);
+    pEff_mom_all_acc_sub->SetMarkerStyle(4);
+    momhist2->SetTitle("Eff vs Mom: pip");
+    momhist2->GetYaxis()->SetTitle("Eff");
+    momhist2->GetXaxis()->SetTitle("Momentum");
+
+    accsub->cd(5);
+    delhist2->Draw("e,p1");
+    delhist2->GetYaxis()->SetRangeUser(0.8,1.0);
+    pEff_delta_all_acc_sub->Draw("e, p1 sames");
+    pEff_delta_all_acc_sub->SetLineWidth(2);
+    pEff_delta_all_acc_sub->SetMarkerStyle(4);
+    delhist2->SetTitle("Eff vs Mom: pip");
+    delhist2->GetYaxis()->SetTitle("Eff");
+    delhist2->GetXaxis()->SetTitle("Momentum");
+    
+    accsub->cd(6);
+    hRF->Draw("");
+    hRF->SetLineWidth(2);
+    hRF->SetTitle("RF Time: pip");
+    hRF->GetYaxis()->SetTitle("Counts");
+    hRF->GetXaxis()->SetTitle("RF Time");
+    
+    accsub->SaveAs(Form("pdf_allruns/pip_main1_%d.pdf",runs[r]));
+
+    TCanvas *regions = new TCanvas("regions","regions", 1200, 800);
+    regions->Divide(4,3);
+    regions->cd(1);
+    hmom->Draw();
+    hmom->SetLineWidth(2);
+    hmom->SetTitle("Momentum, (pip)");
+
+    //hmom->SetTitle("Mom Distn All Runs (hole removed)");
+    
+  
+
+    regions->cd(2);gPad->SetLogz();
+    xy_vs_npe_grcut->Draw("colz");
+    xy_vs_npe_grcut->SetTitle("X vs Y vs Npe Sum (No HGC, Hole Not Removed)");
+
+    regions->cd(3);gPad->SetLogz();
+    xy_vs_npe_grcut_hole_removed->Draw("colz");
+    xy_vs_npe_grcut_hole_removed->SetTitle("X vs Y vs Npe (HGC > 0.5, Hole Removed)");
+
+   
+    regions->cd(4);
+    XvsY_hgc0p5->Draw("colz");
+
+    regions->cd(5);
+    XvsY_hgc0p5_all_regions->Draw("colz");
+
+    regions->cd(6);
+    XvsY_hgc0p5_cir1->Draw("colz");
+
+    regions->cd(7);
+    XvsY_hgc0p5_cir2->Draw("colz");
+    
+    regions->cd(8);
+    XvsY_hgc0p5_exterior->Draw("colz");
+
+    regions->cd(9);
+    hmom_all_regions->Draw();
+    hmom_all_regions->SetLineWidth(2);
+
+    regions->cd(10);
+    hmom_circle1->Draw();
+    hmom_circle1->SetLineWidth(2);
+
+    regions->cd(11);
+    hmom_circle2->Draw();
+    hmom_circle2->SetLineWidth(2);
+
+    
+    regions->cd(12);
+    hmom_circle3->Draw();
+    hmom_circle3->SetLineWidth(2);
+
+   
+
+
+    cout<<"hole ="<<XvsY_hgc0p5_all_regions->Integral()<<endl;
+    cout<<"cir1 ="<<XvsY_hgc0p5_cir1->Integral()<<endl;
+    cout<<"cir2 ="<<XvsY_hgc0p5_cir2->Integral()<<endl;
+    cout<<"out  ="<<XvsY_hgc0p5_exterior->Integral()<<endl;
+
+    
+
+    regions->SaveAs(Form("pdf_allruns/pip_second_%d.pdf",runs[r]));
+ 
+    TF1 *fit_central[18];
+    /* for(int i=2;i<8;i++){
+
+       fit_central[i] = new TF1(Form("fit_central[%d]",i),"[0]*TMath::Power(([1]/[2]),(x/[2]))*(TMath::Exp(-([1]/[2])))/TMath::Gamma((x/[2])+1)",2,20 );
+       fit_central[i]->SetParameters(3500,12,1.7);
+       }
+    */
+
+    TF1 *fit[18];
+    for(int i=1;i<18;i++){
+
+      fit[i] = new TF1(Form("fit[%d]",i),"[0]*TMath::Power(([1]/[2]),(x/[2]))*(TMath::Exp(-([1]/[2])))/TMath::Gamma((x/[2])+1)",2,22 );
+      fit[i]->SetParameters(3500,8,0.2);
+    }
+
+#include "fit_cent.h"
+
+   
+   
+    //h1->SaveAs(Form("pdf_allruns/giant_allruns_mom_%d_accsub_pip.pdf",runs[r]));
+
+     
+    // double mean_central[21];
+    // double mean_centralerr[21];
+    // double eff_central[21];
+    // double mean_middle[21];
+    // double mean_middleerr[21];
+    // double eff_middle[21];
+    // double mean_exterior[21];
+    // double mean_exteriorerr[21];
+    // double eff_exterior[21];
+
+    TCanvas *central = new TCanvas("central","central", 1200, 800);
+    central->Divide(5,4);
+    for(int i =1;i<17;i++){
+      central->cd(i);//gPad->SetGrid();
+      histcer_central[i]->Draw("");
+      histcer_central[i]->SetTitle(Form("Npe: Central (%.2f - %.2f)", 2.8+0.1*i, 2.9+0.1*i));
+      histcer_central[i]->SetLineWidth(2);
+      histcer_central[i]->Fit(fit_central[i], "R same");
+      histcer_central[i]->Write();
+     
+    }
+    central->cd(17);//gPad->SetGrid();
+    histcer_central[17]->Draw("");
+    histcer_central[17]->SetTitle(Form("Npe: Central (> %.2f)", 4.5));
+    histcer_central[17]->SetLineWidth(2);
+    histcer_central[17]->Fit(fit_central[17], "R same");
+    histcer_central[17]->Write();
+      
+    central->SaveAs(Form("pdf_allruns/pip_third_central_%d_accsub_pip.pdf",runs[r]));
+
+
+    TCanvas *middle = new TCanvas("middle","middle", 1200, 800);
+    middle->Divide(5,5);
+    for(int i =1;i<17;i++){
+      middle->cd(i);//gPad->SetGrid();
+      histcer_middle[i]->Draw("");
+      histcer_middle[i]->SetTitle(Form("Npe: Middle (%.2f - %.2f)", 2.8+0.1*i, 2.9+0.1*i));
+      histcer_middle[i]->SetLineWidth(2);
+      histcer_middle[i]->Fit(fit[i], "R same");
+      histcer_middle[i]->Write();
+
+    }
+    middle->cd(17);//gPad->SetGrid();
+    histcer_middle[17]->Draw("");
+    histcer_middle[17]->SetTitle(Form("Npe: Middle (> %.2f)", 4.5));
+    histcer_middle[17]->SetLineWidth(2);
+    histcer_middle[17]->Fit(fit[17], "R same");
+    histcer_middle[17]->Write();
+      
+
+
+      
+    middle->SaveAs(Form("pdf_allruns/pip_forth_middle_%d_accsub_pip.pdf",runs[r]));
+
+    TCanvas *exterior = new TCanvas("exterior","exterior", 1200, 800);
+    exterior->Divide(5,5);
+    for(int i =1;i<17;i++){
+      exterior->cd(i);//gPad->SetGrid();
+      histcer_exterior[i]->Draw("");
+      histcer_exterior[i]->SetTitle(Form("Npe: Outer (%.2f - %.2f)", 2.8+0.1*i, 2.9+0.1*i));
+      histcer_exterior[i]->SetLineWidth(2);
+      histcer_exterior[i]->Fit(fit[i], "R same");
+      histcer_exterior[i]->Write();
+
+    }
+
+    exterior->cd(17);//gPad->SetGrid();
+    histcer_exterior[17]->Draw("");
+    histcer_exterior[17]->SetTitle(Form("Npe (Outer) (> %.2f)", 4.5));
+    histcer_exterior[17]->SetLineWidth(2);
+    histcer_exterior[17]->Fit(fit[17], "R same");
+    histcer_exterior[17]->Write();
+  
+
+      
+    exterior->SaveAs(Form("pdf_allruns/pip_fifth_exterior_%d_accsub_pip.pdf",runs[r]));
+
+    TCanvas *all = new TCanvas("all","all", 1200, 800);
+    all->Divide(5,5);
+    for(int i =1;i<17;i++){
+      all->cd(i);//gPad->SetGrid();
+      histcer_all[i]->Draw("");
+      histcer_all[i]->SetTitle(Form("Npe: All Reg (%.2f - %.2f)", 2.8+0.1*i, 2.9+0.1*i));
+      histcer_all[i]->SetLineWidth(2);
+      histcer_all[i]->Fit(fit[i], "R same");
+      histcer_all[i]->Write();
+
+    }
+
+    all->cd(17);//gPad->SetGrid();
+    histcer_all[17]->Draw("");
+    histcer_all[17]->SetTitle(Form("Npe: All Reg (> %.2f)", 4.5));
+    histcer_all[17]->SetLineWidth(2);
+    histcer_all[17]->Fit(fit[17], "R same");
+    histcer_all[17]->Write();
+  
+
+      
+    all->SaveAs(Form("pdf_allruns/pip_%d_accsub_pip.pdf",runs[r]));
+
+
+    
+    f11->Write();
+      
+    double mean_central[17];
+    double mean_central_err[17];
+    double  mean_middle[17];
+    double  mean_middle_err[17];
+    double  mean_exterior[17];
+    double  mean_exterior_err[17];
+      
+    TCanvas *Ef = new TCanvas("Ef","Eff in 4 regions", 1200, 800);
+    Ef->Divide(5,2);
+
+    Ef->cd(1);gPad->SetGrid();
+    momhist1->Draw();
+    momhist1->GetYaxis()->SetRangeUser(0.6,1.0);
+    pEff_mom_hole_present->Draw("same");
+    pEff_mom_hole_present->SetLineWidth(2);
+    pEff_mom_hole_present->SetMarkerStyle(4);
+    momhist1->SetTitle("Eff vs Mom (Hole Present) (pip)");
+
+
+    Ef->cd(2);gPad->SetGrid();
+    momhist2->Draw();
+    momhist2->GetYaxis()->SetRangeUser(0.85,1.0);
+    pEff_mom_all->Draw("same");
+    pEff_mom_all->SetLineWidth(2);
+    pEff_mom_all->SetMarkerStyle(4);
+    momhist2->SetTitle("Eff vs Mom (All) (pip)");
+
+    Ef->cd(3);gPad->SetGrid();
+    momhist3->Draw();
+    momhist3->GetYaxis()->SetRangeUser(0.85,1.0);
+    pEff_mom_central->Draw("same");
+    pEff_mom_central->SetLineWidth(2);
+    pEff_mom_central->SetMarkerStyle(4);
+    momhist3->SetTitle("Eff vs Mom (Central) (pip)");
+
+    Ef->cd(4);gPad->SetGrid();
+    momhist4->Draw();
+    momhist4->GetYaxis()->SetRangeUser(0.8,1.0);
+    pEff_mom_middle->Draw("same");
+    pEff_mom_middle->SetLineWidth(2);
+    pEff_mom_middle->SetMarkerStyle(4);
+    pEff_mom_middle->SetTitle("Eff vs Momentum Middle Region");
+    momhist4->SetTitle("Eff vs Mom (Middle) (pip)");
+
+
+
+    Ef->cd(5);gPad->SetGrid();
+    momhist5->Draw();
+    momhist5->GetYaxis()->SetRangeUser(0.8,1.0);
+    pEff_mom_exterior->Draw("same");
+    pEff_mom_exterior->SetLineWidth(2);
+    pEff_mom_exterior->SetMarkerStyle(4);
+    pEff_mom_exterior->SetTitle("Eff vs Momentum Exterior Region");
+    momhist5->SetTitle("Eff vs Mom (Ext) (pip)");
+
+
+    //////////
+    Ef->cd(6);gPad->SetGrid();
+    delhist1->Draw();
+    delhist1->GetYaxis()->SetRangeUser(0.6,1.0);
+    pEff_delta_hole_present->Draw("same");
+    pEff_delta_hole_present->SetLineWidth(2);
+    pEff_delta_hole_present->SetMarkerStyle(4);
+    delhist1->SetTitle("Eff vs Delta (Hole Present) (pip)");
+
+
+    Ef->cd(7);gPad->SetGrid();
+    delhist2->Draw();
+    delhist2->GetYaxis()->SetRangeUser(0.85,1.0);pEff_delta_all->Draw("same");
+    pEff_delta_all->SetLineWidth(2);
+    pEff_delta_all->SetMarkerStyle(4);
+    pEff_delta_all->SetTitle("Eff vs Delta All Region");
+    delhist2->SetTitle("Eff vs Delta (All) (pip)");
+
+
+    Ef->cd(8);gPad->SetGrid();
+    delhist3->Draw();
+    delhist3->GetYaxis()->SetRangeUser(0.85,1.0);
+    pEff_delta_central->Draw("same");
+    pEff_delta_central->SetLineWidth(2);
+    pEff_delta_central->SetMarkerStyle(4);
+    delhist3->SetTitle("Eff vs Delta (Central) (pip)");
+
+
+    Ef->cd(9);gPad->SetGrid();
+    delhist4->Draw();
+    delhist4->GetYaxis()->SetRangeUser(0.85,1.0);
+    pEff_delta_middle->Draw("same");
+    pEff_delta_middle->SetLineWidth(2);
+    pEff_delta_middle->SetMarkerStyle(4);
+    delhist4->SetTitle("Eff vs Delta (Middle) (pip)");
+
+
+
+    Ef->cd(10);gPad->SetGrid();
+    delhist5->Draw();
+    delhist5->GetYaxis()->SetRangeUser(0.85,1.0);
+    pEff_delta_exterior->Draw("same");
+    pEff_delta_exterior->SetLineWidth(2);
+    pEff_delta_exterior->SetMarkerStyle(4);
+    delhist5->SetTitle("Eff vs Delta (Ext) (pip)");
+
+
+    Ef->SaveAs(Form("pdf_allruns/pip_main2_allregions_eff_%d.pdf",runs[r]));
+    ////DD test for ctime vs RF time
+
+    TCanvas *CtRf_did = new TCanvas("CtRf_did","CtRf_did", 1200, 800);
+    CtRf_did->Divide(5,5);
+    for(int i =1;i<17;i++){
+      CtRf_did->cd(i);gPad->SetLogz();gPad->SetGrid();
+      hctime_vs_rftime_did[i]->Draw("colz");
+      hctime_vs_rftime_did[i]->SetTitle(Form(" pip: Ctime vs RF did (%.2f - %.2f)", 2.8+0.1*i, 2.9+0.1*i));
+      hctime_vs_rftime_did[i]->SetLineWidth(2);
+      hctime_vs_rftime_did[i]->Write();
+      hctime_vs_rftime_did[i]->GetXaxis()->SetAxisColor(17);
+      hctime_vs_rftime_did[i]->GetYaxis()->SetAxisColor(17);
+
+    }
+
+    CtRf_did->cd(17);gPad->SetLogz();gPad->SetGrid();
+    hctime_vs_rftime_did[17]->Draw("colz");
+    hctime_vs_rftime_did[17]->SetTitle(Form("pip: Ctime vs RF did  (> %.2f)", 4.5));
+    hctime_vs_rftime_did[17]->SetLineWidth(2);
+    hctime_vs_rftime_did[17]->Write();
+    hctime_vs_rftime_did[17]->GetXaxis()->SetAxisColor(17);
+    hctime_vs_rftime_did[17]->GetYaxis()->SetAxisColor(17);
+
+    CtRf_did->SaveAs(Form("pdf_allruns/pip_CtRf_did_%d.pdf",runs[r]));
+
+      
+
+
+    TCanvas *CtRf_should = new TCanvas("CtRf_should","CtRf_should", 1200, 800);
+    CtRf_should->Divide(5,5);
+    for(int i =1;i<17;i++){
+      CtRf_should->cd(i);gPad->SetLogz();gPad->SetGrid();
+      hctime_vs_rftime_should[i]->Draw("colz");
+      hctime_vs_rftime_should[i]->SetTitle(Form("pip: Ctime vs RF should(%.2f - %.2f)", 2.8+0.1*i, 2.9+0.1*i));
+      hctime_vs_rftime_should[i]->SetLineWidth(2);
+      hctime_vs_rftime_should[i]->Write();
+      hctime_vs_rftime_should[i]->GetXaxis()->SetAxisColor(17);
+      hctime_vs_rftime_should[i]->GetYaxis()->SetAxisColor(17);
+
+    }
+
+    CtRf_should->cd(17);gPad->SetLogz();gPad->SetGrid();
+    hctime_vs_rftime_should[17]->Draw("colz");
+    hctime_vs_rftime_should[17]->SetTitle(Form(" (pip: Ctime vs RF should (> %.2f)", 4.5));
+    hctime_vs_rftime_should[17]->SetLineWidth(2);
+    hctime_vs_rftime_should[17]->Write();
+    hctime_vs_rftime_should[17]->GetXaxis()->SetAxisColor(17);
+    hctime_vs_rftime_should[17]->GetYaxis()->SetAxisColor(17);
+
+
+      
+    CtRf_should->SaveAs(Form("pdf_allruns/pip_CtRf_should_%d.pdf",runs[r]));
+
+    
+    ////////////
+    cout<<"+++++++++++++++++++++++"<<endl;
+    cout<<"+++++++++++++++++++++++"<<endl;
+    cout<<"acc sub:  "<<"did_Ent = "<<did_accsubEnt<<"   "<< "did_Int = "<< did_accsubInt <<"  "<<"should_Ent = "<<should_accsubEnt<<"   "<< "should_Int = "<< should_accsubInt<<endl;
+    cout<<"+++++++++++++++++++++++"<<endl;
+    cout<<"+++++++++++++++++++++++"<<endl;
+    /* for(int i =1;i<17;i++){
+
+       mean_middle[i] =  histcer_middle[i]->GetFunction("fit[i]")->GetParameter(1);
+       mean_middle_err[i] =  histcer_middle[i]->GetFunction("fit[i]")->GetParError(1);
+       cout<< mean_middle[i]<<"      "<<mean_middle_err[i] <<endl;
+       txtfile_middle<<i<<"     "<< mean_middle[i]<<"      "<<mean_middle_err[i] <<endl;
+
+       mean_exterior[i] =  histcer_exterior[i]->GetFunction("fit[i]")->GetParameter(1);
+       mean_exterior_err[i] =  histcer_exterior[i]->GetFunction("fit[i]")->GetParError(1);
+       cout<< mean_exterior[i]<<"      "<<mean_exterior_err[i] <<endl;
+       txtfile_exterior<<i<<"     "<< mean_exterior[i]<<"      "<<mean_exterior_err[i] <<endl;
+
+       mean_central[i] =  histcer_central[i]->GetFunction("fit_central[i]")->GetParameter(1);
+       mean_central_err[i] =  histcer_central[i]->GetFunction("fit_central[i]")->GetParError(1);
+       cout<< mean_central[i]<<"      "<<mean_central_err[i] <<endl;
+       txtfile_central<<i<<"     "<< mean_central[i]<<"      "<<mean_central_err[i] <<endl;
+
+       }*/
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// if( !cutgr->IsInside(hgc_yAtCer,hgc_xAtCer) && (cutuptriangle->IsInside(hgc_yAtCer,hgc_xAtCer)) ){
+	 
+// txtfile<< runs[r]<<"   "<< histcer[i]->GetFunction("fit[i]")->GetParameter(2)<<"   "<<histcer[i]->GetFunction("fit[i]")->GetParameter(3)<<endl;
+
+// TF1 *fit[21];
+//    for(int i=1;i<22;i++){
+
+//      fit[i] = new TF1(Form("fit[%d]",i),"[0]*TMath::Power(([1]/[2]),(x/[2]))*(TMath::Exp(-([1]/[2])))/TMath::Gamma((x/[2])+1)",2,30 );
+//      fit[i]->SetParameters(3500,8,0.2);
+//    }
+
+
+
+
+
+// mean_exterior[i] = histcer_exterior[i]->GetFunction("fit_exterior[i]")->GetParameter(2);
+// mean_exteriorerr[i] = histcer_exterior[i]->GetFunction("fit_exterior[i]")->GetParError(2);
+// eff_exterior[i] = 1 - exp(mean_exterior[i]);
+// cout<<i<<"\t"<< mean_exterior[i]<<"\t"<< mean_exteriorerr[i]<<"\t"<< eff_exterior[i] <<endl;
+
+// mean_middle[i] = histcer_middle[i]->GetFunction("fit_middle[i]")->GetParameter(2);
+// mean_middleerr[i] = histcer_middle[i]->GetFunction("fit_middle[i]")->GetParError(2);
+// eff_middle[i] = 1 - exp(mean_middle[i]);
+
+
+
+// mean_central[i] = histcer_central[i]->GetFunction("fit_central")->GetParameter(2);
+// mean_centralerr[i] = histcer_central[i]->GetFunction("fit_central")->GetParError(2);
+// eff_central[i] = 1 - exp(mean_central[i]);
+// cout<<i<<"\t"<< mean_central[i]<<"\t"<< mean_centralerr[i]<<"\t"<<eff_central[i] <<endl;
+
+
+// double mean_central= histcer_central[1]->GetFunction("fit_central")->GetParameter(2);
+//       double mean_centralerr= histcer_central[1]->GetFunction("fit_central")->GetParameter(2);
+//       cout<<1<<mean_central<<"   "<<mean_centralerr[1]<<endl;
+
+
+
+
+
+/*
+  TF1 *f1 = new TF1("f1","[0]*TMath::Power(([1]/[2]),(x/[2]))*(TMath::Exp(-([1]/[2])))/TMath::Gamma((x/[2])+1)",2,12 );
+  f1->SetParameters(3500,5,1);
+  TF1 *f2 = new TF1("f2","[0]*TMath::Power(([1]/[2]),(x/[2]))*(TMath::Exp(-([1]/[2])))/TMath::Gamma((x/[2])+1)",2,12 );
+  f2->SetParameters(3500,5,1);
+  TF1 *f3 = new TF1("f3","[0]*TMath::Power(([1]/[2]),(x/[2]))*(TMath::Exp(-([1]/[2])))/TMath::Gamma((x/[2])+1)",2,13 );
+  f3->SetParameters(3500,7,1);
+  TF1 *f4 = new TF1("f4","[0]*TMath::Power(([1]/[2]),(x/[2]))*(TMath::Exp(-([1]/[2])))/TMath::Gamma((x/[2])+1)",2,15 );
+  f4->SetParameters(3500,7.5,1);
+  TF1 *f5 = new TF1("f5","[0]*TMath::Power(([1]/[2]),(x/[2]))*(TMath::Exp(-([1]/[2])))/TMath::Gamma((x/[2])+1)",2,15 );
+  f5->SetParameters(3500,7.5,1);
+  TF1 *f6 = new TF1("f6","[0]*TMath::Power(([1]/[2]),(x/[2]))*(TMath::Exp(-([1]/[2])))/TMath::Gamma((x/[2])+1)",2,18 );
+  f6->SetParameters(3500,7.5,1);
+  TF1 *f7 = new TF1("f7","[0]*TMath::Power(([1]/[2]),(x/[2]))*(TMath::Exp(-([1]/[2])))/TMath::Gamma((x/[2])+1)",2,20 );
+  f7->SetParameters(3500,7.5,1);
+  TF1 *f8 = new TF1("f8","[0]*TMath::Power(([1]/[2]),(x/[2]))*(TMath::Exp(-([1]/[2])))/TMath::Gamma((x/[2])+1)",2,21 );
+  f8->SetParameters(3500,7.5,1);
+  TF1 *f9 = new TF1("f9","[0]*TMath::Power(([1]/[2]),(x/[2]))*(TMath::Exp(-([1]/[2])))/TMath::Gamma((x/[2])+1)",2,21);
+  f9->SetParameters(3500,7.5,1);
+  TF1 *f10 = new TF1("f10","[0]*TMath::Power(([1]/[2]),(x/[2]))*(TMath::Exp(-([1]/[2])))/TMath::Gamma((x/[2])+1)",2,25);
+  f10->SetParameters(3500,7.5,1);
+  TF1 *f12 = new TF1("f12","[0]*TMath::Power(([1]/[2]),(x/[2]))*(TMath::Exp(-([1]/[2])))/TMath::Gamma((x/[2])+1)",2,30);
+  f12->SetParameters(3500,7.5,1);
+*/ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+/*
+// if (event_flag[nscaler_reads]==1) {
+//	accL_cut        =   ctime > (max_value - 18 ) && ctime < (max_value - 10);
+//accR_cut        =   ctime > (max_value + 14 ) && ctime < (max_value + 22);
+//acc_cut1hardcut = (accR_cut || accL_cut);
+//	ctime_cut1 = ctime > (max_value - ctmin) && ctime < (max_value + ctmax);
+//	cointime_cut = ctime > minct && ctime < maxct;
+
+
+
+for (int kk=0; kk<nentriesD;  kk++){//---------------------------------------For Cointime and Acc subtraction only
+tt->GetEntry(kk);
+
+	
+
+rf_pion = (fmod(-prftdctime+phodfphitstime+ offsetrf ,4.008));
+mod4_pioncut = rf_pion > rfmin && rf_pion < rfmax;
+pcal_cut =  pcaletottrack < pcaletotmax ;
+hcal_cut =  hcaletottrack > hcaletotmin ;
+
+hms_cut  =  hdelta> -8 && hdelta < 8  && hhodstarttime ==1 && hdipole==1  && hcaletottrack > 0.8 &&hcernpe>1.0 &&hcaletottrack > 0.7 && hxptar>-0.08&&hxptar<0.08&&hyptar>-0.04&&hyptar<0.04;
+shms_cut =  pdelta >-10 && pdelta < 20   && phodstarttime == 1  && eventtype > 3 && paero>4.0 &&pcaletottrack < 0.7 && pdipole ==1 && pxptar>-0.05&&pxptar<0.05&&pyptar>-0.04&&pyptar<0.04 && mod4_pioncut
+
+pid_cut  = hms_cut && shms_cut;
+       
+      
+if (pid_cut){
+	 
+hctime->Fill(ctime);
+hmom->Fill(PgtrP);
+}  
+	 
+
+}
+
+    
+Int_t bin_max = hctime->GetMaximumBin();
+Double_t max_value = hctime->GetBinCenter(bin_max);
+*/
