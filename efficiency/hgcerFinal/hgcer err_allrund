@@ -1,0 +1,100 @@
+#include "ROOT/RDataFrame.hxx"
+#include "nlohmann/json.hpp"
+using json = nlohmann::json;
+using namespace std;
+#include "TCanvas.h"
+#include <iostream>
+#include <string>
+
+//first script
+void hem_hgcer_all(){
+  json j_rungroup;
+  {
+    std::ifstream ifs("db2/ratio_run_group_updated.json");
+    ifs>>j_rungroup;
+  }
+
+  std::vector<std::string> file_neg_D2,file_pos_D2,file_neg_H2,file_pos_H2,file_neg_Dummy,file_pos_Dummy;
+  for(auto it = j_rungroup.begin();it!=j_rungroup.end();++it){
+    int RunGroup = std::stoi(it.key());
+    double SHMS_P = it.value()["shms_p"].get<double>();
+    auto shms_p_calculate = [SHMS_P](double shms_dp){return SHMS_P*(1+shms_dp/100);};
+    auto runjs = it.value();
+    std::cout<<RunGroup<<" "<<SHMS_P<<std::endl;
+    if(SHMS_P>3 && RunGroup<500){
+      std::vector<int> neg_D2,pos_D2,neg_H2,pos_H2,neg_Dummy,pos_Dummy;
+      neg_D2 = runjs["neg"]["D2"].get<std::vector<int>>();
+      pos_D2 = runjs["pos"]["D2"].get<std::vector<int>>();
+      neg_H2 = runjs["neg"]["H2"].get<std::vector<int>>();
+      pos_H2 = runjs["pos"]["H2"].get<std::vector<int>>();
+      neg_Dummy = runjs["neg"]["Dummy"].get<std::vector<int>>();
+      pos_Dummy = runjs["pos"]["Dummy"].get<std::vector<int>>();
+      if(!neg_D2.empty() && !pos_D2.empty()){
+        for(auto it = neg_D2.begin();it!=neg_D2.end();++it){
+          int RunNumber = *it;
+          std::cout<<RunNumber<<std::endl;
+          std::string rootfile_name = "results/hem/hgcer_"+std::to_string(RunNumber)+"_neg.root";
+          file_neg_D2.push_back(rootfile_name);
+
+        }//for neg runs
+        for(auto it = pos_D2.begin();it!=pos_D2.end();++it){
+          int RunNumber = *it;
+          std::cout<<RunNumber<<std::endl;
+          std::string rootfile_name = "results/hem/hgcer_"+std::to_string(RunNumber)+"_pos.root";
+          file_pos_D2.push_back(rootfile_name);
+
+        }//for pos runs
+        for(auto it = neg_Dummy.begin();it!=neg_Dummy.end();++it){
+          int RunNumber = *it;
+          std::cout<<RunNumber<<std::endl;
+          std::string rootfile_name = "results/hem/hgcer_"+std::to_string(RunNumber)+"_neg_Dummy.root";
+          file_neg_Dummy.push_back(rootfile_name);
+
+        }//for neg runs
+        for(auto it = pos_Dummy.begin();it!=pos_Dummy.end();++it){
+          int RunNumber = *it;
+          std::cout<<RunNumber<<std::endl;
+          std::string rootfile_name = "results/hem/hgcer_"+std::to_string(RunNumber)+"_pos_Dummy.root";
+          file_pos_Dummy.push_back(rootfile_name);
+
+        }//for pos runs
+        if(!neg_H2.empty() && !pos_H2.empty()){
+          for(auto it = neg_H2.begin();it!=neg_H2.end();++it){
+            int RunNumber = *it;
+            std::cout<<RunNumber<<std::endl;
+            std::string rootfile_name = "results/hem/hgcer_"+std::to_string(RunNumber)+"_neg_H2.root";
+            file_neg_H2.push_back(rootfile_name);
+
+          }//for neg runs
+          for(auto it = pos_H2.begin();it!=pos_H2.end();++it){
+            int RunNumber = *it;
+            std::cout<<RunNumber<<std::endl;
+            std::string rootfile_name = "results/hem/hgcer_"+std::to_string(RunNumber)+"_pos_H2.root";
+            file_pos_H2.push_back(rootfile_name);
+
+          }//for pos runs
+        }//if h2 runs exist
+      } //if normal production runs      
+
+    }//if momentum is greater than 3
+  }//loop over all rungroups
+          ROOT::RDataFrame d_neg_D2("T",file_neg_D2);
+          std::string neg_D2_skim_name = "results/hem/hgcer_all_neg_D2.root";
+          d_neg_D2.Snapshot("T",neg_D2_skim_name.c_str(),{"P_gtr_th","P_gtr_ph","P_gtr_y","P_gtr_dp","P_gtr_p","P_hgcer_xAtCer","P_hgcer_yAtCer","CTime_ePiCoinTime_ROC2","shms_p","P_cal_etottracknorm","P_cal_etracknorm","H_cal_etottracknorm","H_cal_etracknorm","P_hgcer_npeSum","diff_time_mod"});
+          ROOT::RDataFrame d_pos_D2("T",file_pos_D2);
+          std::string pos_D2_skim_name = "results/hem/hgcer_all_pos_D2.root";
+          d_pos_D2.Snapshot("T",pos_D2_skim_name.c_str(),{"P_gtr_th","P_gtr_ph","P_gtr_y","P_gtr_dp","P_gtr_p","P_hgcer_xAtCer","P_hgcer_yAtCer","CTime_ePiCoinTime_ROC2","shms_p","P_cal_etottracknorm","P_cal_etracknorm","H_cal_etottracknorm","H_cal_etracknorm","P_hgcer_npeSum","diff_time_mod"});
+          ROOT::RDataFrame d_neg_Dummy("T",file_neg_Dummy);
+          std::string neg_Dummy_skim_name = "results/hem/hgcer_all_neg_Dummy.root";
+          d_neg_Dummy.Snapshot("T",neg_Dummy_skim_name.c_str(),{"P_gtr_th","P_gtr_ph","P_gtr_y","P_gtr_dp","P_gtr_p","P_hgcer_xAtCer","P_hgcer_yAtCer","CTime_ePiCoinTime_ROC2","shms_p","P_cal_etottracknorm","P_cal_etracknorm","H_cal_etottracknorm","H_cal_etracknorm","P_hgcer_npeSum","diff_time_mod"});
+          ROOT::RDataFrame d_pos_Dummy("T",file_pos_Dummy);
+          std::string pos_Dummy_skim_name = "results/hem/hgcer_all_pos_Dummy.root";
+          d_pos_Dummy.Snapshot("T",pos_Dummy_skim_name.c_str(),{"P_gtr_th","P_gtr_ph","P_gtr_y","P_gtr_dp","P_gtr_p","P_hgcer_xAtCer","P_hgcer_yAtCer","CTime_ePiCoinTime_ROC2","shms_p","P_cal_etottracknorm","P_cal_etracknorm","H_cal_etottracknorm","H_cal_etracknorm","P_hgcer_npeSum","diff_time_mod"});
+          ROOT::RDataFrame d_neg_H2("T",file_neg_H2);
+          std::string neg_H2_skim_name = "results/hem/hgcer_all_neg_H2.root";
+          d_neg_H2.Snapshot("T",neg_H2_skim_name.c_str(),{"P_gtr_th","P_gtr_ph","P_gtr_y","P_gtr_dp","P_gtr_p","P_hgcer_xAtCer","P_hgcer_yAtCer","CTime_ePiCoinTime_ROC2","shms_p","P_cal_etottracknorm","P_cal_etracknorm","H_cal_etottracknorm","H_cal_etracknorm","P_hgcer_npeSum","diff_time_mod"});
+          ROOT::RDataFrame d_pos_H2("T",file_pos_H2);
+          std::string pos_H2_skim_name = "results/hem/hgcer_all_pos_H2.root";
+          d_pos_H2.Snapshot("T",pos_H2_skim_name.c_str(),{"P_gtr_th","P_gtr_ph","P_gtr_y","P_gtr_dp","P_gtr_p","P_hgcer_xAtCer","P_hgcer_yAtCer","CTime_ePiCoinTime_ROC2","shms_p","P_cal_etottracknorm","P_cal_etracknorm","H_cal_etottracknorm","H_cal_etracknorm","P_hgcer_npeSum","diff_time_mod"});
+}
+
