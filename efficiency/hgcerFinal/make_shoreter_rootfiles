@@ -1,0 +1,290 @@
+#include "ROOT/RDataFrame.hxx"
+#include "nlohmann/json.hpp"
+using json = nlohmann::json;
+using namespace std;
+#include "TCanvas.h"
+#include <iostream>
+#include <string>
+//For first script, go through all the runs that >3GeV, for each run, do all the basic cuts, including rftime cut. snapshot all needed branch into small rootfile
+////save histograms in rootfile, histogram is P.hgcer.xatcer vs. yatcer. you would have four 2d histogram, one is with hgcercut> 0.5, one is without the hgcer cut. you will get the four 2d histogram in rootfiles for each run. the output roofiles are named as hgcer_RunNumber.rootfile, the four 2d histo are names as xvsy_with_hgcercut_pos/neg , xvsy_without_hgcercut_pos/neg
+//
+//
+//in the second script,  you already know the runnumbers that >3GeV, you will run though all the runs, add the xvsy_with_hgcer in all hgcer_RunNumber.rootfile, this is your first overall histogram. And you will also add all the xvsy_withou_hgcer in all hgcer_RunNumber.rootfile. Now you have four overall histograms, xvsy_with_hgcer_all and xvsy_without_hgcer_all. with/without would be the hgcer eff, xvsy_hgcer_eff_all_pos/neg
+
+
+//first script
+void hem_hgcer(){
+  json j_rungroup;
+  {
+    std::ifstream ifs("/u/group/c-csv/shuo/online_csv/db2/ratio_run_group_updated.json");
+    ifs>>j_rungroup;
+  }
+  json j_runsinfo;
+  {
+    std::ifstream ifs("/u/group/c-csv/shuo/online_csv/db2/runs_info.json");
+    ifs>>j_runsinfo;
+  }
+  json j_cuts;
+  {
+    std::ifstream ifs("/u/group/c-csv/shuo/online_csv/db2/all_cut.json");
+    ifs>>j_cuts;
+  }
+  double H_dp_low = j_cuts["H_dp_low"].get<double>();
+  double H_dp_high = j_cuts["H_dp_high"].get<double>();
+  double P_dp_low = j_cuts["P_dp_low"].get<double>();
+  double P_dp_high = j_cuts["P_dp_high"].get<double>();
+  std::string goodTrackSHMS = "P.gtr.dp>"+std::to_string(P_dp_low)+" && P.gtr.dp<"+std::to_string(P_dp_high);
+  std::string goodTrackHMS = "H.gtr.dp>"+std::to_string(H_dp_low)+" && H.gtr.dp<"+std::to_string(H_dp_high);
+  std::cout<<goodTrackSHMS<<std::endl;
+  std::cout<<goodTrackHMS<<std::endl;
+  double SHMS_low = j_cuts["P_cal_pi_low"].get<double>();
+  double SHMS_high = j_cuts["P_cal_pi_high"].get<double>();
+  std::string piCutSHMS = (" P.cal.etottracknorm > "+std::to_string(SHMS_low)+" && P.cal.etottracknorm < " + std::to_string(SHMS_high)).c_str();
+  std::cout<<"picutSHMS "<<piCutSHMS<<std::endl;
+  double P_aero = 4;
+  //j_cuts["P_aero"].get<double>();
+  std::string aeroCutSHMS = (" P.aero.npeSum > "+std::to_string(P_aero)).c_str();
+  std::cout<<"P_aerocut "<<aeroCutSHMS<<std::endl;
+  double H_cal_low = j_cuts["H_cal_low"].get<double>();
+  double H_cal_high = j_cuts["H_cal_high"].get<double>();
+  double H_cer = j_cuts["H_cer"].get<double>();
+  std::string eCutHMS = ("H.cal.etottracknorm > "+std::to_string(H_cal_low)+" && H.cal.etottracknorm < "+std::to_string(H_cal_high)+" && H.cer.npeSum > "+std::to_string(H_cer)).c_str();
+  std::cout<<"cCutHMS"<<eCutHMS<<std::endl;
+  double H_xptar_low = j_cuts["H_xptar_low"].get<double>();
+  double H_xptar_high = j_cuts["H_xptar_high"].get<double>();
+  double P_xptar_low = j_cuts["P_xptar_low"].get<double>();
+  double P_xptar_high = j_cuts["P_xptar_high"].get<double>();
+  double H_yptar_low = j_cuts["H_yptar_low"].get<double>();
+  double H_yptar_high = j_cuts["H_yptar_high"].get<double>();
+  double P_yptar_low = j_cuts["P_yptar_low"].get<double>();
+  double P_yptar_high = j_cuts["P_yptar_high"].get<double>();
+  std::string Normal_HMS = "H.gtr.th > "+std::to_string(H_xptar_low)+" && H.gtr.th < "+std::to_string(H_xptar_high)+" && H.gtr.ph > "+std::to_string(H_yptar_low)+" && H.gtr.ph < "+std::to_string(H_yptar_high); 
+  std::string Normal_SHMS = "P.gtr.th > "+std::to_string(P_xptar_low)+" && P.gtr.th < "+std::to_string(P_xptar_high)+" && P.gtr.ph > "+std::to_string(P_yptar_low)+" && P.gtr.ph < "+std::to_string(P_yptar_high); 
+  std::cout<<Normal_HMS<<std::endl;
+  std::cout<<Normal_SHMS<<std::endl;
+  auto rf_cut = [=](double SHMS_rftime){
+    double rf_pi_low,rf_pi_high; 
+    rf_pi_low = 0.5;
+    rf_pi_high = 1.3;
+    return SHMS_rftime>rf_pi_low && SHMS_rftime<rf_pi_high;  
+
+  };
+
+  for(auto it = j_rungroup.begin();it!=j_rungroup.end();++it){
+    int RunGroup = std::stoi(it.key());
+    double SHMS_P = it.value()["shms_p"].get<double>();
+    auto shms_p_calculate = [SHMS_P](double shms_dp){return SHMS_P*(1+shms_dp/100);};
+    auto runjs = it.value();
+    std::cout<<RunGroup<<" "<<SHMS_P<<std::endl;
+    if(SHMS_P>2.8 &&SHMS_P<=3.0){
+      std::vector<int> neg_D2,pos_D2,neg_H2,pos_H2,neg_Dummy,pos_Dummy;
+      neg_D2 = runjs["neg"]["D2"].get<std::vector<int>>();
+      pos_D2 = runjs["pos"]["D2"].get<std::vector<int>>();
+      neg_H2 = runjs["neg"]["H2"].get<std::vector<int>>();
+      pos_H2 = runjs["pos"]["H2"].get<std::vector<int>>();
+      neg_Dummy = runjs["neg"]["Dummy"].get<std::vector<int>>();
+      pos_Dummy = runjs["pos"]["Dummy"].get<std::vector<int>>();
+      if(!neg_D2.empty() && !pos_D2.empty()){
+        for(auto it = neg_D2.begin();it!=neg_D2.end();++it){
+          int RunNumber = *it;
+          std::cout<<RunNumber<<std::endl;
+          std::string rootfile_name = "/lustre19/expphy/volatile/hallc/c-csv/hdbhatt/ROOTfiles/newhcana/run_"+std::to_string(RunNumber)+"_-1.root";
+          ROOT::RDataFrame d_neg_raw("T",rootfile_name);
+          double offset_neg;
+          offset_neg = j_runsinfo[(std::to_string(RunNumber)).c_str()]["offset"].get<double>();
+          auto d_neg_run = d_neg_raw
+          .Filter("fEvtHdr.fEvtType == 4")
+          .Define("shms_p",shms_p_calculate,{"P.gtr.dp"})
+          .Filter(goodTrackSHMS)
+          .Filter(goodTrackHMS)
+          //.Filter(piCutSHMS)
+          .Filter(eCutHMS)
+          .Filter(aeroCutSHMS)
+          .Filter(Normal_SHMS)
+          .Filter(Normal_HMS)
+          .Define("fptime_minus_rf","P.hod.starttime - T.coin.pRF_tdcTime")
+          //.Filter([cointime_low_neg,cointime_high_neg](double cointime){return cointime>cointime_low_neg && cointime<cointime_high_neg;},{"CTime.ePiCoinTime_ROC2"})
+          .Define("diff_time_mod_beforeshift",[](double difftime){return std::fmod(difftime,4.008);},{"fptime_minus_rf"})
+          .Define("diff_time_mod",[offset_neg](double difftime){return std::fmod(difftime+offset_neg,4.008);},{"fptime_minus_rf"})
+          .Filter(rf_cut,{"diff_time_mod"})
+          .Filter("P.dc.InsideDipoleExit == 1")
+          .Filter("H.dc.InsideDipoleExit == 1")
+          .Filter("P.hod.goodstarttime == 1")
+          .Filter("H.hod.goodstarttime == 1")
+          .Filter("P.gtr.beta > 0.5")
+          .Filter("H.gtr.beta > 0.5")
+          ; 
+          std::string skim_name = "/u/group/c-csv/hdbhatt/my_analysis/efficiency/hgcer/shortest_rootfile/hgcer_"+std::to_string(RunNumber)+"_neg.root";
+          d_neg_run.Snapshot("T",skim_name.c_str(),{"P.gtr.th","P.gtr.ph","P.gtr.y","P.gtr.dp","P.gtr.p","P.hgcer.xAtCer","P.hgcer.yAtCer","CTime.ePiCoinTime_ROC2","shms_p","P.cal.etottracknorm","P.cal.etracknorm","H.cal.etottracknorm","H.cal.etracknorm","P.hgcer.npeSum","diff_time_mod"});
+
+        }//for neg runs
+        for(auto it = pos_D2.begin();it!=pos_D2.end();++it){
+          int RunNumber = *it;
+          std::cout<<RunNumber<<std::endl;
+          std::string rootfile_name = "/lustre19/expphy/volatile/hallc/c-csv/hdbhatt/ROOTfiles/newhcana/run_"+std::to_string(RunNumber)+"_-1.root";
+          ROOT::RDataFrame d_pos_raw("T",rootfile_name);
+          double offset_pos;
+          offset_pos = j_runsinfo[(std::to_string(RunNumber)).c_str()]["offset"].get<double>();
+          auto d_pos_run = d_pos_raw
+          .Filter("fEvtHdr.fEvtType == 4")
+          .Define("shms_p",shms_p_calculate,{"P.gtr.dp"})
+          .Filter(goodTrackSHMS)
+          .Filter(goodTrackHMS)
+          //.Filter(piCutSHMS)
+          .Filter(eCutHMS)
+          .Filter(aeroCutSHMS)
+          .Filter(Normal_SHMS)
+          .Filter(Normal_HMS)
+          .Define("fptime_minus_rf","P.hod.starttime - T.coin.pRF_tdcTime")
+          //.Filter([cointime_low_pos,cointime_high_pos](double cointime){return cointime>cointime_low_pos && cointime<cointime_high_pos;},{"CTime.ePiCoinTime_ROC2"})
+          .Define("diff_time_mod_beforeshift",[](double difftime){return std::fmod(difftime,4.008);},{"fptime_minus_rf"})
+          .Define("diff_time_mod",[offset_pos](double difftime){return std::fmod(difftime+offset_pos,4.008);},{"fptime_minus_rf"})
+          .Filter(rf_cut,{"diff_time_mod"})
+          .Filter("P.dc.InsideDipoleExit == 1")
+          .Filter("H.dc.InsideDipoleExit == 1")
+          .Filter("P.hod.goodstarttime == 1")
+          .Filter("H.hod.goodstarttime == 1")
+          .Filter("P.gtr.beta > 0.5")
+          .Filter("H.gtr.beta > 0.5")
+          ; 
+          std::string skim_name = "/u/group/c-csv/hdbhatt/my_analysis/efficiency/hgcer/shortest_rootfile/hgcer_"+std::to_string(RunNumber)+"_pos.root";
+          d_pos_run.Snapshot("T",skim_name.c_str(),{"P.gtr.th","P.gtr.ph","P.gtr.y","P.gtr.dp","P.gtr.p","P.hgcer.xAtCer","P.hgcer.yAtCer","CTime.ePiCoinTime_ROC2","shms_p","P.cal.etottracknorm","P.cal.etracknorm","H.cal.etottracknorm","H.cal.etracknorm","P.hgcer.npeSum","diff_time_mod"});
+        }//for pos runs
+        if(!neg_H2.empty() && !pos_H2.empty()){
+          for(auto it = neg_H2.begin();it!=neg_H2.end();++it){
+            int RunNumber = *it;
+            std::cout<<RunNumber<<std::endl;
+            std::string rootfile_name = "/lustre19/expphy/volatile/hallc/c-csv/hdbhatt/ROOTfiles/newhcana/run_"+std::to_string(RunNumber)+"_-1.root";
+            ROOT::RDataFrame d_neg_raw("T",rootfile_name);
+            double offset_neg;
+            offset_neg = j_runsinfo[(std::to_string(RunNumber)).c_str()]["offset"].get<double>();
+            auto d_neg_run = d_neg_raw
+            .Filter("fEvtHdr.fEvtType == 4")
+            .Define("shms_p",shms_p_calculate,{"P.gtr.dp"})
+            .Filter(goodTrackSHMS)
+            .Filter(goodTrackHMS)
+            //.Filter(piCutSHMS)
+            .Filter(eCutHMS)
+            .Filter(aeroCutSHMS)
+            .Filter(Normal_SHMS)
+            .Filter(Normal_HMS)
+            .Define("fptime_minus_rf","P.hod.starttime - T.coin.pRF_tdcTime")
+            //.Filter([cointime_low_neg,cointime_high_neg](double cointime){return cointime>cointime_low_neg && cointime<cointime_high_neg;},{"CTime.ePiCoinTime_ROC2"})
+            .Define("diff_time_mod_beforeshift",[](double difftime){return std::fmod(difftime,4.008);},{"fptime_minus_rf"})
+            .Define("diff_time_mod",[offset_neg](double difftime){return std::fmod(difftime+offset_neg,4.008);},{"fptime_minus_rf"})
+            .Filter(rf_cut,{"diff_time_mod"})
+            .Filter("P.dc.InsideDipoleExit == 1")
+            .Filter("H.dc.InsideDipoleExit == 1")
+            .Filter("P.hod.goodstarttime == 1")
+            .Filter("H.hod.goodstarttime == 1")
+            .Filter("P.gtr.beta > 0.5")
+            .Filter("H.gtr.beta > 0.5")
+            ; 
+            std::string skim_name = "/u/group/c-csv/hdbhatt/my_analysis/efficiency/hgcer/shortest_rootfile/hgcer_"+std::to_string(RunNumber)+"_neg_H2.root";
+            d_neg_run.Snapshot("T",skim_name.c_str(),{"P.gtr.th","P.gtr.ph","P.gtr.y","P.gtr.dp","P.gtr.p","P.hgcer.xAtCer","P.hgcer.yAtCer","CTime.ePiCoinTime_ROC2","shms_p","P.cal.etottracknorm","P.cal.etracknorm","H.cal.etottracknorm","H.cal.etracknorm","P.hgcer.npeSum","diff_time_mod"});
+
+          }//for neg runs
+          for(auto it = pos_H2.begin();it!=pos_H2.end();++it){
+            int RunNumber = *it;
+            std::cout<<RunNumber<<std::endl;
+            std::string rootfile_name = "/lustre19/expphy/volatile/hallc/c-csv/hdbhatt/ROOTfiles/newhcana/run_"+std::to_string(RunNumber)+"_-1.root";
+            ROOT::RDataFrame d_pos_raw("T",rootfile_name);
+            double offset_pos;
+            offset_pos = j_runsinfo[(std::to_string(RunNumber)).c_str()]["offset"].get<double>();
+            auto d_pos_run = d_pos_raw
+            .Filter("fEvtHdr.fEvtType == 4")
+            .Define("shms_p",shms_p_calculate,{"P.gtr.dp"})
+            .Filter(goodTrackSHMS)
+            .Filter(goodTrackHMS)
+            //.Filter(piCutSHMS)
+            .Filter(eCutHMS)
+            .Filter(aeroCutSHMS)
+            .Filter(Normal_SHMS)
+            .Filter(Normal_HMS)
+            .Define("fptime_minus_rf","P.hod.starttime - T.coin.pRF_tdcTime")
+            //.Filter([cointime_low_pos,cointime_high_pos](double cointime){return cointime>cointime_low_pos && cointime<cointime_high_pos;},{"CTime.ePiCoinTime_ROC2"})
+            .Define("diff_time_mod_beforeshift",[](double difftime){return std::fmod(difftime,4.008);},{"fptime_minus_rf"})
+            .Define("diff_time_mod",[offset_pos](double difftime){return std::fmod(difftime+offset_pos,4.008);},{"fptime_minus_rf"})
+            .Filter(rf_cut,{"diff_time_mod"})
+            .Filter("P.dc.InsideDipoleExit == 1")
+            .Filter("H.dc.InsideDipoleExit == 1")
+            .Filter("P.hod.goodstarttime == 1")
+            .Filter("H.hod.goodstarttime == 1")
+            .Filter("P.gtr.beta > 0.5")
+            .Filter("H.gtr.beta > 0.5")
+            ; 
+            std::string skim_name = "/u/group/c-csv/hdbhatt/my_analysis/efficiency/hgcer/shortest_rootfile/hgcer_"+std::to_string(RunNumber)+"_pos_H2.root";
+            d_pos_run.Snapshot("T",skim_name.c_str(),{"P.gtr.th","P.gtr.ph","P.gtr.y","P.gtr.dp","P.gtr.p","P.hgcer.xAtCer","P.hgcer.yAtCer","CTime.ePiCoinTime_ROC2","shms_p","P.cal.etottracknorm","P.cal.etracknorm","H.cal.etottracknorm","H.cal.etracknorm","P.hgcer.npeSum","diff_time_mod"});
+          }//for pos runs
+        }//if h2 runs exist
+          for(auto it = neg_Dummy.begin();it!=neg_Dummy.end();++it){
+            int RunNumber = *it;
+            std::cout<<RunNumber<<std::endl;
+            std::string rootfile_name = "/lustre19/expphy/volatile/hallc/c-csv/hdbhatt/ROOTfiles/newhcana/run_"+std::to_string(RunNumber)+"_-1.root";
+            ROOT::RDataFrame d_neg_raw("T",rootfile_name);
+            double offset_neg;
+            offset_neg = j_runsinfo[(std::to_string(RunNumber)).c_str()]["offset"].get<double>();
+            auto d_neg_run = d_neg_raw
+            .Filter("fEvtHdr.fEvtType == 4")
+            .Define("shms_p",shms_p_calculate,{"P.gtr.dp"})
+            .Filter(goodTrackSHMS)
+            .Filter(goodTrackHMS)
+            //.Filter(piCutSHMS)
+            .Filter(eCutHMS)
+            .Filter(aeroCutSHMS)
+            .Filter(Normal_SHMS)
+            .Filter(Normal_HMS)
+            .Define("fptime_minus_rf","P.hod.starttime - T.coin.pRF_tdcTime")
+            //.Filter([cointime_low_neg,cointime_high_neg](double cointime){return cointime>cointime_low_neg && cointime<cointime_high_neg;},{"CTime.ePiCoinTime_ROC2"})
+            .Define("diff_time_mod_beforeshift",[](double difftime){return std::fmod(difftime,4.008);},{"fptime_minus_rf"})
+            .Define("diff_time_mod",[offset_neg](double difftime){return std::fmod(difftime+offset_neg,4.008);},{"fptime_minus_rf"})
+            .Filter(rf_cut,{"diff_time_mod"})
+            .Filter("P.dc.InsideDipoleExit == 1")
+            .Filter("H.dc.InsideDipoleExit == 1")
+            .Filter("P.hod.goodstarttime == 1")
+            .Filter("H.hod.goodstarttime == 1")
+            .Filter("P.gtr.beta > 0.5")
+            .Filter("H.gtr.beta > 0.5")
+            ; 
+            std::string skim_name = "/u/group/c-csv/hdbhatt/my_analysis/efficiency/hgcer/shortest_rootfile/hgcer_"+std::to_string(RunNumber)+"_neg_Dummy.root";
+            d_neg_run.Snapshot("T",skim_name.c_str(),{"P.gtr.th","P.gtr.ph","P.gtr.y","P.gtr.dp","P.gtr.p","P.hgcer.xAtCer","P.hgcer.yAtCer","CTime.ePiCoinTime_ROC2","shms_p","P.cal.etottracknorm","P.cal.etracknorm","H.cal.etottracknorm","H.cal.etracknorm","P.hgcer.npeSum","diff_time_mod"});
+
+          }//for neg runs
+          for(auto it = pos_Dummy.begin();it!=pos_Dummy.end();++it){
+            int RunNumber = *it;
+            std::cout<<RunNumber<<std::endl;
+            std::string rootfile_name = "/lustre19/expphy/volatile/hallc/c-csv/hdbhatt/ROOTfiles/newhcana/run_"+std::to_string(RunNumber)+"_-1.root";
+            ROOT::RDataFrame d_pos_raw("T",rootfile_name);
+            double offset_pos;
+            offset_pos = j_runsinfo[(std::to_string(RunNumber)).c_str()]["offset"].get<double>();
+            auto d_pos_run = d_pos_raw
+            .Filter("fEvtHdr.fEvtType == 4")
+            .Define("shms_p",shms_p_calculate,{"P.gtr.dp"})
+            .Filter(goodTrackSHMS)
+            .Filter(goodTrackHMS)
+            //.Filter(piCutSHMS)
+            .Filter(eCutHMS)
+            .Filter(aeroCutSHMS)
+            .Filter(Normal_SHMS)
+            .Filter(Normal_HMS)
+            .Define("fptime_minus_rf","P.hod.starttime - T.coin.pRF_tdcTime")
+            //.Filter([cointime_low_pos,cointime_high_pos](double cointime){return cointime>cointime_low_pos && cointime<cointime_high_pos;},{"CTime.ePiCoinTime_ROC2"})
+            .Define("diff_time_mod_beforeshift",[](double difftime){return std::fmod(difftime,4.008);},{"fptime_minus_rf"})
+            .Define("diff_time_mod",[offset_pos](double difftime){return std::fmod(difftime+offset_pos,4.008);},{"fptime_minus_rf"})
+            .Filter(rf_cut,{"diff_time_mod"})
+            .Filter("P.dc.InsideDipoleExit == 1")
+            .Filter("H.dc.InsideDipoleExit == 1")
+            .Filter("P.hod.goodstarttime == 1")
+            .Filter("H.hod.goodstarttime == 1")
+            .Filter("P.gtr.beta > 0.5")
+            .Filter("H.gtr.beta > 0.5")
+            ; 
+            std::string skim_name = "/u/group/c-csv/hdbhatt/my_analysis/efficiency/hgcer/shortest_rootfile/hgcer_"+std::to_string(RunNumber)+"_pos_Dummy.root";
+            d_pos_run.Snapshot("T",skim_name.c_str(),{"P.gtr.th","P.gtr.ph","P.gtr.y","P.gtr.dp","P.gtr.p","P.hgcer.xAtCer","P.hgcer.yAtCer","CTime.ePiCoinTime_ROC2","shms_p","P.cal.etottracknorm","P.cal.etracknorm","H.cal.etottracknorm","H.cal.etracknorm","P.hgcer.npeSum","diff_time_mod"});
+          }//for pos runs
+      } //if normal production runs      
+
+    }//if momentum is greater than 3
+  }//loop over all rungroups
+}
+
