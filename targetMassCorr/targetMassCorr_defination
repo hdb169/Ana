@@ -1,0 +1,203 @@
+//working one
+void plot_z_zprime_x_xprime_noAccDummy(Int_t runNum){
+  gStyle->SetOptStat(1000111);
+  // gROOT->SetBatch("kTRUE");
+  //gStyle->SetOptStat(0);
+  //gStyle->SetOptStat(1000011);
+  gStyle->SetPalette(1,0);
+  // gStyle->SetOptStat(1000011);
+  gStyle->SetOptFit(11);
+  gStyle->SetTitleOffset(1.,"Y");
+  gStyle->SetTitleOffset(.7,"X");
+  gStyle->SetLabelSize(0.04,"XY");
+  gStyle->SetTitleSize(0.06,"XY");
+  gStyle->SetPadLeftMargin(0.12);
+  gStyle->SetOptStat(1000111);
+  gStyle->SetErrorX(0);
+
+
+
+ TH1F *hist_ptsinphi = new TH1F("hist_ptsinphi","pt sin(phi) (GeV);pt sinc(phi) (GeV);Entries",100,-1.5,1.5);
+  TH1F *hist_ptcosphi = new TH1F("hist_ptcosphi","pt cos(phi) (GeV);pt cos(phi) (GeV);Entries",100,-1.5,1.5);
+  TH1F *hist_pt = new TH1F("hist_pt","pt (GeV);pt(GeV);Entries",40,-0.2,0.8);
+  TH2F *hist_ptsin_ptcos = new TH2F("hist_ptsin_ptcos","pt sinphi vs pt cosphi (GeV);ptcosphi (GeV);ptsinphi (GeV)",100,-1,1,100,-1,1);
+  
+  TH1F *hist_zpre = new TH1F("hist_zpre","zhadron before targetmass corr;zhadron;Entries",100,0,1);
+  TH1F *hist_zTM = new TH1F("hist_zTM","zhadron after targetmass corr;zhadron;Entries",100,0,1);
+  TH1F *hist_xpre = new TH1F("hist_xpre","xBj before targetmass corr;xBj;Entries",100,0,1);
+  TH1F *hist_xTM = new TH1F("hist_xTM","xBj after targetmass corr;xBj;Entries",100,0,1);
+
+  
+  TFile *f2 = new TFile(Form("rootpt/write_pt_%d.root",runNum),"RECREATE");
+  
+  TFile *f1 = new TFile(Form("/lustre19/expphy/volatile/hallc/c-csv/hdbhatt/ROOTfiles/newhcana/run_%d_1.root",runNum));
+
+  //TFile *f1 = new TFile("/lustre19/expphy/volatile/hallc/c-csv/hdbhatt/ROOTfiles/pt/coin_replay_production_7777_-1.root");
+  TTree * tt = (TTree*)f1->Get("T");
+  Long64_t nentriesD = tt->GetEntries();
+  double paero,pbeta,pdelta,hdelta,ctime,hcernpeSum,hdipole,pdipole,hbeta,pcal,hcal,hcernpe,phi,theta,mom,pt,ptsinphi,ptcosphi,W2;
+  double dnu,zhad,Mx2,Mx2_pre,dpmiss,Epi,pt_pre,xbj,xbj_TM,zhad_TM,Q2,mhp_square;
+  
+  std::vector<double> pt_vec,pt_vec_err,phi_vec,err_vec;
+
+    
+  tt->SetBranchAddress("P.aero.npeSum", &paero);
+  tt->SetBranchAddress("P.gtr.beta", &pbeta);                                                                       
+  tt->SetBranchAddress("P.gtr.dp", &pdelta);         
+  tt->SetBranchAddress("CTime.ePiCoinTime_ROC2", &ctime);
+  tt->SetBranchAddress("H.cer.npeSum", &hcernpeSum); 
+  tt->SetBranchAddress("H.dc.InsideDipoleExit",&hdipole);
+  tt->SetBranchAddress("P.dc.InsideDipoleExit",&pdipole);
+  tt->SetBranchAddress("H.gtr.beta", &hbeta); 
+  tt->SetBranchAddress("H.gtr.dp", &hdelta);                                                                            
+  tt->SetBranchAddress("P.aero.npeSum", &paero);
+  tt->SetBranchAddress("P.cal.etottracknorm", &pcal);
+  tt->SetBranchAddress("H.cal.etottracknorm", &hcal);
+  tt->SetBranchAddress("H.cer.npe", &hcernpe);
+  tt->SetBranchAddress("P.kin.secondary.ph_xq", &phi);
+  tt->SetBranchAddress("P.kin.secondary.th_xq", &theta);
+  tt->SetBranchAddress("P.gtr.p", &mom);                                                                            
+  tt->SetBranchAddress("CTime.ePiCoinTime_ROC2", &ctime);                                                                            
+  tt->SetBranchAddress("H.kin.primary.W2",&W2);
+  tt->SetBranchAddress("H.kin.primary.omega",&dnu);
+  tt->SetBranchAddress("P.kin.secondary.pmiss",&dpmiss);
+  tt->SetBranchAddress("H.kin.primary.x_bj",&xbj);
+  tt->SetBranchAddress("H.kin.primary.Q2",&Q2);
+
+  double protonmass=0.938;
+  double pionmass=0.139;
+
+  for (int kk=0; kk<nentriesD;  kk++){
+    tt->GetEntry(kk);
+
+
+    if(pdelta>-10&&pdelta<20&&hdelta>-8&&hdelta<8&&pcal<0.7&&hcal>0.75&&hbeta>0.5&&pbeta>0.5&&paero>4&&ctime>42&&ctime<45){
+      // if(pdelta>-10/*&&pdelta<20&&hdelta>-8&&hdelta<8&&pcal<0.7&&hcal>0.75&&hbeta>0.5&&pbeta>0.5&&paero>4&&ctime>42&&ctime<45*/){
+
+      //Mx2_pre = (protonmass + dnu - zhad*dnu) *  (protonmass + dnu - zhad*dnu) - abs(dpmiss)*abs(dpmiss);
+      //pt_pre = mom*sin(theta);
+      // if(Mx2>2&&W2>4&&pt_pre<0.2){
+      // if(Mx2>2&&W2>4&&pt_pre>=0.1){
+      // if(Mx2_pre>2&&W2>4&&pt_pre<=0.2){
+
+      //target mass corr
+
+      Epi = sqrt(pow(pionmass,2) + pow(mom,2));
+      zhad = Epi/dnu;
+      Mx2 = (protonmass + dnu - zhad*dnu) *  (protonmass + dnu - zhad*dnu) - abs(dpmiss)*abs(dpmiss);
+      xbj_TM = 2*xbj/(1+sqrt(1+4*xbj*protonmass*protonmass/Q2));//target mass corrected x
+      mhp_square = pionmass*pionmass+pt*pt;
+      zhad_TM = (zhad/2)*(xbj_TM/xbj)*(1+sqrt(1-(4*xbj*xbj*protonmass*protonmass*mhp_square)/(zhad*zhad*Q2*Q2)));
+      //target mass corrected z
+
+
+      hist_zpre->Fill(zhad-0.0613);
+      hist_zTM->Fill(zhad_TM);
+      hist_xpre->Fill(xbj-0.0367);
+      hist_xTM->Fill(xbj_TM);
+
+
+      //target mass corr
+      pt=mom*sin(theta);
+
+      pt_vec.push_back(pt);
+      phi_vec.push_back(phi);
+      err_vec.push_back(0);
+      ptsinphi=pt*sin(phi);
+      ptcosphi=pt*cos(phi);
+      hist_pt->Fill(pt);
+      hist_ptsinphi->Fill(ptsinphi);
+      hist_ptcosphi->Fill(ptcosphi);
+      hist_ptsin_ptcos->Fill(ptcosphi,ptsinphi);
+      //}
+    }
+  }
+
+  int n_counts = (int) pt_vec.size();
+  double pt_arr[n_counts],phi_arr[n_counts], err_arr[n_counts];
+  cout<<n_counts<<endl;
+  std::copy(pt_vec.begin(),pt_vec.end(),pt_arr);
+  std::copy(phi_vec.begin(),phi_vec.end(),phi_arr);
+  std::copy(err_vec.begin(),err_vec.end(),err_arr);
+
+
+ 
+  
+  TCanvas *c1 = new TCanvas("c1","c1",800,800);
+  c1->Divide(2,2);
+  c1->cd(1);gPad->SetLogy();
+  hist_pt->Draw();gPad->SetGrid();
+  hist_pt->Draw("hist");
+  hist_pt->SetLineWidth(2);
+  hist_pt->GetXaxis()->CenterTitle();
+  hist_pt->GetYaxis()->CenterTitle();
+  hist_pt->Write();
+
+  c1->cd(2);gPad->SetLogz();gPad->SetGrid();
+  hist_ptsin_ptcos->Draw("colz");
+  hist_ptsin_ptcos->Draw("hist");
+  hist_ptsin_ptcos->GetXaxis()->CenterTitle();
+  hist_ptsin_ptcos->GetYaxis()->CenterTitle();
+  hist_ptsin_ptcos->Write();
+
+  
+  c1->cd(3);gPad->SetGrid();
+  hist_ptsinphi->Draw();
+  hist_ptsinphi->Draw("hist");
+  hist_ptsinphi->SetLineWidth(2);
+  hist_ptsinphi->GetXaxis()->CenterTitle();
+  hist_ptsinphi->GetYaxis()->CenterTitle();
+  hist_ptsinphi->Write();
+  
+  c1->cd(4);gPad->SetGrid();
+  hist_ptcosphi->Draw();
+  hist_ptcosphi->Draw("hist");
+  hist_ptcosphi->SetLineWidth(2);
+  hist_ptcosphi->GetXaxis()->CenterTitle();
+  hist_ptcosphi->GetYaxis()->CenterTitle();
+  hist_ptcosphi->Write();
+
+  c1->SaveAs(Form("pdfptbasic_%d.pdf",runNum));
+
+  
+  TCanvas *c_ptpolar = new TCanvas("c_ptpolar","",800,800);
+  TGraphPolar *g_ptpolar = new TGraphPolar(n_counts,phi_arr,pt_arr,err_arr,err_arr);
+  g_ptpolar->Draw("p");
+  g_ptpolar->SetMarkerColor(kRed);
+  g_ptpolar->SetMarkerStyle(4);
+  c_ptpolar->SaveAs(Form("pdfpt/plorplot_%d.pdf",runNum));
+  g_ptpolar->Write();
+  
+ 
+
+  TCanvas *c2 = new TCanvas("c2","c2",1000,800);
+  c2->Divide(2,2);
+  c2->cd(1);gPad->SetGrid();
+  hist_xTM->Draw();
+  hist_xTM->Draw("hist");
+  hist_xTM->SetLineWidth(2);
+  hist_xTM->GetXaxis()->CenterTitle();
+  hist_xTM->GetYaxis()->CenterTitle();
+  hist_xpre->Draw("sames");
+  hist_xpre->SetLineWidth(2);
+  hist_xTM->SetLineColor(kRed);
+  hist_xTM->SetTitle(Form("xBj: before (blue) and after TMC: %d",runNum));
+
+
+  c2->cd(2);gPad->SetGrid();
+  hist_zTM->Draw();
+  hist_zTM->Draw("hist");
+  hist_zTM->SetLineWidth(2);
+  hist_zTM->GetXaxis()->CenterTitle();
+  hist_zTM->GetYaxis()->CenterTitle();
+  hist_zpre->Draw("sames");
+  hist_zpre->SetLineWidth(2);
+  hist_zTM->SetLineColor(kRed);
+  hist_zTM->SetTitle(Form("zhad: before (blue) and after TMC: %d",runNum));
+
+
+  c1->SaveAs(Form("pdfpt/xz_TM_%d.pdf",runNum));
+
+
+
+}
