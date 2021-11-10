@@ -1,4 +1,6 @@
 //working one
+//pt polar plots
+//target mass correction
 void plot_z_zprime_x_xprime_noAccDummy(Int_t runNum){
   gStyle->SetOptStat(1000111);
   // gROOT->SetBatch("kTRUE");
@@ -36,7 +38,7 @@ void plot_z_zprime_x_xprime_noAccDummy(Int_t runNum){
   TTree * tt = (TTree*)f1->Get("T");
   Long64_t nentriesD = tt->GetEntries();
   double paero,pbeta,pdelta,hdelta,ctime,hcernpeSum,hdipole,pdipole,hbeta,pcal,hcal,hcernpe,phi,theta,mom,pt,ptsinphi,ptcosphi,W2;
-  double dnu,zhad,Mx2,Mx2_pre,dpmiss,Epi,pt_pre,xbj,xbj_TM,zhad_TM,Q2,mhp_square;
+  double dnu,zhad,zhad_pre,Mx2,Mx2_pre,dpmiss,Epi,Epi_pre,pt_pre,xbj,xbj_TM,zhad_TM,Q2,mhp_square;
   
   std::vector<double> pt_vec,pt_vec_err,phi_vec,err_vec;
 
@@ -71,16 +73,23 @@ void plot_z_zprime_x_xprime_noAccDummy(Int_t runNum){
     tt->GetEntry(kk);
 
 
+
+
+
+
+
+
+
+
+
     if(pdelta>-10&&pdelta<20&&hdelta>-8&&hdelta<8&&pcal<0.7&&hcal>0.75&&hbeta>0.5&&pbeta>0.5&&paero>4&&ctime>42&&ctime<45){
-      // if(pdelta>-10/*&&pdelta<20&&hdelta>-8&&hdelta<8&&pcal<0.7&&hcal>0.75&&hbeta>0.5&&pbeta>0.5&&paero>4&&ctime>42&&ctime<45*/){
-
-      //Mx2_pre = (protonmass + dnu - zhad*dnu) *  (protonmass + dnu - zhad*dnu) - abs(dpmiss)*abs(dpmiss);
-      //pt_pre = mom*sin(theta);
-      // if(Mx2>2&&W2>4&&pt_pre<0.2){
-      // if(Mx2>2&&W2>4&&pt_pre>=0.1){
-      // if(Mx2_pre>2&&W2>4&&pt_pre<=0.2){
-
-      //target mass corr
+      Epi_pre = sqrt(pow(pionmass,2) + pow(mom,2));
+      zhad_pre = Epi_pre/dnu;
+      Mx2_pre = (protonmass + dnu - zhad_pre*dnu) *  (protonmass + dnu - zhad_pre*dnu) - abs(dpmiss)*abs(dpmiss);
+      pt_pre = mom*sin(theta);
+      if(Mx2_pre > 2 && W2 > 4 && pt_pre < 0.2){
+     
+      //target mass corr start
 
       Epi = sqrt(pow(pionmass,2) + pow(mom,2));
       zhad = Epi/dnu;
@@ -88,18 +97,14 @@ void plot_z_zprime_x_xprime_noAccDummy(Int_t runNum){
       xbj_TM = 2*xbj/(1+sqrt(1+4*xbj*protonmass*protonmass/Q2));//target mass corrected x
       mhp_square = pionmass*pionmass+pt*pt;
       zhad_TM = (zhad/2)*(xbj_TM/xbj)*(1+sqrt(1-(4*xbj*xbj*protonmass*protonmass*mhp_square)/(zhad*zhad*Q2*Q2)));
-      //target mass corrected z
-
-
-      hist_zpre->Fill(zhad-0.0613);
-      hist_zTM->Fill(zhad_TM);
-      hist_xpre->Fill(xbj-0.0367);
+      hist_zpre->Fill(zhad);      // hist_zpre->Fill(zhad-0.0613);
+      hist_zTM->Fill(zhad_TM);      //hist_xpre->Fill(xbj-0.0367);
+      hist_xpre->Fill(xbj);
       hist_xTM->Fill(xbj_TM);
 
 
-      //target mass corr
+      //target mass corr done
       pt=mom*sin(theta);
-
       pt_vec.push_back(pt);
       phi_vec.push_back(phi);
       err_vec.push_back(0);
@@ -109,7 +114,7 @@ void plot_z_zprime_x_xprime_noAccDummy(Int_t runNum){
       hist_ptsinphi->Fill(ptsinphi);
       hist_ptcosphi->Fill(ptcosphi);
       hist_ptsin_ptcos->Fill(ptcosphi,ptsinphi);
-      //}
+     }
     }
   }
 
@@ -183,6 +188,27 @@ void plot_z_zprime_x_xprime_noAccDummy(Int_t runNum){
   hist_xTM->SetLineColor(kRed);
   hist_xTM->SetTitle(Form("xBj: before (blue) and after TMC: %d",runNum));
 
+  gPad->Update();
+
+
+  TPaveStats *p1 = (TPaveStats*) hist_xpre->FindObject("stats");
+  p1->SetY1NDC(.68);
+  p1->SetY2NDC(.93);
+  p1->SetX1NDC(.75); 
+  p1->SetX2NDC(0.95);
+  p1->SetLineColor(kBlue);
+  p1->SetLineWidth(2);
+  p1->SetTextColor(kBlue);
+  gPad->Update();
+  TPaveStats *p2 = (TPaveStats*) hist_xTM->FindObject("stats");
+  p2->SetY1NDC(.4);
+  p2->SetY2NDC(.65);
+  p2->SetX1NDC(.75); 
+  p2->SetX2NDC(0.95);
+  p2->SetLineColor(kRed);
+  p2->SetLineWidth(2);
+  p2->SetTextColor(kRed);
+  gPad->Update();
 
   c2->cd(2);gPad->SetGrid();
   hist_zTM->Draw();
@@ -194,10 +220,31 @@ void plot_z_zprime_x_xprime_noAccDummy(Int_t runNum){
   hist_zpre->SetLineWidth(2);
   hist_zTM->SetLineColor(kRed);
   hist_zTM->SetTitle(Form("zhad: before (blue) and after TMC: %d",runNum));
-
-
-  c1->SaveAs(Form("pdfpt/xz_TM_%d.pdf",runNum));
+  
+  gPad->Update();
+ TPaveStats *p3 = (TPaveStats*) hist_zpre->FindObject("stats");
+  p3->SetY1NDC(.68);
+  p3->SetY2NDC(.93);
+  p3->SetX1NDC(.15); 
+  p3->SetX2NDC(.35);
+  p3->SetLineColor(kBlue);
+  p3->SetLineWidth(2);
+  p3->SetTextColor(kBlue);
+  gPad->Update();
+  TPaveStats *p4 = (TPaveStats*) hist_zTM->FindObject("stats");
+  p4->SetY1NDC(.4);
+  p4->SetY2NDC(.65);
+  p4->SetX1NDC(.15); 
+  p4->SetX2NDC(.35);
+  p4->SetLineColor(kRed);
+  p4->SetLineWidth(2);
+  p4->SetTextColor(kRed);
+  gPad->Update();
+  c2->SaveAs(Form("pdfpt/xz_TM_%d.pdf",runNum));
 
 
 
 }
+
+
+
