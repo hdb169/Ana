@@ -1,0 +1,67 @@
+void read_TGraph_fromRootFile(){
+  gStyle->SetPalette(1,0);
+  gStyle->SetOptStat(1000011);
+  gStyle->SetOptFit(1);
+  gStyle->SetTitleOffset(1.,"Y");
+  gStyle->SetTitleOffset(.7,"X");
+  gStyle->SetLabelSize(0.04,"XY");
+  gStyle->SetTitleSize(0.06,"XY");
+  gStyle->SetPadLeftMargin(0.12);
+  gStyle->SetErrorX(0);
+  // gStyle->SetOptStat(0);
+
+  TFile *f1 = new TFile("root/myfile.root", "READ"); f1->ls();
+  TGraph *g1= new TGraph();
+  TGraph *g2;
+  TGraph *g3;
+  TGraph *g4;
+
+  
+  f1->GetObject("gr_pos", g1);
+  f1->GetObject("gr_neg", g2);
+  f1->GetObject("gr_yield_ratio", g3);
+  f1->GetObject("gr_rd", g4);
+
+  TCanvas *c1 = new TCanvas("c1","C1",1000,800);
+  c1->Divide(2,2);
+
+  c1->cd(1);
+  g1->Draw("AP");
+  g1->SetTitle("Yield Pi+");
+  g1->GetXaxis()->SetTitle("zhadron");
+  g1->GetYaxis()->SetTitle("Yield (counts/mC)");
+  g1->GetXaxis()->CenterTitle();
+  g1->GetYaxis()->CenterTitle();
+
+  c1->cd(2);
+  g2->Draw("AP");
+  g2->SetTitle("Yield Pi-");
+  g2->GetXaxis()->SetTitle("zhadron");
+  g2->GetYaxis()->SetTitle("Yield (counts/mC)");
+  g2->GetXaxis()->CenterTitle();
+  g2->GetYaxis()->CenterTitle();
+
+  c1->cd(3);
+  g3->Draw("AP");
+  g3->SetTitle("Yield Ratio (pi-/pi+)");
+  g3->GetXaxis()->SetTitle("zhadron");
+  g3->GetYaxis()->SetTitle("Yield Ratio (pi-/pi+)");
+  g3->GetXaxis()->CenterTitle();
+  g3->GetYaxis()->CenterTitle();
+  c1->cd(4);
+  g4->Draw("AP");
+  g4->SetTitle("RD_Measured");
+  g4->GetXaxis()->SetTitle("zhadron");
+  g4->GetYaxis()->SetTitle("RD_Measured");
+  g4->GetXaxis()->CenterTitle();
+  g4->GetYaxis()->CenterTitle();
+
+
+  c1->SaveAs("pdf/pdf_saved_TgraphFrom_root.pdf");
+  
+  //delete g;
+  //delete f1;
+
+
+
+}
