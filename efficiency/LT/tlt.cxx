@@ -1,4 +1,4 @@
-
+This is WRONG
 //root -l aimple_method_allruns.C
 //make a "pdf" directory
 //give run list and write number of runs 
