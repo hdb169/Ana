@@ -1,0 +1,57 @@
+#include <TString.h>
+void bhesha_short(){
+  gStyle->SetPalette(1,0);
+  gStyle->SetOptStat(1000111);
+  gStyle->SetOptFit(1);
+  gStyle->SetTitleOffset(1.,"Y");
+  gStyle->SetTitleOffset(.7,"X");
+  gStyle->SetLabelSize(0.04,"XY");
+  gStyle->SetTitleSize(0.06,"XY");
+  gStyle->SetPadLeftMargin(0.12);
+  gStyle->SetErrorX(0);
+
+
+  TH1F *pmom = new TH1F("pmom","Momentum (+VE);Momentum (GeV);Entries", 100, 0, 6);
+  TH1F *phg = new TH1F("phg","NPeSum ;NpeSum;Entries", 100, 0, 30);
+
+
+  
+  TChain *tt = new TChain("T");
+   tt->Add("/home/hdbhatt/ROOTfiles/hgcerEff_momGT2p7/hgcer_7800_neg.root");
+   tt->Add("/home/hdbhatt/ROOTfiles/hgcerEff_momGT2p7/hgcer_7808_pos.root");
+   tt->Add("/home/hdbhatt/ROOTfiles/hgcerEff_momGT2p7/hgcer_7809_pos.root");
+
+   Double_t mom, hgcernpe;
+
+   tt->SetBranchAddress("shms_p", &mom);
+   tt->SetBranchAddress("P_hgcer_npeSum", &hgcernpe);
+
+   Bool_t ex_cut1, ex_cut2;
+   Long64_t nentriesD = tt->GetEntries();
+     
+   for (int kk=0; kk<nentriesD;  kk++){
+     tt->GetEntry(kk);
+
+     ex_cut1 = mom > 3.0 && mom<7.0;
+     ex_cut2 = hgcernpe>0;
+
+     if(ex_cut1 && ex_cut2){
+       pmom->Fill(mom);
+       phg->Fill(hgcernpe);
+    
+     }
+   }
+
+   TCanvas *c1 = new TCanvas("c1","c1", 1000,800);
+   c1->Divide(1,2);
+   c1->cd(1);
+   pmom->Draw();
+   pmom->SetLineWidth(2);
+
+    c1->cd(2);
+   phg->Draw();
+   phg->SetLineWidth(2);
+
+   c1->SaveAs("example_plots.pdf");
+   
+}
