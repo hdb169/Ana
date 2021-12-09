@@ -1,3 +1,7 @@
+/*Here, you first loop over all the run groups, and then the code will look for the runs in D2, Dummy, H2; and through pos, neg, and read each runs and then perform the assigned work. db2/ratio_run_group_updated.json have run group definitions, db2/runs_info.json have the info about uns like charge, LT, and mainly offset RF, etc, and db2/all_cut.json has the cut definition file. I applied basic cuts only. 
+Then, to save "T" and "TSP", first read those, and apply cuts where needed, and do a snapshot.	ROOT::RDF::RSnapshotOptions opts;
+	opts.fMode = "UPDATE"; is to be done after one TTree is filled and  },opts); is required at the end of the second TTree.
+*/
 #include "ROOT/RDataFrame.hxx"
 #include "nlohmann/json.hpp"
 using json = nlohmann::json;
