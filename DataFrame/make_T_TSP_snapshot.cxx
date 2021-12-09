@@ -35,7 +35,7 @@ void make_T_TSP_snapshot(){
   json j_rungroup;
   {
     //std::ifstream ifs("db2/ratio_run_group_updated.json");
- std::ifstream ifs("db2/trash.json");
+    std::ifstream ifs("db2/trash.json");
     ifs>>j_rungroup;
   }
   json j_runsinfo;
@@ -89,7 +89,7 @@ void make_T_TSP_snapshot(){
     return SHMS_rftime>rf_pi_low && SHMS_rftime<rf_pi_high;  
   };
 
-   for(auto it = j_rungroup.begin();it!=j_rungroup.end();++it){
+  for(auto it = j_rungroup.begin();it!=j_rungroup.end();++it){
 
 
 
@@ -254,7 +254,10 @@ void make_T_TSP_snapshot(){
 	  continue;
 	}
 	//test
-
+	TFile file(rootfile_name.c_str());
+	if(file.IsZombie()){
+	  continue;
+	}
 
 
 	ROOT::RDataFrame d_pos_raw("T",rootfile_name);
@@ -380,7 +383,10 @@ void make_T_TSP_snapshot(){
 	    continue;
 	  }
 	  //test
-
+	  TFile file(rootfile_name.c_str());
+	  if(file.IsZombie()){
+	    continue;
+	  }
 	  ROOT::RDataFrame d_neg_raw("T",rootfile_name);
 	  ROOT::RDataFrame d_neg_raw_s("TSP",rootfile_name);
 	 
@@ -504,7 +510,10 @@ void make_T_TSP_snapshot(){
 	    continue;
 	  }
 	  //test
-
+	  TFile file(rootfile_name.c_str());
+	  if(file.IsZombie()){
+	    continue;
+	  }
 	  ROOT::RDataFrame d_pos_raw("T",rootfile_name);
 	  ROOT::RDataFrame d_pos_raw_s("TSP",rootfile_name);
 	  std::string skim_name = "/lustre19/expphy/volatile/hallc/c-csv/hdbhatt/ROOTfiles/skimROOTfiles/run_"+std::to_string(RunNumber)+"_pos_H2.root";
@@ -626,6 +635,11 @@ void make_T_TSP_snapshot(){
 	  continue;
 	}
 	//test
+	TFile file(rootfile_name.c_str());
+	if(file.IsZombie()){
+	  continue;
+	}
+
 	ROOT::RDataFrame d_neg_raw("T",rootfile_name);
 	ROOT::RDataFrame d_neg_raw_s("TSP",rootfile_name);
 	std::string skim_name = "/lustre19/expphy/volatile/hallc/c-csv/hdbhatt/ROOTfiles/skimROOTfiles/run_"+std::to_string(RunNumber)+"_neg_Dummy.root";
@@ -745,6 +759,11 @@ void make_T_TSP_snapshot(){
 	  std::cout << "Error opening file "<< std::endl;
 	  continue;
 	}
+	TFile file(rootfile_name.c_str());
+	if(file.IsZombie()){
+	  continue;
+	}
+
 	//test
 
 	ROOT::RDataFrame d_pos_raw("T",rootfile_name);
