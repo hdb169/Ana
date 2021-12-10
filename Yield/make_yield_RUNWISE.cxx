@@ -1,3 +1,4 @@
+Dec10,2021
 All cuts are shown, 
 1)current cut of 5 uA
 2)hgcer cut
@@ -8,6 +9,7 @@ All cuts are shown,
 7)cal < 0.8 and hcal > 0.8
 8)acceptance cuts
 9)all eff correction, For hgcer P>3.3, eff = 0.986, P = 3-3.3 =0.982, p<3 = 0.995 (RF)
+	A yield table is attached here
   ////////See script//
   
   #include <TSystem.h>
