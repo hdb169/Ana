@@ -1,3 +1,5 @@
+Note, Here Htrack, Ptrack and TLT are from Fit or guess (in fact spring SHMS track are not consistent with fall) and pcal eff are good only with P.cal.etracknorm.
+So, I have another txtfile, with all efficiencies correctly done for hrack, ptrack, and TLT. (final_updated_eff_jan2022.txt)
 run	Rate	curr	charge	pcal	hcal	hcer	aero	htrack	ptrack	TLT	boil	fadc	total	hgcer_rf_later	note fadc does not include htrig3 rate
 6018	458.0	30.3	44.68348	0.96	0.994	0.98	0.968	0.995	0.995	0.9810	0.9921	0.9771	0.8523		
 6019	458.9	30.8	50.80805	0.96	0.994	0.98	0.968	0.995	0.995	0.9810	0.9920	0.9771	0.8521		
