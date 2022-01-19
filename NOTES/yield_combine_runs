@@ -1,0 +1,44 @@
+//2022 Jan 18
+two runs in the same kinematics
+y1= N1/(Q1*eff1) in bins of x or in Integral
+y2=N2/(Q2*eff2)
+e1 = sqrt(N1)/(Q1*eff1)
+e2 = sqrt(N2)/(Q2*eff2)
+
+y=(y1*w1+y2*w2)/(w1+w2)
+
+wi=1/ei^2
+
+y_err = dy
+y1=a+e1
+y2=b+e2
+y=y1+y2
+dy=sqrt[(dy/dy1)^2*e1^2+(dy/dy2)^2*e2^2]
+dy=sqrt[e1^2+e2^2]
+
+(1)
+y=(y1*w1+y2*w2)/(w1+w2)
+dy=sqrt[e1^2+e2^2]
+
+
+Ydata compare with Ysimc (=Inc,rad+exc,rad+delta,rad+rho,rad):yields
+
+Ratio data simc = Ydata/ysimc
+
+absolute c.s = sigma,noRad = (Ydata,rad/Ysimc,rad)*(Inc_norad/Inc_rad)* sigma_model
+//we need to get CS without the effect of radiation, so we should take this factor (Inc_norad/Inc_rad)
+//data will have effect of radiation
+
+///What about this?
+
+run1:N1, eff1,Q1
+run2:N2, eff2,Q2
+
+(2)
+y=(N1+N2)/(Q1*eff1+Q2*eff2)(if eff1=eff2)
+err = sqrt(N1+N2)/(Q1*eff1+Q2*eff2)
+
+
+(3)y=(N1+N2)/[(Q1+Q2)*(eff1+eff2)/2](may be correct if eff1~eff2 or eff1=eff2)
+err=sqrt(N1+N2)/[(Q1+Q2)*(eff1+eff2)/2]
+but (2) and (3) formulae are not as correct as the (1)
