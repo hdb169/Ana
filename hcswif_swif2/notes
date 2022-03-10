@@ -1,0 +1,6 @@
+
+/my_analysis/hcswif/
+
+./hcswif.py --mode replay --spectrometer COIN --run xxxx-xxxx yyyy-yyyy zzzz --events -1 --name xxxx --account hallc --disk 5000000000 --ram 6000000000 --cpu 1
+swif2 import -file xxxx.json
+swif2 run xxxx
